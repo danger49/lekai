@@ -1,0 +1,265 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>乐开儿童音乐王国|中国最权威的儿童音乐教育品牌</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <style>
+        .video {
+            position: absolute;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 5;
+            top:40%;
+            left: 50%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .play-video-btn {
+            height: 70px;
+            width: 70px;
+            text-align: center;
+        }
+        .play-video-btn img {
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+        .play-video-btn:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            margin-top: -40px;
+            background: transparent url("./img/dotted-line.png") repeat-x;
+            content: '';
+        }
+        ul.nav {
+            list-style: none;
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+        .nav li{ 
+            float:left;
+            position: relative;
+            left: -50%;
+        }
+        .nav li a{ display:block; text-align:center; width:150px; background-color:#efefef;}
+        .nav li.active a {background-color:#84bade;}
+        .nav li.active a:hover {background-color:#84bade;}
+        .nav li.active a:after {background-color:#84bade;}
+        .nav li a:hover{ background-color:#F60; color:#fff}
+        .padding {padding: 5px}
+       </style>
+</head>
+<body>
+<div class="wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="background-color:#4a86c3">
+            <div class="container">
+                <div class="navbar-header navbar-left">
+                    <span style="font-size: xx-large;color: white;line-height: 150%">LK Music Kingdom</span>
+                </div>
+                <div class="dropdown navbar-btn navbar-right">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">导航
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu tab-titles constrain" role="menu" aria-labelledby="dropdownMenu"
+                        style="background-color:#4a86c3">
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">乐开音乐</a>
+                        </li>
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">乐开师训</a>
+                        </li>
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">乐开风采</a>
+                        </li>
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">关于乐开</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">&nbsp;</div>
+    </nav>
+    <!--轮播 start-->
+    <div style="position:relative;">
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./img/carousel/slide3.jpg" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide1.jpg" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide2.jpg" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide4.jpg" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide5.jpg" alt="Third slide">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+        <div class="video">
+            <div class="play-video-btn">
+                <a href="#" data-toggle="modal" data-target="#videoModal">
+                    <img src="./img/play-video-btn.png" alt="Play Video">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--轮播 end-->
+    <!--标签页 start-->
+    <div style="background-color: #84bade">
+        <div class="container">
+            <ul id="myTab" class="nav nav-pills">
+                <li class="active">
+                    <a href="#music" data-toggle="tab">
+                        乐开音乐
+                    </a>
+                </li>
+                <li>
+                    <a href="#teacher" data-toggle="tab">乐开师训</a>
+                </li>
+                <li>
+                    <a href="#activity" data-toggle="tab">乐开风采</a>
+                </li>
+                <li>
+                    <a href="#about" data-toggle="tab">关于乐开</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="music">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <p>乐开音乐专注于0-12岁儿童音乐教育，致力于提升全体国民儿童的音乐素养，带给孩子最具时代审美和气质的儿童音乐，让亿万儿童享有更具艺术高度的音乐教育服务。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="teacher">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    <ul>
+                                        <li>节奏由简入难，逐渐深入，多元练习，趣味融入，快乐地玩，开心地学</li>
+                                        <li>结合达尔克罗兹,柯达伊,奥尔夫等多元教学法，融合中国的本土文化元素,有梯度的儿童音高教学练习，充分适应孩子不同年龄段的视唱特征</li>
+                                        <li>由国内外音乐早教专家和一线专业儿童音乐创作团队历时数年，精心打磨创作编配，带给属于孩子们真正有童真和气质的儿童音乐</li>
+                                        <li>融合趣味性的动画节奏及音高练习，配合奥尔夫乐器玩法，真正提升孩子的音乐基础能力及听想能力</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="activity">
+                    <p><img src="./img/content/a.png"></p>
+                </div>
+                <div class="tab-pane fade" id="about">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <dl class="dl-horizontal">
+                                    <dt></dt>
+                                    <dd><img src="./img/qr.png" style="width:150px;height:150px"></dd>
+                                    <dt>地址</dt>
+                                    <dd>...</dd>
+                                    <dt>联系电话</dt>
+                                    <dd>...</dd>
+                                    <dt>联系人</dt>
+                                    <dd>...</dd>
+                                    <dt>邮箱</dt>
+                                    <dd>...</dd>
+                                </dl>
+                            </div>
+                            <div class="col-md-6 padding"><iframe src="map.html" width="100%" height="40%"></iframe></div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--标签页 end-->
+    <!--固定start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                乐开儿童音乐王国致力于开发适合中国宝宝的音乐教育体系，创作了数百首极富针对性的儿童教学音乐，音乐有别于传统儿童歌曲，在强调音乐本身的现代气质的同时，更强调教学功能性和循序渐进的梯度，把教学知识点完美地整合到音乐中，让宝宝在聆听和歌唱的过程中不知不觉就掌握知识要点，同时也建立良好的听觉审美。
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                乐开儿童音乐王国的音乐作品在创作就充分融合了达尔克罗兹、柯达伊、奥尔夫、戈登等教学理念，充分结合当下的音乐审美，拒绝老掉牙式儿歌，创作出更受宝宝和妈妈喜欢的作品，让宝宝在更具艺术性的音乐当中熏陶和成长。
+                </p>
+                <p>乐开儿童音乐王国革命性的创造了音高和节奏学习系统，每一首音乐作品均有配套的专业音高试唱和节奏学习，这一切都在充满趣味的动画视频中完成，让孩子在趣味中学习音乐，快乐的宝贝们有福了，一起先睹为快
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--固定end-->
+    <div style="background-color: orange">
+        <div class="container text-center" style="color: white;padding: 15px">乐开儿童音乐王国全国加盟，即将开启，敬请期待</div>
+    </div>
+    <div style="background-color: #EEEEEE">
+        <div class="container" style="padding: 20px">©2017 上海乐开文化传播有限公司版权所有 沪备2000010.</div>
+    </div>
+</div>
+<div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal-dialog" role="document" style="width: auto;">
+        <div class="modal-content">
+            <div class="modal-body">
+                <video id="videoSource" controls="controls" style="width: 100%">
+                    <source src="./img/ConfidentCustomer.mp4" type="video/mp4">
+                    你的浏览器不支持该视频播放！
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    $(function() {
+        var video = document.getElementById('videoSource');
+        $('#videoModal').on('hide.bs.modal', function(){
+            video.pause();
+        })
+        $('#videoModal').on('shown.bs.modal', function(){
+            video.play();
+        })
+    });
+</script>
