@@ -1,7 +1,7 @@
 <?php
 
 /**
- * chenzhidong
+ * DJ
  * 2013-5-10
  */
 class CookiePlugin extends Yaf_Plugin_Abstract {

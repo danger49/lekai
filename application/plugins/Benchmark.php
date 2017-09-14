@@ -1,7 +1,7 @@
 <?php
 
 /**
- * chenzhidong
+ * DJ
  * 2013-5-31
  */
 class BenchmarkPlugin extends Yaf_Plugin_Abstract {

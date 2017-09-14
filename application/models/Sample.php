@@ -2,7 +2,7 @@
 
 /**
  * just a sample model showing how to use Object and Db
- * chenzhidong
+ * DJ
  * 2013-4-27
  */
 class SampleModel extends Object {
