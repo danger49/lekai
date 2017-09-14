@@ -40,4 +40,10 @@ class IndexController extends FControllerModel {
         $this->_view->assign('newsList', $newsList);
         return true;
     }
+
+    public function mapAction() {
+        echo 'aaaaaaaaaaaaaaaaaa';exit;
+        $this->_view->assign();
+        return true;
+    }
 }

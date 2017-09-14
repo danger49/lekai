@@ -1,211 +1,402 @@
-﻿{@include 'header.phtml'@}
-<!--banner-->
-<div class="banner" id="banner">
-	<div class="inner"></div>
-</div>
-<!--/banner-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>乐开儿童音乐王国|中国最权威的儿童音乐教育品牌</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <style>
+        .video {
+            position: absolute;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 5;
+            top: 40%;
+            left: 50%;
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-<!--我们的服务-->
-<div class="service" id="service">
-	<div class="inner">
-    	<!--title-->
-        <div class="title">我们的服务</div>
-        <!--/title-->
-        <div class="serviceList">
-        	<dl>
-            	<dd>
-                	<div class="serviceImg m1"><a href="/case#case1"><img src="images/bgIco.png"></a></div>
-                	<h2>动漫音乐</h2>
-                    <p>与国内外多家影视动漫公司合作，为诸多一线动漫作品担任主题音乐作曲作词、动漫配乐创作，获得业内人士及用户一致好评。</p>
-                </dd>
-                <dd>
-                	<div class="serviceImg m2"><a href="/case#case2"><img src="images/bgIco.png"></a></div>
-                	<h2>声优配音</h2>
-                    <p>国内外一线配音演员及资深导演联袂合作，完美诠释影片角色个性，用极具感染力的声音塑造经典。</p>
-                </dd>
-                <dd>
-                	<div class="serviceImg m3"><a href="/case#case3"><img src="images/bgIco.png"></a></div>
-                	<h2>音乐课堂</h2>
-                    <p>国际专业教材结合乐开音乐开发的音乐启蒙教材，以及乐开历年的经典作品的曲谱，以最专业的服务结合具有艺术高度的音乐传承每一位用户</p>
-                </dd>
-                <dd>
-                	<div class="serviceImg m4"><a href="/case#case4"><img src="images/bgIco.png"></a></div>
-                	<h2>音效设计</h2>
-                    <p>媲美真实立体的游戏音频设计，创意非凡的拟音空间，由资深游戏音效设计师领衔创造，我们的职责就是永远保持最佳的创造力。</p>
-                </dd>
-                <dd class="last">
-                	<div class="serviceImg m5"> <a href="/case#case5"><img src="images/bgIco.png"></a></div>
-                	<h2>游戏音乐</h2>
-                    <p>具有艺术高度的游戏配乐作品，用心定制每一首作品，匠心独特，带给你大气非凡的听觉感受。</p>
-                </dd>
-            </dl>
-            <div class="clearboth"></div>
+        .play-video-btn {
+            height: 70px;
+            width: 70px;
+            text-align: center;
+        }
+
+        .play-video-btn img {
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+
+        .play-video-btn:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            margin-top: -40px;
+            background: transparent url("./img/dotted-line.png") repeat-x;
+            content: '';
+        }
+
+        .nav li a {
+            background-color: #efefef;
+            font-size: 16px;
+        }
+
+        .nav li.active a {
+            background-color: #84bade;
+        }
+
+        .nav li.active a:hover {
+            background-color: #84bade;
+        }
+
+        .nav li.active a:focus {
+            background-color: #84bade;
+        }
+
+        .nav li.active a:after {
+            background-color: #84bade;
+        }
+
+        .nav li a:hover {
+            background-color: #F60;
+            color: #fff
+        }
+
+        .padding {
+            padding: 50px 20px
+        }
+
+        .yellow {
+            background-color: #d3dc4f;
+        }
+
+        .orange {
+            background-color: #f6b802;
+        }
+
+        .green {
+            background-color: #82c05d;
+        }
+
+        .blue {
+            background-color: #19afda;
+        }
+
+        .description {
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+            color: white;
+            line-height: 180%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="background-color:#4a86c3">
+            <div class="container">
+                <div class="navbar-header navbar-left">
+                    <span style="font-size: xx-large;color: white;line-height: 150%">LK Music Kingdom</span>
+                </div>
+                <div class="dropdown navbar-btn navbar-right">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">导航
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu tab-titles constrain" role="menu" aria-labelledby="dropdownMenu" style="background-color:#4a86c3">
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">乐开音乐</a>
+                        </li>
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">乐开师训</a>
+                        </li>
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">乐开风采</a>
+                        </li>
+                        <li role="presentation" style="color: white">
+                            <a role="menuitem" tabindex="-1" href="#">关于乐开</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">&nbsp;</div>
+    </nav>
+    <!--轮播 start-->
+    <div style="position:relative;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./img/carousel/slide3.jpg" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide1.jpg" alt="First slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide2.jpg" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide4.jpg" alt="Third slide">
+                </div>
+                <div class="item">
+                    <img src="./img/carousel/slide5.jpg" alt="Third slide">
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+        <div class="video">
+            <div class="play-video-btn">
+                <a href="#" data-toggle="modal" data-target="#videoModal">
+                    <img src="./img/play-video-btn.png" alt="Play Video">
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<!--/我们的服务-->
-
-<!--banner-->
-<div class="banner02">
-	<div class="inner"></div>
-</div>
-<!--/banner-->
-
-<!--我们的作品-->
-<div class="works" id="works">
-	<div class="inner">
-    	<!--title-->
-        <div class="title">我们的作品</div>
-        <!--/title-->
-
-        <div id="content-music-player">
-            <div id="music-player">
-                <div id="music-player-header">
-                    <h2 class="inon"></h2>
-                    <h3></h3>
+    <!--轮播 end-->
+    <!--标签页 start-->
+    <div style="background-color: #84bade">
+        <div class="container">
+            <ul id="myTab" class="nav nav-pills col-md-offset-4">
+                <li class="active">
+                    <a href="#music" data-toggle="tab">
+                        乐开音乐
+                    </a>
+                </li>
+                <li>
+                    <a href="#teacher" data-toggle="tab">乐开师训</a>
+                </li>
+                <li>
+                    <a href="#activity" data-toggle="tab">乐开风采</a>
+                </li>
+                <li>
+                    <a href="#about" data-toggle="tab">关于乐开</a>
+                </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="music">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 padding" style="text-align:center">
+                                <div><img src="img/a11.png" height="180px"></div>
+                                <h3 style="color: white;line-height: 200%">感知</h3>
+                                <div class="yellow description">
+                                    内容体系：节奏由简入难，逐渐深入，多元而趣味化的练习加强孩子对音乐节奏的理解，让孩子在轻松愉悦的环境中无形掌握音乐的律动；
+                                </div>
+                            </div>
+                            <div class="col-md-3 padding" style="text-align:center">
+                                <div><img src="img/a21.png" height="180px"></div>
+                                <h3 style="color: white;line-height: 200%">同化</h3>
+                                <div class="orange description">
+                                    多元融合：结合达尔克罗兹,柯达伊,奥尔夫等多元教学法，融合中国的本土文化元素,有梯度的儿童音高教学练习，充分适应孩子不同年龄段的视唱特征；
+                                </div>
+                            </div>
+                            <div class="col-md-3 padding" style="text-align:center">
+                                <div><img src="img/a31.png" height="180px"></div>
+                                <h3 style="color: white;line-height: 200%">模仿</h3>
+                                <div class="green description">
+                                    精品视听：由国内外音乐早教专家和一线专业儿童音乐创作团队历时数年，精心打磨创作编配，带给属于孩子们真正有童真和气质的儿童音乐；
+                                </div>
+                            </div>
+                            <div class="col-md-3 padding" style="text-align:center">
+                                <div><img src="img/a41.png" height="180px"></div>
+                                <h3 style="color: white;line-height: 200%">创造</h3>
+                                <div class="blue description">专业趣味：融合趣味性的动画节奏及音高练习，配合奥尔夫乐器玩法，真正提升孩子的音乐基础能力及听想能力；
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="width: 0px; height: 0px;" id="jquery_jplayer_1" class="jp-jplayer"><img style="width: 0px; height: 0px; display: none;" id="jp_poster_0"><audio src="8082_files/%2520--%2520Opening.mp3" preload="metadata" id="jp_audio_0"></audio></div>
-
-                <div id="jp_container_1" class="jp-audio" width="400" height="64">
-                    <div class="jp-type-playlist">
-                        <div class="jp-gui jp-interface">
-                            <div class="jp-controls">
-                                <a href="javascript:;" class="jp-previous" tabindex="1">previous</a>
-                                <a href="javascript:;" class="jp-play" tabindex="1">play</a>
-                                <a style="display: none;" href="javascript:;" class="jp-pause" tabindex="1">pause</a>
-                                <a href="javascript:;" class="jp-next" tabindex="1">next</a>
+                <div class="tab-pane fade" id="teacher">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                <ul>
+                                    <li>节奏由简入难，逐渐深入，多元练习，趣味融入，快乐地玩，开心地学</li>
+                                    <li>结合达尔克罗兹,柯达伊,奥尔夫等多元教学法，融合中国的本土文化元素,有梯度的儿童音高教学练习，充分适应孩子不同年龄段的视唱特征</li>
+                                    <li>由国内外音乐早教专家和一线专业儿童音乐创作团队历时数年，精心打磨创作编配，带给属于孩子们真正有童真和气质的儿童音乐</li>
+                                    <li>融合趣味性的动画节奏及音高练习，配合奥尔夫乐器玩法，真正提升孩子的音乐基础能力及听想能力</li>
+                                </ul>
+                                </p>
                             </div>
-                            <div class="jp-progress-container">
-                                <div class="jp-progress">
-                                    <div style="width: 100%;" class="jp-seek-bar">
-                                        <div style="overflow: hidden; width: 0%;" class="jp-play-bar"><span class="jp-play-bar-knob"></span></div>
-                                    </div>
-                                </div>
-                                <div class="jp-current-time">00:00</div>
-                            </div>
-                            <div class="jp-volume-controls">
-                                <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
-                                <a style="display: none;" href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
-                                <div class="jp-volume-bar">
-                                    <div style="width: 80%;" class="jp-volume-bar-value"></div>
-                                </div>
+                            <div class="col-md-6">
+                                <p>乐开音乐专注于0-12岁儿童音乐教育，致力于提升全体国民儿童的音乐素养，带给孩子最具时代审美和气质的儿童音乐，让亿万儿童享有更具艺术高度的音乐教育服务。
+                                </p>
                             </div>
                         </div>
-                        <div class="jp-playlist">
-                            <ul style="display: block;">
-                            {@foreach from=$caseList item=item @}
-                                <li class="jp-playlist-current">
-                                    <div>
-                                        <a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a>
-                                        <a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="1">{@$item.name@}<span></span></a>
-                                     </div>
-                                </li>
-                            {@/foreach@}
-                           </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="activity">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6" style="text-align:right; padding:20px">
+                                <img src="./img/content/b1.png" width="350px; padding:20px"/>
+                            </div>
+                            <div class="col-md-6" style="text-align:left; padding:20px">
+                                <img src="./img/content/b2.png" width="350px"/>
+                            </div>
                         </div>
-                        <span class="shadow"></span>
+                        <div class="row">
+                            <div class="col-md-6" style="text-align:right; padding:20px">
+                                <img src="./img/content/b3.png" width="350px"/>
+                            </div>
+                            <div class="col-md-6" style="text-align:left; padding:20px">
+                                <img src="./img/content/b4.png" width="350px"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="about">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 padding">
+                                <dl class="dl-horizontal">
+                                    <dd><img src="./img/qr.png" style="width:150px;height:120px"></dd>
+                                    <dd><h3>{@$config.name@}</h3></dd>
+                                    <dt>网址：</dt><dd><a href="http://{@$config.host@}">http://{@$config.host@}</a></dd>
+                                    <dt>地址：</dt><dd>{@$config.address@}</dd>
+                                    <dt>邮箱：</dt><dd><a href="mailTo:{@$config.email@}">{@$config.email@}</a></dd>
+                                    <dt>手机：</dt><dd>{@$config.mobile@}</dd>
+                                    <dt>传真：</dt><dd>{@$config.fax@}</dd>
+                                    <dt>Q Q： </dt><dd>{@$config.qq@}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-md-6 padding">
+                                <iframe src="map.html" width="100%" height="50%"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <script type="text/javascript">
-			var playermp3s = [
-				{@foreach from=$caseList item=item @}
-					{title: '{@$item.name@}<span></span>',
-					mp3: '{@$item.src@}'},
-				{@/foreach@}
-				];
-			</script>
-
-        <div class="btnMore txtC"><a href="/case">查看更多案例</a></div>
-
     </div>
-</div>
-<!--/我们的作品-->
+    <!--标签页 end-->
+    <!--固定start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 padding">
+                <h2>音乐欣赏</h2>
+                <div id="content-music-player">
+                    <div id="music-player">
+                        <div id="music-player-header">
+                            <h2 class="inon"></h2>
+                            <h3></h3>
+                        </div>
+                        <div style="width: 0px; height: 0px;" id="jquery_jplayer_1" class="jp-jplayer"><img style="width: 0px; height: 0px; display: none;" id="jp_poster_0"><audio src="8082_files/%2520--%2520Opening.mp3" preload="metadata" id="jp_audio_0"></audio></div>
 
-<!--banner-->
-<div class="banner03">
-	<div class="inner"></div>
-</div>
-<!--/banner-->
+                        <div id="jp_container_1" class="jp-audio" width="400" height="64">
+                            <div class="jp-type-playlist">
+                                <div class="jp-gui jp-interface">
+                                    <div class="jp-controls">
+                                        <a href="javascript:;" class="jp-previous" tabindex="1">previous</a>
+                                        <a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                                        <a style="display: none;" href="javascript:;" class="jp-pause" tabindex="1">pause</a>
+                                        <a href="javascript:;" class="jp-next" tabindex="1">next</a>
+                                    </div>
+                                    <div class="jp-progress-container">
+                                        <div class="jp-progress">
+                                            <div style="width: 100%;" class="jp-seek-bar">
+                                                <div style="overflow: hidden; width: 0%;" class="jp-play-bar"><span class="jp-play-bar-knob"></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-current-time">00:00</div>
+                                    </div>
+                                    <div class="jp-volume-controls">
+                                        <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                                        <a style="display: none;" href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                                        <div class="jp-volume-bar">
+                                            <div style="width: 80%;" class="jp-volume-bar-value"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="jp-playlist">
+                                    <ul style="display: block;">
+                                    {@foreach from=$caseList item=item @}
+                                        <li class="jp-playlist-current">
+                                            <div>
+                                                <a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a>
+                                                <a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="1">{@$item.name@}<span></span></a>
+                                             </div>
+                                        </li>
+                                    {@/foreach@}
+                                   </ul>
+                                </div>
+                                <span class="shadow"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!--新闻动态-->
-<div class="newsIndex" id="newsIndex">
-	<div class="inner">
-    	<!--title-->
-        <div class="title">新闻动态</div>
-        <!--/title-->
-        <div class="newsIndexList">
-        	<dl>
-        	{@foreach from=$newsList item=news@}
-            	<dd>
-                	<h3>{@$news.title|truncate:15:"...":true@}</h3>
-                    <p>{@$news.description@}</p>
-                    <p class="margin_top10"><a class="btnMoreNor" href="/news/detail/id/{@$news.id@}">查看详情</a></p>
-                </dd>
-            {@/foreach@}
-            </dl>
-        	<div class="clearboth"></div>
+                <script type="text/javascript">
+                    var playermp3s = [
+                    {@foreach from=$caseList item=item @}
+                        {title: '{@$item.name@}<span></span>',
+                        mp3: '{@$item.src@}'},
+                    {@/foreach@}
+                    ];
+                </script>
+            </div>
+            <div class="col-md-6 padding">
+                <h2>音乐知识</h2>
+                {@foreach from=$newsList item=news@}
+                    <span style="padding:20px 0;color:orange;line-height:200%;font-size:20px">2017-08-09</span><br/>
+                    <h3>{@$news.title|truncate:30:"...":true@}</h3>
+                    <p style="margin:5px 0;line-height:150%;">{@$news.description@}<span><a href="/news/detail/id/{@$news.id@}">>>查看详情</a></span></p>
+                    <hr/>
+                {@/foreach@}
+                <a href="/news/"><span style="padding:10px 20px;background-color:#205f8a;color:white;width:100px">更多知识</span></a>
+            </div>
         </div>
-
-        <div class="btnMore txtC"><a href="/news">查看更多新闻</a></div>
-
     </div>
-</div>
-<!--/新闻动态-->
-
-<!--关于我们-->
-<div class="banner04" id="aboutUs">
-	<div class="inner">
-    	<!--title-->
-        <div class="title">关于我们</div>
-        <!--/title-->
-        <div class="aboutUs">乐开音乐是专注于ACG音乐创作及教育的专业音乐公司，公司于2011年成立于上海，团队成员均为业内资深音乐制作人及音乐教师，公司音乐团队为诸多客户及中国亿万儿童创作数首经典的主题歌曲及动漫游戏音乐，团队专注于经典音乐的创作及传承，希望以最专业的服务结合具有艺术高度的音乐感动每一位用户！</div>
+    <!--固定end-->
+    <div style="background-color: orange">
+        <div class="container text-center" style="color: white;padding: 15px">乐开儿童音乐王国全国加盟，即将开启，敬请期待</div>
     </div>
-</div>
-<!--/关于我们-->
-
-<!--联系我们-->
-<div class="contact" id="contact">
-	<div class="inner">
-    	<!--title-->
-        <div class="title">联系我们</div>
-        <!--/title-->
-        <div class="contactList txtC">
-        	<p>{@$config.name@}</p>
-           	<p>网址：<a href="http://{@$config.host@}">http://{@$config.host@}</a></p>
-            <p>地址：{@$config.address@}</p>
-            <p>邮箱：<a href="mailTo:{@$config.email@}">{@$config.email@}</a></p>
-            <p>手机：{@$config.mobile@}</p>
-            <p>传真：{@$config.fax@}</p>
-            <p>Q Q： {@$config.qq@}</p>
+    <div style="background-color: #EEEEEE">
+        <div class="container" style="padding: 20px">©2017 {@$config.name@}版权所有 沪ICP备15002392号-1 24小时热线电话：{@$config.mobile@}<span style="float:right"><a href="/job">加入我们</a></span></div>
+    </div>
+    <div class="modal fade" id="videoModal" tabindex="-1">
+        <div class="modal-dialog" role="document" style="width: auto;">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <video id="videoSource" controls="controls" style="width: 100%">
+                        <source src="./img/ConfidentCustomer.mp4" type="video/mp4">
+                        你的浏览器不支持该视频播放！
+                    </video>
+                </div>
+            </div>
         </div>
-
     </div>
-</div>
-<!--/联系我们-->
-
-
-<!--copy start-->
-<div class="footer">
-    <div class="inner">
-       <p class="txtC">24小时热线电话：13917605543</p>
-       <p class="txtC">乐开音乐All Rights Reserved.</p>
-	   <p class="txtC"><a href="/job">加入我们</a></p>
-    </div>
-</div>
-<!--copy end-->
-<!--[if lte IE 6]>
-<script src="js/iepng.js" type="text/javascript"></script>
-<script>
-DD_belatedPNG.fix('*');
-</script>
-<![endif]-->
-<script type="text/javascript">
-$(function() {
-	//顶部导航 选中状态
-	$(".menu dd.m1 a").addClass("current")
-})
-</script>
 {@include 'footer.phtml'@}
+
+<script>
+    $(function () {
+        var video = document.getElementById('videoSource');
+        $('#videoModal').on('hide.bs.modal', function () {
+            video.pause();
+        })
+        $('#videoModal').on('shown.bs.modal', function () {
+            video.play();
+        })
+    });
+</script>
