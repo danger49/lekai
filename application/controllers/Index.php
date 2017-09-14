@@ -19,7 +19,7 @@ class IndexController extends FControllerModel {
         $newsModel = NewsModel::getInstance();
         $newsList = $newsModel->getLatestNews();
         $casedetailModel = CasedetailModel::getInstance();
-        $caseList = $casedetailModel->getLatestCase();
+        $caseList = $casedetailModel->getLatestCase(10);
         foreach ($caseList as &$case) {
             if (strpos($case['src'], '.mp3')) {
                 $case['mp3'] = $case['src'];

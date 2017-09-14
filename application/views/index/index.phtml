@@ -359,7 +359,7 @@
             <div class="col-md-6 padding">
                 <h2>音乐知识</h2>
                 {@foreach from=$newsList item=news@}
-                    <span style="padding:20px 0;color:orange;line-height:200%;font-size:20px">2017-08-09</span><br/>
+                    <span style="padding:20px 0;color:orange;line-height:200%;font-size:20px">{@$news.add_time@}</span><br/>
                     <h3>{@$news.title|truncate:30:"...":true@}</h3>
                     <p style="margin:5px 0;line-height:150%;">{@$news.description@}<span><a href="/news/detail/id/{@$news.id@}">>>查看详情</a></span></p>
                     <hr/>
