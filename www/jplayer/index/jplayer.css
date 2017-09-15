@@ -13,16 +13,16 @@ Author: Chen Wei Gang
 }
 
 #music-player {
-	height: 470px;
-	margin: 50px auto;
+	height: 300px;
+	margin: 10px auto;
 	overflow: hidden;
-	padding: 10px;
-	width: 620px;
+	padding: 5px;
+	width: 100%;
 }
 
 .ie7 #music-player,
 .ie8 #music-player {
-	margin: 20px auto;
+	margin: 10px auto;
 }
 
 #music-player-header {
@@ -50,7 +50,7 @@ Author: Chen Wei Gang
 	background: #f6f6f6;
 	border-radius: 0 0 10px 10px;
 	box-shadow: 0 0 5px rgba(78,17,0,0.7);		
-	height: 410px;
+	height: 250px;
 	overflow: hidden;
 	position: relative;
 }
@@ -62,12 +62,12 @@ Author: Chen Wei Gang
 
 .jp-previous,
 .jp-next {
-	background: #fff url(http://www.8082audio.com/img/player-prev.png) no-repeat center center;
+	background: #fff url(../img/player-prev.png) no-repeat center center;
 	border: 1px solid #555a5f;
 	border-radius: 17px;
 	display: block;
 	height: 34px;
-	left: 24px;
+	left: 14px;
 	position: absolute;
 	text-indent: -10000px;
 	top: 24px;
@@ -75,18 +75,18 @@ Author: Chen Wei Gang
 }
 
 .jp-next {
-	background-image: url(http://www.8082audio.com/img/player-next.png);
-	left: 124px;
+	background-image: url(../img/player-next.png);
+	left: 114px;
 }
 
 .jp-play,
 .jp-pause {
-	background: #fff url(http://www.8082audio.com/img/player-play.png) no-repeat 22px center;
+	background: #fff url(../img/player-play.png) no-repeat 22px center;
 	border: 1px solid #555a5f;
 	border-radius: 28px;
 	display: block;
 	height: 56px;
-	left: 63px;
+	left: 53px;
 	position: absolute;
 	text-indent: -10000px;
 	top: 14px;
@@ -95,7 +95,7 @@ Author: Chen Wei Gang
 }
 
 .jp-pause {
-	background-image: url(http://www.8082audio.com/img/player-pause.png);
+	background-image: url(../img/player-pause.png);
 	z-index: 9;
 }
 
@@ -117,7 +117,7 @@ Author: Chen Wei Gang
 	height: 6px;
 	margin: 16px 0;
 	overflow: visible !important;
-	width: 230px;
+	width: 200px;
 }
 
 .jp-play-bar {
@@ -143,7 +143,7 @@ Author: Chen Wei Gang
 	border: 1px solid #cacaca;
 	border-radius: 10px;
 	height: 40px;
-	left: 176px;
+	left: 155px;
 	overflow: hidden;
 	padding: 0 12px;
 	position: absolute;
@@ -164,53 +164,53 @@ Author: Chen Wei Gang
 	border: 1px solid #cacaca;
 	border-radius: 10px;
 	height: 40px;
-	left: 495px;
+	left: 430px;
 	overflow: hidden;
 	position: absolute;
 	top: 20px;	
-	width: 104px;
+	width: 90px;
 }
 
 .jp-mute,
 .jp-unmute {
-	background: transparent url(http://www.8082audio.com/img/player-volume.png) no-repeat;
+	background: transparent url(../img/player-volume.png) no-repeat;
 	height: 19px;
-	left: 11px;
+	left: 2px;
 	position: absolute;
 	text-indent: -10000px;	
-	top: 10px;
+	top: 12px;
 	width: 20px;
 	z-index: 10;
 }
 
 .jp-unmute {
-	background-image: url(http://www.8082audio.com/img/player-volume-mute.png);
+	background-image: url(../img/player-volume-mute.png);
 	z-index: 9;
 }
 
 .jp-volume-bar {
-	background: transparent url(http://www.8082audio.com/img/player-volume-slider-bg.png) no-repeat;
+	background: transparent url(../img/player-volume-slider-bg.png) no-repeat;
 	height: 20px;
-	left: 37px;
+	left: 20px;
 	position: absolute;
 	top: 10px;
 	width: 49px;
 }
 
 .jp-volume-bar-value {
-	background: transparent url(http://www.8082audio.com/img/player-volume-slider.png) no-repeat;	
+	background: transparent url(../img/player-volume-slider.png) no-repeat;
 	height: 20px;
 	width: 49px;
 }
 
 
 .jp-playlist {
-	height: 270px;
-	margin: 0 0 0 35px;
+	height: 150px;
+	margin: 0 0 0 20px;
 	overflow: scroll;
 	padding-right: 20px;
 	position: relative;
-	width: 550px;
+	width: 96%;
 }
 
 .ie .jp-playlist {
@@ -219,13 +219,13 @@ Author: Chen Wei Gang
 }
 
 .jp-type-playlist .shadow {
-	background: transparent url(http://www.8082audio.com/img/player-shadow.png);
-	bottom: 47px;
+	background: transparent url(../img/player-shadow.png);
+	bottom: 10px;
 	display: block;
 	height: 27px;
-	left: 40px;
+	left: 10px;
 	position: absolute;
-	width: 541px;
+	width: 96%;
 }
 
 
@@ -234,7 +234,7 @@ Author: Chen Wei Gang
 }
 
 .jp-playlist li a.jp-playlist-item {
-	background: #686868 url(http://www.8082audio.com/img/playlist-play.png) no-repeat right center;
+	background: #686868 url(../img/playlist-play.png) no-repeat right center;
 	border-radius: 10px;
 	color: #fff;
 	display: block;
@@ -250,7 +250,7 @@ Author: Chen Wei Gang
 }
 
 .jp-playlist li a.jp-playlist-current {
-	background: #8f4813 url(http://www.8082audio.com/img/playlist-playing.png) no-repeat right center;	
+	background: #8f4813 url(../img/playlist-playing.png) no-repeat right center;
 }
 
 .jp-playlist li a.jp-playlist-item span {
