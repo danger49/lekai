@@ -29,7 +29,6 @@ class FControllerModel extends Yaf_Controller_Abstract {
         );
         $this->js = array(
             'http://www.lkmusic.cn/js/jquery1.4.2.min.js',
-            'http://www.lkmusic.cn/js/jquery.base.js',
             'http://www.lkmusic.cn/js/jquery-1.js',
             'http://www.lkmusic.cn/js/jquery-migrate.js',
             'http://www.lkmusic.cn/js/jplayer.js',

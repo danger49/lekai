@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://192.168.1.200/favicon.ico">
+
+    <title>乐开音乐后台管理中心</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://192.168.1.200/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://192.168.1.200/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <script src="http://192.168.1.200/js/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="http://192.168.1.200/js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="http://192.168.1.200/js/ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="http://192.168.1.200/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <link href="http://192.168.1.200/js/ueditor/themes/default/css/ueditor.css" type="text/css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">乐开音乐后台管理中心</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/admin/index/main">首页</a></li>
+            <li><a href="/admin/case/index">案例中心</a></li>
+            <li><a href="/admin/news/index">新闻中心</a></li>
+            <li><a href="/admin/job/index">招聘中心</a></li>
+            <li><a href="/admin/index/admin">管理帐号</a></li>
+            <li><a href="/admin/index/out">退出</a></li>
+          </ul>
+          <!--
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+           -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/admin/index/main">首页 <span class="sr-only">(current)</span></a></li>
+            <li><a href="/admin/case/index">案例中心</a></li>
+            <li><a href="/admin/news/index">新闻中心</a></li>
+            <li><a href="/admin/job/index">招聘中心</a></li>
+            <li><a href="/admin/index/admin">管理帐号</a></li>
+            <li><a href="/admin/index/out">退出</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">新增文章</h2>
+          <div class="row placeholders">
+          	<h4><a href="/admin/news/index">返回</a></h4>
+          </div>
+          <div class="table-responsive">
+          <form id='form' enctype="multipart/form-data" method="post" action="/admin/news/save">
+            <table class="table table-striped">
+              <tr>
+              <td>文章名称</td>
+              <td><input name="title" type="text"/></td>
+              </tr>
+              <tr>
+              <tr>
+              <td>文章类型</td>
+              <td><select name="type">
+              {@foreach from=$newsCategory item=item@}
+              <option value="{@$item.id@}">{@$item.name@}</option>
+              {@/foreach@}
+              </select></td>
+              </tr>
+              <tr>
+              <td>排序</td>
+              <td><input name="order" type="text"/></td>
+              </tr>
+              <tr>
+              <td>文章描述</td>
+              <td><textarea name="description"></textarea></td>
+              </tr>
+              <tr>
+              <td>文章来源</td>
+              <td><input name="source" type="text"/></td>
+              </tr>
+              <tr>
+              <td>链接地址</td>
+              <td><input name="link" type="text"/></td>
+              </tr>
+              <tr>
+              <td>文章内容</td>
+              <td><script id="content" name="content" style="width:600px;height:400px" type="text/plain"></script></td>
+              </tr>
+              <tr>
+              <td colspan=2><input id='submit' type="submit" value="提交"/> <input id='reset' type="reset" value="重置"/></td>
+              </tr>
+            </table>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://192.168.1.200/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://192.168.1.200/js/ie10-viewport-bug-workaround.js"></script>
+<script type="text/javascript">
+    //加载公式编辑器
+    var this_title  = UE.getEditor('content');
+
+    //试题添加
+    $('#submit').click(function(){
+        var title     = this_title.overflow?'--overflow--':this_title.getContent();                    //题干
+        if (title == ''){
+            alert('请填写内容！');
+            return false;
+        }else if (title == '--overflow--'){
+            alert('内容字数超限！');
+            return false;
+        }
+        $('#form').submit();
+    });
+
+    //重置
+    $('#reset').click(function(){
+        this_title.setContent('');
+        });
+
+</script>
+  </body>
+</html>

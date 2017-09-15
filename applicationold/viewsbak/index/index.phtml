@@ -1,0 +1,211 @@
+﻿{@include 'header.phtml'@}
+<!--banner-->
+<div class="banner" id="banner">
+	<div class="inner"></div>
+</div>
+<!--/banner-->
+
+<!--我们的服务-->
+<div class="service" id="service">
+	<div class="inner">
+    	<!--title-->
+        <div class="title">我们的服务</div>
+        <!--/title-->
+        <div class="serviceList">
+        	<dl>
+            	<dd>
+                	<div class="serviceImg m1"><a href="/case#case1"><img src="images/bgIco.png"></a></div>
+                	<h2>音乐感知</h2>
+                    <p>以音乐的聆听和感知为主体内容，伴随唱歌，游戏，体态律动为主的节奏性练习，使用基础的奥尔夫乐器和音乐结合互动，建立良好的乐感和音乐兴趣。</p>
+                </dd>
+                <dd>
+                	<div class="serviceImg m2"><a href="/case#case2"><img src="images/bgIco.png"></a></div>
+                	<h2>节奏王国</h2>
+                    <p>国内外一线配音演员及资深导演联袂合作，完美诠释影片角色个性，用极具感染力的声音塑造经典。</p>
+                </dd>
+                <dd>
+                	<div class="serviceImg m3"><a href="/case#case3"><img src="images/bgIco.png"></a></div>
+                	<h2>音乐教室</h2>
+                    <p>国际专业教材结合乐开音乐开发的音乐启蒙教材，以及公司历年的经典作品曲谱，以最专业的服务结合高艺术度的音乐传承每一位用户</p>
+                </dd>
+                <dd>
+                	<div class="serviceImg m4"><a href="/case#case4"><img src="images/bgIco.png"></a></div>
+                	<h2>音效设计</h2>
+                    <p>媲美真实立体的游戏音频设计，创意非凡的拟音空间，由资深游戏音效设计师领衔创造，我们的职责就是永远保持最佳的创造力。</p>
+                </dd>
+                <dd class="last">
+                	<div class="serviceImg m5"> <a href="/case#case5"><img src="images/bgIco.png"></a></div>
+                	<h2>游戏音乐</h2>
+                    <p>具有艺术高度的游戏配乐作品，用心定制每一首作品，匠心独特，带给你大气非凡的听觉感受。</p>
+                </dd>
+            </dl>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+</div>
+<!--/我们的服务-->
+
+<!--banner-->
+<div class="banner02">
+	<div class="inner"></div>
+</div>
+<!--/banner-->
+
+<!--我们的作品-->
+<div class="works" id="works">
+	<div class="inner">
+    	<!--title-->
+        <div class="title">我们的作品</div>
+        <!--/title-->
+
+        <div id="content-music-player">
+            <div id="music-player">
+                <div id="music-player-header">
+                    <h2 class="inon"></h2>
+                    <h3></h3>
+                </div>
+                <div style="width: 0px; height: 0px;" id="jquery_jplayer_1" class="jp-jplayer"><img style="width: 0px; height: 0px; display: none;" id="jp_poster_0"><audio src="8082_files/%2520--%2520Opening.mp3" preload="metadata" id="jp_audio_0"></audio></div>
+
+                <div id="jp_container_1" class="jp-audio" width="400" height="64">
+                    <div class="jp-type-playlist">
+                        <div class="jp-gui jp-interface">
+                            <div class="jp-controls">
+                                <a href="javascript:;" class="jp-previous" tabindex="1">previous</a>
+                                <a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                                <a style="display: none;" href="javascript:;" class="jp-pause" tabindex="1">pause</a>
+                                <a href="javascript:;" class="jp-next" tabindex="1">next</a>
+                            </div>
+                            <div class="jp-progress-container">
+                                <div class="jp-progress">
+                                    <div style="width: 100%;" class="jp-seek-bar">
+                                        <div style="overflow: hidden; width: 0%;" class="jp-play-bar"><span class="jp-play-bar-knob"></span></div>
+                                    </div>
+                                </div>
+                                <div class="jp-current-time">00:00</div>
+                            </div>
+                            <div class="jp-volume-controls">
+                                <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                                <a style="display: none;" href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                                <div class="jp-volume-bar">
+                                    <div style="width: 80%;" class="jp-volume-bar-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-playlist">
+                            <ul style="display: block;">
+                            {@foreach from=$caseList item=item @}
+                                <li class="jp-playlist-current">
+                                    <div>
+                                        <a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a>
+                                        <a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="1">{@$item.name@}<span></span></a>
+                                     </div>
+                                </li>
+                            {@/foreach@}
+                           </ul>
+                        </div>
+                        <span class="shadow"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+			var playermp3s = [
+				{@foreach from=$caseList item=item @}
+					{title: '{@$item.name@}<span></span>',
+					mp3: '{@$item.src@}'},
+				{@/foreach@}
+				];
+			</script>
+
+        <div class="btnMore txtC"><a href="/case">查看更多案例</a></div>
+
+    </div>
+</div>
+<!--/我们的作品-->
+
+<!--banner-->
+<div class="banner03">
+	<div class="inner"></div>
+</div>
+<!--/banner-->
+
+<!--新闻动态-->
+<div class="newsIndex" id="newsIndex">
+	<div class="inner">
+    	<!--title-->
+        <div class="title">新闻动态</div>
+        <!--/title-->
+        <div class="newsIndexList">
+        	<dl>
+        	{@foreach from=$newsList item=news@}
+            	<dd>
+                	<h3>{@$news.title|truncate:15:"...":true@}</h3>
+                    <p>{@$news.description@}</p>
+                    <p class="margin_top10"><a class="btnMoreNor" href="/news/detail/id/{@$news.id@}">查看详情</a></p>
+                </dd>
+            {@/foreach@}
+            </dl>
+        	<div class="clearboth"></div>
+        </div>
+
+        <div class="btnMore txtC"><a href="/news">查看更多新闻</a></div>
+
+    </div>
+</div>
+<!--/新闻动态-->
+
+<!--关于我们-->
+<div class="banner04" id="aboutUs">
+	<div class="inner">
+    	<!--title-->
+        <div class="title">关于我们</div>
+        <!--/title-->
+        <div class="aboutUs">乐开音乐是专注于ACG音乐创作及教育的专业音乐公司，公司于2011年成立于上海，团队成员均为业内资深音乐制作人及音乐教师，公司音乐团队为诸多客户及中国亿万儿童创作数首经典的主题歌曲及动漫游戏音乐，团队专注于经典音乐的创作及传承，希望以最专业的服务结合具有艺术高度的音乐感动每一位用户！</div>
+    </div>
+</div>
+<!--/关于我们-->
+
+<!--联系我们-->
+<div class="contact" id="contact">
+	<div class="inner">
+    	<!--title-->
+        <div class="title">联系我们</div>
+        <!--/title-->
+        <div class="contactList txtC">
+        	<p>{@$config.name@}</p>
+           	<p>网址：<a href="http://{@$config.host@}">http://{@$config.host@}</a></p>
+            <p>地址：{@$config.address@}</p>
+            <p>邮箱：<a href="mailTo:{@$config.email@}">{@$config.email@}</a></p>
+            <p>手机：{@$config.mobile@}</p>
+            <p>传真：{@$config.fax@}</p>
+            <p>Q Q： {@$config.qq@}</p>
+        </div>
+
+    </div>
+</div>
+<!--/联系我们-->
+
+
+<!--copy start-->
+<div class="footer">
+    <div class="inner">
+       <p class="txtC">24小时热线电话：13917605543</p>
+       <p class="txtC">乐开音乐All Rights Reserved.</p>
+	   <p class="txtC"><a href="/job">加入我们</a></p>
+    </div>
+</div>
+<!--copy end-->
+<!--[if lte IE 6]>
+<script src="js/iepng.js" type="text/javascript"></script>
+<script>
+DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+<script type="text/javascript">
+$(function() {
+	//顶部导航 选中状态
+	$(".menu dd.m1 a").addClass("current")
+})
+</script>
+{@include 'footer.phtml'@}

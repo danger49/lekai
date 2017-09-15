@@ -102,6 +102,7 @@
     </style>
 </head>
 <body>
+    <!--head start-->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid" style="background-color:#4a86c3">
             <div class="container">
@@ -131,6 +132,7 @@
         </div>
         <div class="header-wrapper">&nbsp;</div>
     </nav>
+    <!--head end-->
     <!--轮播 start-->
     <div style="position:relative;">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -385,6 +387,77 @@
                     </video>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="works" id="works">
+        <div class="inner">
+            <!--title-->
+            <div class="title">我们的作品</div>
+            <!--/title-->
+
+            <div id="content-music-player">
+                <div id="music-player">
+                    <div id="music-player-header">
+                        <h2 class="inon"></h2>
+                        <h3></h3>
+                    </div>
+                    <div style="width: 0px; height: 0px;" id="jquery_jplayer_1" class="jp-jplayer"><img style="width: 0px; height: 0px; display: none;" id="jp_poster_0"><audio src="8082_files/%2520--%2520Opening.mp3" preload="metadata" id="jp_audio_0"></audio></div>
+
+                    <div id="jp_container_1" class="jp-audio" width="400" height="64">
+                        <div class="jp-type-playlist">
+                            <div class="jp-gui jp-interface">
+                                <div class="jp-controls">
+                                    <a href="javascript:;" class="jp-previous" tabindex="1">previous</a>
+                                    <a href="javascript:;" class="jp-play" tabindex="1">play</a>
+                                    <a style="display: none;" href="javascript:;" class="jp-pause" tabindex="1">pause</a>
+                                    <a href="javascript:;" class="jp-next" tabindex="1">next</a>
+                                </div>
+                                <div class="jp-progress-container">
+                                    <div class="jp-progress">
+                                        <div style="width: 100%;" class="jp-seek-bar">
+                                            <div style="overflow: hidden; width: 0%;" class="jp-play-bar"><span class="jp-play-bar-knob"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-current-time">00:00</div>
+                                </div>
+                                <div class="jp-volume-controls">
+                                    <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                                    <a style="display: none;" href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                                    <div class="jp-volume-bar">
+                                        <div style="width: 80%;" class="jp-volume-bar-value"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jp-playlist">
+                                <ul style="display: block;">
+                                    {@foreach from=$caseList item=item @}
+                                    <li class="jp-playlist-current">
+                                        <div>
+                                            <a style="display: none;" href="javascript:;" class="jp-playlist-item-remove">×</a>
+                                            <a href="javascript:;" class="jp-playlist-item jp-playlist-current" tabindex="1">{@$item.name@}<span></span></a>
+                                        </div>
+                                    </li>
+                                    {@/foreach@}
+                                </ul>
+                            </div>
+                            <span class="shadow"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                var playermp3s = [
+                    {@foreach from=$caseList item=item @}
+                {title: '{@$item.name@}<span></span>',
+                    mp3: '{@$item.src@}'},
+                {@/foreach@}
+                ];
+            </script>
+
+            <div class="btnMore txtC"><a href="/case">查看更多案例</a></div>
+
         </div>
     </div>
 {@include 'footer.phtml'@}
