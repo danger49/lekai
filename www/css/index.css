@@ -1,0 +1,1056 @@
+/**
+
+Theme Name: lekai
+
+Author: Chen Wei Gang
+
+*/
+
+
+
+
+
+/*---------------------------*/
+
+/*--------Css Reset--------*/
+
+/*---------------------------*/
+
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,a {margin:0;padding:0;}
+
+img {border-style:none;}
+
+ul,li {list-style-type:none;}
+
+form {margin:0;padding:0;}
+
+body {font-size:12px;font-family:"宋体",Arial, Verdana;color:#313030;line-height:18px; background:#fff;}
+
+input {font-size:12px;color:#333;line-height: 17px;}
+
+select {border: 1px solid #744219;font-size: 12px;color: #333;}
+
+.clearboth {line-height:0px;height:0px;clear:both;*display:inline; font-size:0px;}
+
+button{margin:0;padding:0;border:0; cursor:pointer}
+
+i,em{ font-style:normal}
+
+h1 {font-size: 30px; color: #666;}
+
+h2 {font-size: 24px; color: #666;}
+
+h3 {font-size: 22px; color: #666;}
+
+h4 {font-size: 18px; color: #666;}
+
+h5 {font-size: 16px; color: #666;}
+
+h6 {font-size: 14px; color: #666;}
+
+a:visited,a:link {color:#717171;text-decoration:none;border-style:none;}
+
+a:hover {color:#a8421c;text-decoration:underline;border-style:none;}
+
+.margin_auto {margin-right:auto;margin-left:auto;}
+
+.margin_top10 {margin-top:10px;}
+
+.margin_top5 {margin-top:5px;}
+
+.txtR {text-align: right;}
+
+.txtL { text-align: left;}
+
+.txtC { text-align: center;}
+
+.fl{float: left;}
+
+.fr{float: right;}
+
+.fontSong { font-family:"宋体"}
+
+.fontYah { font-family:"微软雅黑"}
+
+.line {height:1px;line-height:0;font-size:0;border-bottom:1px solid #e3e3e3; n margin:20px 0}
+
+/* new clearfix */
+
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+
+* html .clearfix{ zoom: 1;}/*IE6*/
+
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.gray { color:#ccc}
+
+
+
+.menuFloat {position:fixed;_position:absolute;z-index:500;bottom:auto;top:0;}
+
+
+
+/*---------------------------*/
+
+/*--------General----------*/
+
+/*---------------------------*/
+
+.inner{width:1000px;margin:0 auto;}
+
+.logo a,.menu dd a {background:url(../images/main.png) no-repeat}
+
+
+
+.header{ width:100%;height:99px;background:#242629;}
+
+.header .inner{background:#242629; position:relative; z-index:20}
+
+    .logo { width:179px; height:99px;}
+
+    .logo a { height:99px; display:block; text-indent:-9999px; outline:none; background-position:0 -198px}
+
+    .menu { height:99px;}
+
+    .menu dd { width:109px; text-align:center; float:left; }
+
+    .menu dd a { display:block; height:99px;outline:none; text-indent:-9999px;}
+
+    .menu dd.m1 a { background-position:0 0}
+
+    .menu dd.m2 a { background-position:-109px 0} 
+
+    .menu dd.m3 a { background-position:-218px 0} 
+
+    .menu dd.m4 a { background-position:-327px 0} 
+
+    .menu dd.m5 a { background-position:-436px 0} 
+
+    .menu dd.m6 a { background-position:-545px 0} 
+
+    
+
+    .menu dd.m1 a:hover,.menu dd.m1 a.current { background-position:0 -99px}
+
+    .menu dd.m2 a:hover,.menu dd.m2 a.current { background-position:-109px -99px} 
+
+    .menu dd.m3 a:hover,.menu dd.m3 a.current { background-position:-218px -99px} 
+
+    .menu dd.m4 a:hover,.menu dd.m4 a.current { background-position:-327px -99px} 
+
+    .menu dd.m5 a:hover,.menu dd.m5 a.current { background-position:-436px -99px} 
+
+    .menu dd.m6 a:hover,.menu dd.m6 a.current { background-position:-545px -99px} 
+
+        
+
+/*---------------------------*/
+
+/*---------news-------*/ 
+
+/*---------------------------*/
+
+.news { width:422px; height:310px; background:#ebebeb;margin-top:9px; padding:0 10px;}
+
+.newslist li {line-height: 29px;height: 28px;position: relative; font-size:14px;*line-height: 24px;*height: 24px;}
+
+.newslist li.hot {background:#fff; height:62px; margin-bottom:10px}
+
+.newslist li.hot div { height:30px;}
+
+.newslist li a{ float:left}
+
+.newslist li span { float:right}
+
+.newslist li a:link,.newslist li a:visited { color:#333;}
+
+.newslist li a:hover { color:#ff9b00;text-decoration:none}
+
+.newslist li.hot a:link,.newslist li.hot a:visited { color:#333; font:normal 18px/26px "微软雅黑"}
+
+.newslist li.hot a:hover { color:#ff6600;text-decoration:none}
+
+
+
+.newslistInner li { border-bottom:1px dashed #e0e0e0; padding:5px}
+
+
+
+.newslist li a.red:link,.newslist li a.red:visited { color:#d01a14;}
+
+.newslist li a.red:hover { color:#d01a14;}
+
+.newslist li a.redStrong:link,.newslist li a.redStrong:visited { color:#d01a14; font-weight:bold;}
+
+.newslist li a.redStrong:hover { color:#d01a14; font-weight:bold;}
+
+
+
+.newslist li a.yellow:link,.newslist li a.yellow:visited { color:#ff9b00;}
+
+.newslist li a.yellow:hover { color:#ff9b00;}
+
+.newslist li a.yellowStrong:link,.newslist li a.yellowStrong:visited { color:#ff9b00; font-weight:bold;}
+
+.newslist li a.yellowStrong:hover { color:#ff9b00; font-weight:bold;}
+
+
+
+.newslist li a.blue:link,.newslist li a.blue:visited { color:#00F;}
+
+.newslist li a.blue:hover { color:#00F;}
+
+.newslist li a.blueStrong:link,.newslist li a.blueStrong:visited { color:#00F; font-weight:bold;}
+
+.newslist li a.blueStrong:hover { color:#00F; font-weight:bold;}
+
+
+
+.newsNav { height:48px; padding-top:13px; padding-left:1px}
+
+.newsNav li { width:110px; height:48px; text-align:center; border:1px solid #e0e0e0; position:relative; float:left; margin:0 0 0 -1px; border-bottom:none}
+
+.newsNav li a {width:114px;height:48px; font:18px/48px "微软雅黑"; position:absolute; top:0; left:0}
+
+.newsNav li a.current {background:url(../images/newsNavCur.png) no-repeat; color:#ff9e00; top:0; left:0}
+
+.newsNav li a:hover { text-decoration:none}
+
+
+
+.innerNewsTit {text-align:center; height:50px; line-height:50px; padding:15px 0; margin-bottom:30px;font-size:14px; font-weight:bold;border-bottom:1px solid #e7e7e7}
+
+.publishTime {text-align:center; border-bottom:1px dashed #e0e0e0; height:30px; line-height:30px; color:#999}
+
+
+
+.innerCon { width:600px; padding:20px 0; line-height:24px}
+
+.innerCon img { max-width:600px; border:2px solid #999}
+
+.innerCon p { margin-bottom:10px}
+
+.newsInnerShow { padding:100px 0 20px 0}
+
+
+
+.shadowScroll {width:290px;height:310px;position:relative; padding:9px 0 0 0;}
+
+.shadowScroll_photo {width: 290px;height: 310px; position:absolute;overflow:hidden}
+
+.shadowScroll_photo img{ width:290px; height:310px;}
+
+.shadowScroll_photo a.ch_adG {position: absolute}
+
+.shadowScroll_control {width:88%;height:23px;text-align:right; padding:5px 0 0 0; position:absolute; right:15px; bottom:0; z-index:20;}
+
+.shadowScroll_control a { margin:0 4px 0 0; width:13px; height:13px;display:inline-block; text-indent:-9999px; background:#fff;opacity: 0.3; -moz-opacity: 0.3; filter: alpha(opacity=30)}
+
+.shadowScroll_control a.on,.shadowScroll_control a.current{opacity: 0.8; -moz-opacity: 0.8; filter: alpha(opacity=80)}
+
+.shadowScroll_over {width:100%;height:30px; position:absolute; display:none; left:0; bottom:0; z-index:15; background:#000;opacity: 0.6; -moz-opacity: 0.6; filter: alpha(opacity=60)}
+
+.shadowScroll_control_left a,.shadowScroll_control_right a { width:43px; height:43px; text-indent:-9999px; outline:none; display:none;position:absolute; top:100px;z-index:30; }
+
+
+
+#ScrollSpe { width:722px; padding-left:10px}
+
+#ScrollSpe .shadowScroll_photo {width: 722px;}
+
+#ScrollSpe .shadowScroll_photo img{ width:722px;}
+
+
+
+/*---------------------------*/ 
+
+/*---------banner---------*/
+
+/*---------------------------*/
+
+.banner { width:100%; background:url(../images/a1.jpg) no-repeat center top}
+
+.banner .inner { height:530px;background:url(../images/a1.jpg) no-repeat center top}
+
+.banner02 { width:100%; background:url(../images/a2.jpg) no-repeat center top}
+
+.banner02 .inner { height:272px;background:url(../images/a2.jpg) no-repeat center top}
+
+.banner03 { width:100%; background:url(../images/a3.jpg) no-repeat center top}
+
+.banner03 .inner { height:371px;background:url(../images/a3.jpg) no-repeat center top}
+
+.banner04 { width:100%; background:url(../images/a4.jpg) no-repeat center top}
+
+.banner04 .inner { height:370px;background:url(../images/a4.jpg) no-repeat center top}
+
+.banner04 .title{ color:#eae7e7; padding:50px 0}
+
+
+
+/*---------------------------*/ 
+
+/*---------service---------*/
+
+/*---------------------------*/
+
+.service { width:100%;}
+
+.title {font:bold 35px/47px "微软雅黑";color:#2f2f2f;letter-spacing: 0.3em; text-align:center; background:url(../images/line.png) no-repeat center bottom; padding:80px 0 40px}
+
+.serviceList { padding:70px 0 0 20px; min-height:360px;_height:360px;}
+
+.serviceList dd { width:121px; height:auto; float:left; margin-right:88px; display:inline;color:#82858a; font-family:"微软雅黑"; line-height:22px}
+
+.serviceList dd.last { margin:0}
+
+.serviceList dd h2{ height:50px;font: normal 24px/50px "微软雅黑"; color:#000; text-align:center; padding:15px 0}
+
+.serviceList dd .serviceImg { height:121px;}
+
+.serviceList dd .serviceImg a { height:100px; display:block; text-align:center; }
+
+.serviceList dd .serviceImg a img {position: relative;width:121px;}
+
+.serviceList dd .m1{ background:url(../images/ico1.png) no-repeat 27px 22px}
+
+.serviceList dd .m2{ background:url(../images/ico2.png) no-repeat 27px 22px}
+
+.serviceList dd .m3{ background:url(../images/ico3.png) no-repeat 27px 22px}
+
+.serviceList dd .m4{ background:url(../images/ico4.png) no-repeat 27px 22px}
+
+.serviceList dd .m5{ background:url(../images/ico5.png) no-repeat 27px 22px}
+
+
+
+/*---------------------------*/ 
+
+/*---------works---------*/
+
+/*---------------------------*/
+
+.works,.newsIndex,.contact { width:100%; padding-bottom:90px}
+
+.btnMore { height:50px;}
+
+.btnMore a { display:inline-block; width:175px; height:45px; line-height:45px; text-align:center; border:3px solid #717171; font-weight:bold; position:relative; overflow:hidden}
+
+.btnMore a:link,.btnMore a:visited { color:#717171}
+
+.btnMore a:hover { color:#c01439; border:4px solid #c01439; text-decoration:none; margin-top:1px}
+
+.btnMoreNor:link,.btnMoreNor:visited{ border:1px solid #717171; padding:3px 10px; display:inline-block}
+
+.btnMoreNor:hover { color:#c01439; border-color:#c01439; text-decoration:none}
+
+
+
+/*---------------------------*/ 
+
+/*---------newsIndex---------*/
+
+/*---------------------------*/
+
+.newsIndexList { padding:70px 0}
+
+.newsIndexList dd { width:350px; height:auto; margin:0 75px; float:left; display:inline; font-family:"微软雅黑"; line-height:22px; color:#555656}
+
+.newsIndexList dd h3{ height:30px; margin-bottom:10px; color:#2c2e2e; font-size:22px; font-weight:normal; border-bottom:1px solid #b4b4b4}
+
+
+
+/*---------------------------*/ 
+
+/*---------contact---------*/
+
+/*---------------------------*/
+
+.contactList { padding:50px 0; font-family:"微软雅黑"; line-height:26px; color:#717171; font-size:16px}
+
+
+
+/*---------------------------*/ 
+
+/*---------aboutUs---------*/
+
+/*---------------------------*/
+
+.aboutUs { padding:30px 50px 0 50px; font-family:"微软雅黑"; line-height:30px; color:#dad8d8; font-size:16px}
+
+
+
+/*---------------------------*/ 
+
+/*---------case---------*/
+
+/*---------------------------*/
+
+.case { width:100%; background:#f3f3f3; padding:15px 0}
+
+.caseCon { width:999px; margin:0 auto; background:url(../images/bgVideoR.png) repeat-y}
+
+.caseTop { min-height:400px;_height:400px;background:url(../images/bgVideoT.png) no-repeat left top}
+
+.caseBot {height:12px;background:url(../images/bgVideoB1.png) no-repeat left bottom}
+
+.caseTop h2 {font:normal 24px/47px "微软雅黑"; color:#313030; height:48px; text-indent:25px}
+
+.casePlay { border-top:1px solid #e3e3e3; overflow:hidden}
+
+.video { width:492px;padding:13px 0 0 16px}
+
+.caseInfro { width:455px; padding:15px 25px 0 0;font-family:"微软雅黑";}
+
+.caseInfro_a p{ margin-bottom:10px}
+
+.caseInfro_a .caseInfro_aTit {font-size: 30px;margin-right: 20px; line-height:36px}
+
+.caseInfro_a .caseInfro_aSty {font-size: 18px;}
+
+.caseInfro_b {height: 250px;margin: 12px 0;overflow-y: scroll;padding-bottom: 20px;font-family:"微软雅黑";}
+
+.caseInfro_b dd { line-height:26px;}
+
+.caseInfro_bTit{ font-size:20px}
+
+.caseInfro_bSubTit{ font-size:16px}
+
+
+
+#case2,#case4 { background:#fff}
+
+
+
+/*---------------------------*/ 
+
+/*---------content---------*/
+
+/*---------------------------*/
+
+.mainContent{ width:100%;background:#f3f3f3; padding:35px 0;}
+
+.content { width:769px; margin:0 auto; background:url(../images/bgConR.png) repeat-y}
+
+.contentTop { min-height:600px;_height:600px;background:url(../images/bgConT.png) no-repeat left top}
+
+.contentBot {height:19px;background:url(../images/bgConB.png) no-repeat left bottom}
+
+
+
+.pageTit { height:47px;font:normal 24px/47px "微软雅黑";text-indent:22px; position:relative; }
+
+.conBase { padding:0 40px;line-height:28px;}
+
+.conBase p { margin-bottom:15px}
+
+
+
+.upLoad td { height:50px;}
+
+.upLoad td a{ margin:0 6px;}
+
+.upLoad span { color:#F00;}
+
+.upLoad select { width:268px; height:22px; line-height:22px; padding:1px 2px; border:1px solid #999; margin:0 6px;}
+
+.upLoad input { width:260px; height:28px; line-height:28px; padding:0 5px; border:1px solid #999; margin:0 6px;}
+
+.upLoad input.spe { width:80px; height:28px;}
+
+.upLoad textarea {width:480px; height:105px; padding:3px; border:1px solid #999; margin:0 6px; font-size:12px}
+
+
+
+/*---------------------------*/ 
+
+/*---------轮播---------*/
+
+/*---------------------------*/
+
+.marqueeScroll { width:953px; margin:0 auto;padding:20px 0 0 42px;position:relative; background:#fff}
+
+.marqueeScroll_con {width:920px;height:160px;overflow:hidden }/*显示宽度 是li的倍数*/
+
+.marqueeScroll_con ul { margin-left:0;}
+
+.marqueeScroll_con ul li { width:115px;height:160px;float:left; position:relative; color:#929292}
+.marqueeScroll_con ul li img {
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px; 
+    border-radius:15px; 
+}
+
+.marqueeScroll_con ul li p { padding-right:9px}
+
+.marqueeScroll_con ul li a { display:block}
+
+.marqueeScroll_con ul li a.current i { width:106px; height:106px; position:absolute; top:0; left:-1px; background:url(../images/bgVideo.png) no-repeat}
+
+.marqueeScroll_control_left a,.marqueeScroll_control_right a {width:15px; height:32px; background:url(../images/main.png) no-repeat -184px -198px; text-indent:-9999px; outline:none;position:absolute; top:60px; z-index:30;}
+
+.marqueeScroll_control_left a { left:5px;}
+
+.marqueeScroll_control_right a { background-position:-184px -230px;right:5px;}
+
+
+
+
+
+/*---------------------------*/ 
+
+/*---------翻页---------*/
+
+/*---------------------------*/
+
+.page_turn {color: #8c8d92; padding: 15px 0; font-size:12px; font-weight:bold}
+
+.page_turn a{ background:#d2d2d2;color: #575757;margin: 0 2px;padding: 4px 9px;}
+
+.page_turn a:link,.page_turn a:visited {color: #fff;}
+
+.page_turn a:hover {color:#fff;}
+
+.page_turn a:hover,.page_turn a.current {color:#fff;background:#999; text-decoration:none}
+
+
+
+/*---------------------------*/ 
+
+/*---------footer---------*/
+
+/*---------------------------*/ 
+
+.footer {background: #1f2224;width: 100%; }
+
+.footer .inner {background: #1f2224;height:110px;padding-top:20px; color:#8f9191; font:16px/22px "微软雅黑"}
+
+.footer .inner p { margin-top:12px}
+
+
+
+/*---------------------------*/ 
+
+/*---------audio player---------*/
+
+/*---------------------------*/ 
+
+/*
+
+.ie7 #content-music-player,
+
+.ie8 #content-music-player {
+
+    padding: 10px 0;
+
+}
+
+
+
+#music-player {
+
+    height: 470px;
+
+    margin: 50px auto;
+
+    overflow: hidden;
+
+    padding: 10px;
+
+    width: 620px;
+
+}
+
+
+
+.ie7 #music-player,
+
+.ie8 #music-player {
+
+    margin: 20px auto;
+
+}
+
+
+
+#music-player-header {
+
+    background: #272727;
+
+    border-radius: 10px 10px 0 0;
+
+    box-shadow: 0 0 5px rgba(78,17,0,0.7);      
+
+    height: 60px;
+
+    padding: 0 15px;
+
+}
+
+
+
+#music-player-header h2 {
+
+    float: left;
+
+    font-size: 2em;
+
+    margin-top: 14px;
+
+}
+
+
+
+#music-player-header h3 {
+
+    color: #fff;
+
+    float: right;
+
+    font-size: 0.75em;
+
+    margin-top: 38px;
+
+}
+
+
+
+.jp-type-playlist {
+
+    background: #f6f6f6;
+
+    border-radius: 0 0 10px 10px;
+
+    box-shadow: 0 0 5px rgba(78,17,0,0.7);      
+
+    height: 410px;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+
+
+.jp-interface {
+
+    height: 92px;
+
+    position: relative;
+
+}
+
+
+
+.jp-previous,
+
+.jp-next {
+
+    background: #fff url(http://www.8082audio.com/img/player-prev.png) no-repeat center center;
+
+    border: 1px solid #555a5f;
+
+    border-radius: 17px;
+
+    display: block;
+
+    height: 34px;
+
+    left: 24px;
+
+    position: absolute;
+
+    text-indent: -10000px;
+
+    top: 24px;
+
+    width: 34px;
+
+}
+
+
+
+.jp-next {
+
+    background-image: url(http://www.8082audio.com/img/player-next.png);
+
+    left: 124px;
+
+}
+
+
+
+.jp-play,
+
+.jp-pause {
+
+    background: #fff url(http://www.8082audio.com/img/player-play.png) no-repeat 22px center;
+
+    border: 1px solid #555a5f;
+
+    border-radius: 28px;
+
+    display: block;
+
+    height: 56px;
+
+    left: 63px;
+
+    position: absolute;
+
+    text-indent: -10000px;
+
+    top: 14px;
+
+    width: 56px;
+
+    z-index: 10;
+
+}
+
+
+
+.jp-pause {
+
+    background-image: url(http://www.8082audio.com/img/player-pause.png);
+
+    z-index: 9;
+
+}
+
+
+
+.jp-previous:hover,
+
+.jp-next:hover,
+
+.jp-play:hover,
+
+.jp-pause:hover {
+
+    border: 1px solid #999;
+
+}
+
+
+
+.jp-stop {
+
+    display: none;
+
+}
+
+
+
+.jp-progress {
+
+    border-radius: 3px;
+
+    box-shadow: inset 2px 2px 6px rgba(100,100,100,0.7);
+
+    float: left;
+
+    height: 6px;
+
+    margin: 16px 0;
+
+    overflow: visible !important;
+
+    width: 230px;
+
+}
+
+
+
+.jp-play-bar {
+
+    background: #b0330e;
+
+    border-radius: 3px; 
+
+    height: 6px;
+
+    overflow: visible !important;
+
+    position: relative;
+
+}
+
+
+
+.jp-play-bar-knob {
+
+    background: #000;
+
+    border-radius: 8px;
+
+    height: 16px;
+
+    position: absolute;
+
+    right: -12px;
+
+    top: -5px;
+
+    width: 16px;
+
+}
+
+
+
+.jp-progress-container {
+
+    background: #fff;
+
+    border: 1px solid #cacaca;
+
+    border-radius: 10px;
+
+    height: 40px;
+
+    left: 176px;
+
+    overflow: hidden;
+
+    padding: 0 12px;
+
+    position: absolute;
+
+    top: 20px;
+
+}
+
+
+
+.jp-current-time {
+
+    float: left;
+
+    font-size: 0.75em;
+
+    height: 38px;
+
+    line-height: 38px;
+
+    margin: 0 0 0 10px;
+
+    vertical-align: middle;
+
+}
+
+
+
+.jp-volume-controls {
+
+    background: #fff;
+
+    border: 1px solid #cacaca;
+
+    border-radius: 10px;
+
+    height: 40px;
+
+    left: 495px;
+
+    overflow: hidden;
+
+    position: absolute;
+
+    top: 20px;  
+
+    width: 104px;
+
+}
+
+
+
+.jp-mute,
+
+.jp-unmute {
+
+    background: transparent url(http://www.8082audio.com/img/player-volume.png) no-repeat;
+
+    height: 19px;
+
+    left: 11px;
+
+    position: absolute;
+
+    text-indent: -10000px;  
+
+    top: 10px;
+
+    width: 20px;
+
+    z-index: 10;
+
+}
+
+
+
+.jp-unmute {
+
+    background-image: url(http://www.8082audio.com/img/player-volume-mute.png);
+
+    z-index: 9;
+
+}
+
+
+
+.jp-volume-bar {
+
+    background: transparent url(http://www.8082audio.com/img/player-volume-slider-bg.png) no-repeat;
+
+    height: 20px;
+
+    left: 37px;
+
+    position: absolute;
+
+    top: 10px;
+
+    width: 49px;
+
+}
+
+
+
+.jp-volume-bar-value {
+
+    background: transparent url(http://www.8082audio.com/img/player-volume-slider.png) no-repeat;   
+
+    height: 20px;
+
+    width: 49px;
+
+}
+
+
+
+
+
+.jp-playlist {
+
+    height: 270px;
+
+    margin: 0 0 0 35px;
+
+    overflow: scroll;
+
+    padding-right: 20px;
+
+    position: relative;
+
+    width: 550px;
+
+}
+
+
+
+.ie .jp-playlist {
+
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+
+}
+
+
+
+.jp-type-playlist .shadow {
+
+    background: transparent url(http://www.8082audio.com/img/player-shadow.png);
+
+    bottom: 47px;
+
+    display: block;
+
+    height: 27px;
+
+    left: 40px;
+
+    position: absolute;
+
+    width: 541px;
+
+}
+
+
+
+.jp-playlist li {
+
+    margin-bottom: 6px;
+
+}
+
+
+
+.jp-playlist li a.jp-playlist-item {
+
+    background: #686868 url(http://www.8082audio.com/img/playlist-play.png) no-repeat right center;
+
+    border-radius: 10px;
+
+    color: #fff;
+
+    display: block;
+
+    font-weight: bold;
+
+    height: 44px;
+
+    line-height: 44px;
+
+    padding: 0 16px;
+
+    text-decoration: none;
+
+}
+
+
+
+.jp-playlist li a.jp-playlist-item:hover {
+
+    background-color: #8f4813;
+
+}
+
+
+
+.jp-playlist li a.jp-playlist-current {
+
+    background: #8f4813 url(http://www.8082audio.com/img/playlist-playing.png) no-repeat right center;  
+
+}
+
+
+
+.jp-playlist li a.jp-playlist-item span {
+
+    display: inline-block;
+
+    float: right;
+
+    font-weight: normal;
+
+    margin-right: 115px;
+
+    width: 200px;
+
+}
+
+
+
+.jp-playlist li a.jp-playlist-item span strong {
+
+    font-weight: bold;
+
+}
+
+
+
+*/
