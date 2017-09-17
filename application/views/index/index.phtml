@@ -91,6 +91,10 @@
             background-color: #19afda;
         }
 
+        .red {
+            background-color: red;
+        }
+
         .description {
             padding: 10px;
             border-radius: 10px;
@@ -100,6 +104,19 @@
             line-height: 180%;
             text-align: left;
         }
+
+        .dl-horizontal a{
+            color: white;
+            line-height: 200%;
+        }
+        .dl-horizontal dd{
+            color: white;
+            line-height: 200%;
+        }
+        .dl-horizontal img{
+            width: 120px;
+            padding:10px;
+        }
     </style>
 </head>
 <body>
@@ -108,7 +125,7 @@
         <div class="container-fluid" style="background-color:#4a86c3">
             <div class="container">
                 <div class="navbar-header navbar-left">
-                    <span style="font-size: xx-large;color: white;line-height: 150%">LK Music Kingdom</span>
+                    <span style="font-size: xx-large;color: white;line-height: 150%">乐开儿童音乐王国</span>
                 </div>
                 <div class="dropdown navbar-btn navbar-right">
                     <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">导航
@@ -116,16 +133,16 @@
                     </button>
                     <ul class="dropdown-menu tab-titles constrain" role="menu" aria-labelledby="dropdownMenu" style="background-color:#4a86c3">
                         <li role="presentation" style="color: white">
-                            <a role="menuitem" tabindex="-1" href="#">乐开音乐</a>
+                            <a role="menuitem" tabindex="-1" href="/case">乐开作品</a>
                         </li>
                         <li role="presentation" style="color: white">
-                            <a role="menuitem" tabindex="-1" href="#">乐开师训</a>
+                            <a role="menuitem" tabindex="-1" href="/news">乐开文化</a>
                         </li>
                         <li role="presentation" style="color: white">
                             <a role="menuitem" tabindex="-1" href="#">乐开风采</a>
                         </li>
                         <li role="presentation" style="color: white">
-                            <a role="menuitem" tabindex="-1" href="#">关于乐开</a>
+                            <a role="menuitem" tabindex="-1" href="/job">加入乐开</a>
                         </li>
                     </ul>
                 </div>
@@ -181,9 +198,7 @@
         <div class="container">
             <ul id="myTab" class="nav nav-pills col-md-offset-4">
                 <li class="active">
-                    <a href="#music" data-toggle="tab">
-                        乐开音乐
-                    </a>
+                    <a href="#music" data-toggle="tab">乐开音乐</a>
                 </li>
                 <li>
                     <a href="#teacher" data-toggle="tab">乐开师训</a>
@@ -199,53 +214,52 @@
                 <div class="tab-pane fade in active" id="music">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-3 padding" style="text-align:center">
-                                <div><img src="img/a11.png" height="180px"></div>
-                                <h3 style="color: white;line-height: 200%">感知</h3>
+                            <div class="col-md-3 padding" style="text-align:center;width:20%;">
+                                <div><img src="img/a11.png" height="100px"></div>
+                                <h3 style="color: white;line-height: 200%">音乐启蒙</h3>
                                 <div class="yellow description">
-                                    内容体系：节奏由简入难，逐渐深入，多元而趣味化的练习加强孩子对音乐节奏的理解，让孩子在轻松愉悦的环境中无形掌握音乐的律动；
+                                    以音乐的聆听和赏析为主体内容，伴随唱歌，游戏，体态律动为主的节奏性练习，建立良好的基础乐感和音乐兴趣；
                                 </div>
                             </div>
-                            <div class="col-md-3 padding" style="text-align:center">
-                                <div><img src="img/a21.png" height="180px"></div>
-                                <h3 style="color: white;line-height: 200%">同化</h3>
+                            <div class="col-md-3 padding" style="text-align:center;width:20%;">
+                                <div><img src="img/a21.png" height="100px"></div>
+                                <h3 style="color: white;line-height: 200%">节奏王国</h3>
                                 <div class="orange description">
-                                    多元融合：结合达尔克罗兹,柯达伊,奥尔夫等多元教学法，融合中国的本土文化元素,有梯度的儿童音高教学练习，充分适应孩子不同年龄段的视唱特征；
+                                    以节奏为教学主题，伴随基础音高，游戏，体态律动，声势为主的节奏性教学，掌握节拍，识谱，并用基础奥尔夫乐器作课堂节奏练习；
                                 </div>
                             </div>
-                            <div class="col-md-3 padding" style="text-align:center">
-                                <div><img src="img/a31.png" height="180px"></div>
-                                <h3 style="color: white;line-height: 200%">模仿</h3>
+                            <div class="col-md-3 padding" style="text-align:center;width:20%;">
+                                <div><img src="img/a31.png" height="100px"></div>
+                                <h3 style="color: white;line-height: 200%">乐音王国</h3>
                                 <div class="green description">
-                                    精品视听：由国内外音乐早教专家和一线专业儿童音乐创作团队历时数年，精心打磨创作编配，带给属于孩子们真正有童真和气质的儿童音乐；
+                                    音高视唱练习为主题，引入复合型节奏练习及切分，让孩子建立在自然音阶基础上保持稳定的演唱状态，具备基础的合唱能力，同时提升有难度的奥尔夫乐器演奏教学；
                                 </div>
                             </div>
-                            <div class="col-md-3 padding" style="text-align:center">
-                                <div><img src="img/a41.png" height="180px"></div>
-                                <h3 style="color: white;line-height: 200%">创造</h3>
-                                <div class="blue description">专业趣味：融合趣味性的动画节奏及音高练习，配合奥尔夫乐器玩法，真正提升孩子的音乐基础能力及听想能力；
+                            <div class="col-md-3 padding" style="text-align:center;width:20%;">
+                                <div><img src="img/a41.png" height="100px"></div>
+                                <h3 style="color: white;line-height: 200%">乐队王国</h3>
+                                <div class="blue description">以节奏和音高教学为基础，奥尔夫乐器演奏及视唱为教学主体，建立良好的奥尔夫乐器演奏及配合能力；
+                                </div>
+                            </div>
+                            <div class="col-md-3 padding" style="text-align:center;width:20%;">
+                                <div><img src="img/ico5.png" height="100px"></div>
+                                <h3 style="color: white;line-height: 200%">音乐之旅</h3>
+                                <div class="red description">复杂的节奏练习及音高视唱，了解各种音乐风格特征，以及团队性的节奏练习，让孩子拥有一流的音乐素养及听想能力；
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="teacher">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>
-                                <ul>
-                                    <li>节奏由简入难，逐渐深入，多元练习，趣味融入，快乐地玩，开心地学</li>
-                                    <li>结合达尔克罗兹,柯达伊,奥尔夫等多元教学法，融合中国的本土文化元素,有梯度的儿童音高教学练习，充分适应孩子不同年龄段的视唱特征</li>
-                                    <li>由国内外音乐早教专家和一线专业儿童音乐创作团队历时数年，精心打磨创作编配，带给属于孩子们真正有童真和气质的儿童音乐</li>
-                                    <li>融合趣味性的动画节奏及音高练习，配合奥尔夫乐器玩法，真正提升孩子的音乐基础能力及听想能力</li>
-                                </ul>
-                                </p>
-                            </div>
-                            <div class="col-md-6">
-                                <p>乐开音乐专注于0-12岁儿童音乐教育，致力于提升全体国民儿童的音乐素养，带给孩子最具时代审美和气质的儿童音乐，让亿万儿童享有更具艺术高度的音乐教育服务。
-                                </p>
-                            </div>
+                    <div class="container" style="padding:50px 0 50px 0">
+                        <div class="row" style="text-align:center;font-size:50px;color:white;padding:10px">
+                        专注 - 极致 - 用心 - 严谨
+                        </div>
+                        <div class="row" style="text-align:center;font-size:30px;color:white;padding:10px">
+                        带给孩子最动听的儿童音乐
+                        </div>
+                        <div class="row" style="text-align:center;font-size:30px;color:white;padding:10px">
+                        玩的是<span style="font-size:50px">快乐</span>，学的是<span style="font-size:50px">知识</span>
                         </div>
                     </div>
                 </div>
@@ -272,16 +286,16 @@
                 <div class="tab-pane fade" id="about">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 padding">
+                            <div class="col-md-6 padding" style="font-color:white">
                                 <dl class="dl-horizontal">
-                                    <dd><img src="./img/qr.png" style="width:150px;height:120px"></dd>
-                                    <dd><h3>{@$config.name@}</h3></dd>
-                                    <dt>网址：</dt><dd><a href="http://{@$config.host@}">http://{@$config.host@}</a></dd>
-                                    <dt>地址：</dt><dd>{@$config.address@}</dd>
-                                    <dt>邮箱：</dt><dd><a href="mailTo:{@$config.email@}">{@$config.email@}</a></dd>
-                                    <dt>手机：</dt><dd>{@$config.mobile@}</dd>
-                                    <dt>传真：</dt><dd>{@$config.fax@}</dd>
-                                    <dt>Q Q： </dt><dd>{@$config.qq@}</dd>
+                                    <dd><img src="./img/qr.png" style="width:120px;height:120px"></dd>
+                                    <dt><a>名称：</a></dt><dd>{@$config.name@}</dd>
+                                    <dt><a>网址：</a></dt><dd>http://{@$config.host@}</dd>
+                                    <dt><a>地址：</a></dt><dd>{@$config.address@}</dd>
+                                    <dt><a>邮箱：</a></dt><dd>{@$config.email@}</dd>
+                                    <dt><a>手机：</a></dt><dd>{@$config.mobile@}</dd>
+                                    <dt><a>传真：</a></dt><dd>{@$config.fax@}</dd>
+                                    <dt><a>Q Q： </a></dt><dd>{@$config.qq@}</dd>
                                 </dl>
                             </div>
                             <div class="col-md-6 padding">
@@ -298,7 +312,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 padding">
-                <h2>音乐欣赏</h2>
+                <h2>乐开作品</h2>
                 <div id="content-music-player">
                     <div id="music-player">
                         <div id="music-player-header">
@@ -360,7 +374,7 @@
                 </script>
             </div>
             <div class="col-md-6 padding">
-                <h2>音乐知识</h2>
+                <h2>乐开文化</h2>
                 {@foreach from=$newsList item=news@}
                     <span style="padding:20px 0;color:orange;line-height:200%;font-size:20px">{@$news.add_time@}</span><br/>
                     <h3>{@$news.title|truncate:30:"...":true@}</h3>
@@ -376,7 +390,7 @@
         <div class="container text-center" style="color: white;padding: 15px">乐开儿童音乐王国全国加盟，即将开启，敬请期待</div>
     </div>
     <div style="background-color: #EEEEEE">
-        <div class="container" style="padding: 20px">©2017 {@$config.name@}版权所有 沪ICP备15002392号-1 24小时热线电话：{@$config.mobile@}<span style="float:right"><a href="/job">加入我们</a></span></div>
+        <div class="container" style="padding: 20px">©2017 {@$config.name@}版权所有 沪ICP备15002392号 24小时热线电话：{@$config.mobile@}<span style="float:right"><a href="/job">加入我们</a></span></div>
     </div>
     <div class="modal fade" id="videoModal" tabindex="-1">
         <div class="modal-dialog" role="document" style="width: auto;">
