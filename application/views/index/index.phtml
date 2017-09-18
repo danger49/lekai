@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <title>乐开儿童音乐王国|中国最权威的儿童音乐教育品牌</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./jplayer/index/jplayer.css" media="all"/>
@@ -281,6 +282,9 @@
                                 <img src="./img/content/b4.png" width="350px"/>
                             </div>
                         </div>
+                        <div  style="text-align: center;margin:20px;">
+                            <a href="/photo"><span style="padding:10px 20px;background-color:#205f8a;color:white;width:100px;border-radius: 5px;">更多图片</span></a>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="about">
@@ -364,6 +368,10 @@
                     </div>
                 </div>
 
+                <div style="text-align: center;margin:20px;">
+                    <a href="/case"><span style="padding:10px 20px;background-color:#205f8a;color:white;width:100px;border-radius: 5px;">更多作品</span></a>
+                </div>
+
                 <script type="text/javascript">
                     var playermp3s = [
                     {@foreach from=$caseList item=item @}
@@ -381,7 +389,9 @@
                     <p style="margin:5px 0;line-height:150%;">{@$news.description@}<span><a href="/news/detail/id/{@$news.id@}">>>查看详情</a></span></p>
                     <hr/>
                 {@/foreach@}
-                <a href="/news/"><span style="padding:10px 20px;background-color:#205f8a;color:white;width:100px">更多知识</span></a>
+                <div style="text-align: center;margin:20px;">
+                <a href="/news"><span style="padding:10px 20px;background-color:#205f8a;color:white;width:100px;border-radius: 5px;">更多知识</span></a>
+                </div>
             </div>
         </div>
     </div>

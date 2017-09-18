@@ -1,54 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-		<title>乐开音乐</title>
-			<meta name="description" content="乐开音乐是专注于游戏动漫音乐音效外包制作的专业音乐团队，公司成立于2011年，团队成员均为业内资深音乐制作人，为诸多网游、单机游戏、Webgame、ios、SNS及其动画片、电影等创作音乐、音效和主题歌，并与诸多一线游戏、动漫公司保持深度合作。"/>
-			<meta name="keywords" content="游戏音乐视频外包"/>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-			<link href="http://www.lkmusic.cn/css/index.css" rel="stylesheet" type="text/css" media="all"/>
-		</head>
-<body>
-
-<!--header start-->
-<div class="header">
-    <div class="inner">
-    	<!--logo-->
-    	<div class="logo fl"><a href="/index" title="乐开音乐网">logo</a></div>
-
-        <!--menu-->
-        <div class="menu fr">
-        	<dl>
-            	<dd class="m1"><a href="/#banner">首页</a></dd>
-                <dd class="m2"><a href="/#service">服务</a></dd>
-                <dd class="m3"><a href="/case">作品</a></dd>
-                <dd class="m4"><a href="/news">动态</a></dd>
-                <dd class="m5"><a href="/#aboutUs">关于</a></dd>
-                <dd class="m6"><a href="/#contact">联系</a></dd>
-            </dl>
-        </div>
-        <!--/menu-->
-
-        <div class="clearboth"></div>
-    </div>
-</div>
-<!--header end-->
+{@include 'header.phtml'@}
 
 <!--mainContent start-->
 <div class="mainContent">
     <!--内容-->
     <div class="content">
-    	<div class="contentTop">
-        <!--标题-->
-        <div class="pageTit">加入我们</div>
-        <!--/标题-->
-        <div class="conBase">
-			{@foreach from=$list item=job@}
-                <p><h5>{@$job.title@}</h5><hr/>{@$job.content@}</p>
-            {@/foreach@}
+        <div class="contentTop">
+            <!--标题-->
+            <div class="pageTit">加入我们</div>
+            <!--/标题-->
+            <div class="conBase">
+                {@foreach from=$list item=job@}
+                <p><h5>{@$job.title@}</h5>
+                <hr/>
+                {@$job.content@}</p>
+                {@/foreach@}
 
+            </div>
         </div>
-    	</div>
         <div class="clearboth"></div>
         <div class="contentBot"></div>
     </div>
@@ -60,17 +28,19 @@
 <!--copy start-->
 <div class="footer">
     <div class="inner">
-       <p class="txtC">24小时热线电话：13917605543</p>
-       <p class="txtC">乐开音乐All Rights Reserved.</p>
-	   <p class="txtC"><a href="/job">招聘</a></p>
+        <p class="txtC">24小时热线电话：13917605543</p>
+        <p class="txtC">乐开音乐All Rights Reserved.</p>
+        <p class="txtC"><a href="/job">招聘</a></p>
     </div>
 </div>
 <!--copy end-->
 
+<script type="text/javascript">
+    $(function() {
+        //顶部导航 选中状态
+        $(".menu dd.m4 a").addClass("current")
+    })
+</script>
 
-
-		<script type="text/javascript" src="http://www.lkmusic.cn/js/jquery1.4.2.min.js"></script>
-		<script type="text/javascript" src="http://www.lkmusic.cn/js/jquery.base.js"></script>
-</body>
-</html>
+{@include 'footer.phtml'@}
 
