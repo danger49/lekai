@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://www.lkmusic.cn/favicon.ico">
+
+    <title>乐开音乐后台管理中心</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://www.lkmusic.cn/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://www.lkmusic.cn/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <script src="http://www.lkmusic.cn/js/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="http://www.lkmusic.cn/js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" src="http://www.lkmusic.cn/js/ueditor/ueditor.all.js"></script>
+    <script type="text/javascript" src="http://www.lkmusic.cn/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <link href="http://www.lkmusic.cn/js/ueditor/themes/default/css/ueditor.css" type="text/css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">乐开音乐后台管理中心</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/admin/index/main">首页</a></li>
+            <li><a href="/admin/case/index">案例中心</a></li>
+            <li><a href="/admin/news/index">新闻中心</a></li>
+            <li><a href="/admin/job/index">招聘中心</a></li>
+            <li><a href="/admin/index/admin">管理帐号</a></li>
+            <li><a href="/admin/index/out">退出</a></li>
+          </ul>
+          <!--
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+           -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/admin/index/main">首页 <span class="sr-only">(current)</span></a></li>
+            <li><a href="/admin/case/index">案例中心</a></li>
+            <li><a href="/admin/news/index">新闻中心</a></li>
+            <li><a href="/admin/job/index">招聘中心</a></li>
+            <li><a href="/admin/index/admin">管理帐号</a></li>
+            <li><a href="/admin/index/out">退出</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">新增图片</h2>
+          <div class="row placeholders">
+          	<h4><a href="/admin/photo/index">返回</a></h4>
+          </div>
+          <div class="table-responsive">
+          <form id='form' enctype="multipart/form-data" method="post" action="/admin/photo/save">
+            <table class="table table-striped">
+              <tr>
+              <td>图片名称</td>
+              <td><input name="title" type="text"/></td>
+              </tr>
+              <tr>
+              <tr>
+              <td>图片描述</td>
+              <td><textarea name="content"></textarea></td>
+              </tr>
+              <tr>
+                <td>资源</td>
+                <td><input name="img[]" type="file"/></td>
+              </tr>
+              <tr>
+              <td colspan=2><input id='submit' type="submit" value="提交"/> <input id='reset' type="reset" value="重置"/></td>
+              </tr>
+            </table>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://www.lkmusic.cn/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://www.lkmusic.cn/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>
