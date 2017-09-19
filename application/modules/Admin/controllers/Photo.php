@@ -54,7 +54,7 @@ class PhotoController extends BControllerModel {
         $id = $_GET['id'];
         $photoModel = PhotoModel::getInstance();
         $photo = $photoModel->getPhoto($id);
-        $this->_view->assign('job', $photo);
+        $this->_view->assign('photo', $photo);
         return true;
     }
 
