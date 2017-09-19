@@ -15,5 +15,11 @@ class BControllerModel extends Yaf_Controller_Abstract {
 		//设置Controller的模板位置为模块目录下的views文件夹
 		$this->setViewpath(APPLICATION_PATH . '/application/modules/' . $this->getModuleName() . '/views');
 		$views = $this->initView();
+        $configs = array();
+        $list = ConfigModel::getInstance()->getAllConfig();
+        foreach ($list as $config) {
+            $configs[$config['key']] = $config['value'];
+        }
+        $this->_view->assign('config', $configs);
 	}
 }

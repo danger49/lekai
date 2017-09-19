@@ -25,15 +25,15 @@ class FControllerModel extends Yaf_Controller_Abstract {
         $this->_view->assign('meta_description', $configs['description']);
         $this->_view->assign('meta_keywords', $configs['keywords']);
         $this->css = array(
-            'index' => 'http://www.lkmusic.cn/css/index.css',
+            'index' => 'http://' . $configs['host'] . '/css/index.css',
         );
         $this->js = array(
-            'http://www.lkmusic.cn/js/jquery1.4.2.min.js',
-            'http://www.lkmusic.cn/js/jquery-1.js',
-            'http://www.lkmusic.cn/js/jquery-migrate.js',
-            'http://www.lkmusic.cn/js/jplayer.js',
-            'http://www.lkmusic.cn/js/jquery_003.js',
-            'http://www.lkmusic.cn/js/index.js',
+            'http://' . $configs['host'] . '/js/jquery1.4.2.min.js',
+            'http://' . $configs['host'] . '/js/jquery-1.js',
+            'http://' . $configs['host'] . '/js/jquery-migrate.js',
+            'http://' . $configs['host'] . '/js/jplayer.js',
+            'http://' . $configs['host'] . '/js/jquery_003.js',
+            'http://' . $configs['host'] . '/js/index.js',
         );
         $this->_view->assign('css_files', $this->css);
         $this->_view->assign('js_files', $this->js);
