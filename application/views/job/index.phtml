@@ -3,37 +3,24 @@
 <!--mainContent start-->
 <div class="mainContent">
     <!--内容-->
-    <div class="content">
-        <div class="contentTop">
+    <div class="container content">
             <!--标题-->
             <div class="pageTit">加入我们</div>
             <!--/标题-->
             <div class="conBase">
                 {@foreach from=$list item=job@}
-                <p><h5>{@$job.title@}</h5>
+                <h4>{@$job.title@}</h4>
                 <hr/>
-                {@$job.content@}</p>
+                <p>{@$job.content@}</p>
                 {@/foreach@}
 
             </div>
         </div>
         <div class="clearboth"></div>
-        <div class="contentBot"></div>
     </div>
     <!--/内容-->
 </div>
 <!--mainContent end-->
-
-
-<!--copy start-->
-<div class="footer">
-    <div class="inner">
-        <p class="txtC">24小时热线电话：13917605543</p>
-        <p class="txtC">乐开音乐All Rights Reserved.</p>
-        <p class="txtC"><a href="/job">招聘</a></p>
-    </div>
-</div>
-<!--copy end-->
 
 <script type="text/javascript">
     $(function() {

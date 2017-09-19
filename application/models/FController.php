@@ -25,10 +25,11 @@ class FControllerModel extends Yaf_Controller_Abstract {
         $this->_view->assign('meta_description', $configs['description']);
         $this->_view->assign('meta_keywords', $configs['keywords']);
         $this->css = array(
-            'index' => 'http://' . $configs['host'] . '/css/index.css',
+            'index' => 'http://' . $configs['host'] . '/css/newstyle.css',
+            'bootstrap' => 'http://' . $configs['host'] . '/css/bootstrap.css',
         );
         $this->js = array(
-            'http://' . $configs['host'] . '/js/jquery1.4.2.min.js',
+//            'http://' . $configs['host'] . '/js/jquery1.4.2.min.js',
             'http://' . $configs['host'] . '/js/jquery-1.js',
             'http://' . $configs['host'] . '/js/jquery-migrate.js',
             'http://' . $configs['host'] . '/js/jplayer.js',

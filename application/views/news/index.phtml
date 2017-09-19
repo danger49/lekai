@@ -3,47 +3,34 @@
 <!--mainContent start-->
 <div class="mainContent">
     <!--内容-->
-    <div class="content">
-    	<div class="contentTop">
+    <div class="container content">
         <!--标题-->
         <div class="pageTit">新闻中心</div>
         <!--/标题-->
-        <div class="conBase">
-            <!--新闻列表-->
-            <ul class="newslist newslistInner">
-            {@foreach from=$list item=news@}
-                <li><a href="/news/detail/id/{@$news.id@}" class="{@$news.class@}">【新闻】{@$news.title@}</a><span>{@$news.add_time@}</span></li>
-            {@/foreach@}
-            </ul>
-
-            <div class="clearboth"></div>
-
-            <!--翻页-->
-            <div class="page_turn page_turnSpe txtC">
-                {@$pagebar@}
+        <!--新闻列表-->
+        {@foreach from=$list item=news@}
+        <div class="row newsbottom">
+            <div class="col-md-10">
+                <a href="/news/detail/id/{@$news.id@}" class="{@$news.class@}">【新闻】{@$news.title@}</a>
             </div>
-            <!--/翻页-->
+            <div class="col-md-2 fr">
+                <span>{@$news.add_time@}</span>
+            </div>
         </div>
+        {@/foreach@}
+
+        <!--翻页-->
+        <div class="page_turn page_turnSpe txtC">
+            {@$pagebar@}
+        </div>
+        <!--/翻页-->
 
         <!--/新闻列表-->
-    	</div>
         <div class="clearboth"></div>
-        <div class="contentBot"></div>
     </div>
     <!--/内容-->
 </div>
 <!--mainContent end-->
-
-
-<!--copy start-->
-<div class="footer">
-    <div class="inner">
-       <p class="txtC">24小时热线电话：{@$config.mobile@}</p>
-       <p class="txtC">乐开音乐All Rights Reserved.</p>
-        <p class="txtC"><a href="/job">招聘</a></p>
-    </div>
-</div>
-<!--copy end-->
 
 <script type="text/javascript">
 $(function() {

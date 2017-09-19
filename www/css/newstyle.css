@@ -1,0 +1,265 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,a {margin:0;padding:0;}
+
+img {border-style:none;}
+ul,li {list-style-type:none;}
+form {margin:0;padding:0;}
+body {font-size:14px;font-family:Microsoft Yahei,"Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;color:#313030;line-height:150%; background:#fff;}
+input {font-size:12px;color:#333;line-height: 17px;}
+select {border: 1px solid #744219;font-size: 12px;color: #333;}
+.clearboth {line-height:0px;height:0px;clear:both;*display:inline; font-size:0px;}
+
+button{margin:0;padding:0;border:0; cursor:pointer}
+i,em{ font-style:normal}
+
+h1 {font-size: 30px; color: #666;}
+h2 {font-size: 24px; color: #666;}
+h3 {font-size: 22px; color: #666;}
+h4 {font-size: 18px; color: #666;}
+h5 {font-size: 16px; color: #666;}
+h6 {font-size: 14px; color: #666;}
+
+a:visited,a:link {color:#717171;text-decoration:none;border-style:none;}
+a:hover {color:#4a86c3;text-decoration:underline;border-style:none;}
+
+.margin_auto {margin-right:auto;margin-left:auto;}
+.margin_top10 {margin-top:10px;}
+.margin_top5 {margin-top:5px;}
+
+.txtR {text-align: right;}
+.txtL { text-align: left;}
+.txtC { text-align: center;}
+
+.fl{float: left;}
+.fr{float: right;}
+
+.line {height:1px;line-height:0;font-size:0;border-bottom:1px solid #e3e3e3; n margin:20px 0}
+
+/* new clearfix */
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+* html .clearfix{ zoom: 1;}/*IE6*/
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+.gray { color:#ccc}
+
+/*--------General----------*/
+
+.header-wrapper {
+    background-color: #4a86c3;
+}
+.header-wrapper:after {
+    display: block;
+    margin-top: -8px;
+    height: 24px;
+    width: 100%;
+    content: " ";
+    background: #4a86c3 url(../img/tear_bg.png) top center repeat-x;
+    position: absolute;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.video {
+    position: absolute;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 5;
+    top: 40%;
+    left: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.play-video-btn {
+    height: 70px;
+    width: 70px;
+    text-align: center;
+}
+
+.play-video-btn img {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.play-video-btn:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    margin-top: -40px;
+    background: transparent url("../img/dotted-line.png") repeat-x;
+    content: '';
+}
+
+.nav li a {
+    font-size: 16px;
+}
+
+.nav li.active a {
+    background-color: #84bade;
+}
+
+.nav li.active a:hover {
+    background-color: #84bade;
+}
+
+.nav li.active a:focus {
+    background-color: #84bade;
+}
+
+.nav li.active a:after {
+    background-color: #84bade;
+}
+
+.nav li a:hover {
+    background-color: #F60;
+    color: #fff
+}
+
+.header-bar{
+    color:#fff;
+}
+.header-bar :hover{
+    color:#fff;
+    background-color: #F60;
+}
+
+.padding {
+    padding: 20px 10px 0 10px;
+}
+
+.paddingrow {
+    padding: 20px 0 20px 0;
+}
+
+.description {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    color: white;
+    line-height: 150%;
+    text-align: left;
+}
+
+.dl-horizontal a{
+    color: white;
+    line-height: 200%;
+}
+.dl-horizontal dd{
+    color: white;
+    line-height: 200%;
+}
+.dl-horizontal img{
+    width: 120px;
+    padding:10px;
+}
+
+/*---图片页面---*/
+
+#masonry
+{
+    padding: 0;
+    min-height: 450px;
+    margin: 0 auto;
+}
+#masonry .thumbnail
+{
+    width: 330px;
+    margin: 20px;
+    padding: 0;
+    border-width: 1px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+#masonry .thumbnail .imgs
+{
+    padding: 10px;
+}
+#masonry .thumbnail .imgs img
+{
+    margin-bottom: 5px;
+}
+#masonry .thumbnail .caption
+{
+    background-color: #fff;
+    padding-top: 0;
+    font-size: 13px;
+}
+#masonry .thumbnail .caption .title
+{
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: left;
+}
+#masonry .thumbnail .caption .author
+{
+    font-size: 11px;
+    text-align: right;
+}
+
+/*---------newsIndex---------*/
+.newsIndexList { padding:70px 0}
+.newsIndexList dd { width:350px; height:auto; margin:0 75px; float:left; display:inline; line-height:22px; color:#555656}
+.newsIndexList dd h3{ height:30px; margin-bottom:10px; color:#2c2e2e; font-size:22px; font-weight:normal; border-bottom:1px solid #b4b4b4}
+
+/*---------news-------*/
+.newsbottom { border-bottom:1px dashed #e0e0e0; padding:5px}
+
+ a.red:link,.newslist li a.red:visited { color:#d01a14;}
+ a.red:hover { color:#d01a14;}
+ a.redStrong:link,.newslist li a.redStrong:visited { color:#d01a14; font-weight:bold;}
+ a.redStrong:hover { color:#d01a14; font-weight:bold;}
+
+ a.yellow:link,.newslist li a.yellow:visited { color:#ff9b00;}
+ a.yellow:hover { color:#ff9b00;}
+ a.yellowStrong:link,.newslist li a.yellowStrong:visited { color:#ff9b00; font-weight:bold;}
+ a.yellowStrong:hover { color:#ff9b00; font-weight:bold;}
+
+ a.blue:link,.newslist li a.blue:visited { color:#00F;}
+ a.blue:hover { color:#00F;}
+ a.blueStrong:link,.newslist li a.blueStrong:visited { color:#00F; font-weight:bold;}
+ a.blueStrong:hover { color:#00F; font-weight:bold;}
+
+.newsNav { height:48px; padding-top:13px; padding-left:1px}
+.newsNav li { width:110px; height:48px; text-align:center; border:1px solid #e0e0e0; position:relative; float:left; margin:0 0 0 -1px; border-bottom:none}
+.newsNav li a {width:114px;height:48px; font:18px/48px "微软雅黑"; position:absolute; top:0; left:0}
+.newsNav li a.current {background:url(../images/newsNavCur.png) no-repeat; color:#ff9e00; top:0; left:0}
+.newsNav li a:hover { text-decoration:none}
+
+.innerNewsTit {text-align:center; line-height:200%;font-size:14px; font-weight:bold;border-bottom:1px solid #e7e7e7}
+.publishTime {text-align:center; border-bottom:1px dashed #e0e0e0; height:30px; line-height:30px; color:#999}
+.innerCon { width:600px; padding:20px 0; line-height:24px}
+.innerCon img { max-width:600px; border:2px solid #999}
+.innerCon p { margin-bottom:10px}
+.newsInnerShow { padding:100px 0 20px 0}
+
+.shadowScroll {width:290px;height:310px;position:relative; padding:9px 0 0 0;}
+.shadowScroll_photo {width: 290px;height: 310px; position:absolute;overflow:hidden}
+.shadowScroll_photo img{ width:290px; height:310px;}
+.shadowScroll_photo a.ch_adG {position: absolute}
+.shadowScroll_control {width:88%;height:23px;text-align:right; padding:5px 0 0 0; position:absolute; right:15px; bottom:0; z-index:20;}
+.shadowScroll_control a { margin:0 4px 0 0; width:13px; height:13px;display:inline-block; text-indent:-9999px; background:#fff;opacity: 0.3; -moz-opacity: 0.3; filter: alpha(opacity=30)}
+.shadowScroll_control a.on,.shadowScroll_control a.current{opacity: 0.8; -moz-opacity: 0.8; filter: alpha(opacity=80)}
+.shadowScroll_over {width:100%;height:30px; position:absolute; display:none; left:0; bottom:0; z-index:15; background:#000;opacity: 0.6; -moz-opacity: 0.6; filter: alpha(opacity=60)}
+.shadowScroll_control_left a,.shadowScroll_control_right a { width:43px; height:43px; text-indent:-9999px; outline:none; display:none;position:absolute; top:100px;z-index:30; }
+
+#ScrollSpe { width:722px; padding-left:10px}
+#ScrollSpe .shadowScroll_photo {width: 722px;}
+#ScrollSpe .shadowScroll_photo img{ width:722px;}
+
+/*---------翻页---------*/
+.page_turn {color: #8c8d92; padding: 15px 0; font-size:12px; font-weight:bold}
+.page_turn a{ background:#d2d2d2;color: #575757;margin: 0 2px;padding: 4px 9px;}
+.page_turn a:link,.page_turn a:visited {color: #fff;}
+.page_turn a:hover {color:#fff;}
+.page_turn a:hover,.page_turn a.current {color:#fff;background:#999; text-decoration:none}
+
+/*---------content---------*/
+.mainContent{ width:100%;background:#ffffff; padding:35px 0;}
+.content { width:80%; margin:50px auto;border-radius: 10px;border: 1px solid #eee}
+.pageTit { height:47px;font:normal 24px/47px "微软雅黑";text-indent:22px; position:relative; }
+.conBase { padding:0 40px;}
+.conBase p { margin-bottom:15px; line-height: 150%}

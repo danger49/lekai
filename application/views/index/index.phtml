@@ -6,150 +6,36 @@
     <title>乐开儿童音乐王国|中国最权威的儿童音乐教育品牌</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/newstyle.css">
     <link rel="stylesheet" href="./jplayer/index/jplayer.css" media="all"/>
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script src="./js/bootstrap.js"></script>
-    <style>
-        .video {
-            position: absolute;
-            height: auto;
-            margin: 0 auto;
-            text-align: center;
-            z-index: 5;
-            top: 40%;
-            left: 50%;
-            display: inline-block;
-            vertical-align: middle;
-        }
 
-        .play-video-btn {
-            height: 70px;
-            width: 70px;
-            text-align: center;
-        }
-
-        .play-video-btn img {
-            cursor: pointer;
-            position: relative;
-            z-index: 2;
-        }
-
-        .play-video-btn:after {
-            display: block;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            margin-top: -40px;
-            background: transparent url("./img/dotted-line.png") repeat-x;
-            content: '';
-        }
-
-        .nav li a {
-            background-color: #efefef;
-            font-size: 16px;
-        }
-
-        .nav li.active a {
-            background-color: #84bade;
-        }
-
-        .nav li.active a:hover {
-            background-color: #84bade;
-        }
-
-        .nav li.active a:focus {
-            background-color: #84bade;
-        }
-
-        .nav li.active a:after {
-            background-color: #84bade;
-        }
-
-        .nav li a:hover {
-            background-color: #F60;
-            color: #fff
-        }
-
-        .padding {
-            padding: 50px 10px 0 10px;
-        }
-
-        .yellow {
-            background-color: #d3dc4f;
-        }
-
-        .orange {
-            background-color: #f6b802;
-        }
-
-        .green {
-            background-color: #82c05d;
-        }
-
-        .blue {
-            background-color: #19afda;
-        }
-
-        .red {
-            background-color: red;
-        }
-
-        .description {
-            padding: 10px;
-            border-radius: 10px;
-            width: 100%;
-            height: auto;
-            color: white;
-            line-height: 150%;
-            text-align: left;
-        }
-
-        .dl-horizontal a{
-            color: white;
-            line-height: 200%;
-        }
-        .dl-horizontal dd{
-            color: white;
-            line-height: 200%;
-        }
-        .dl-horizontal img{
-            width: 120px;
-            padding:10px;
-        }
-    </style>
 </head>
 <body>
     <!--head start-->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid" style="background-color:#4a86c3">
-            <div class="container">
-                <div class="navbar-header navbar-left">
-                    <span style="font-size: xx-large;color: white;line-height: 150%">乐开儿童音乐王国</span>
-                </div>
-                <div class="dropdown navbar-btn navbar-right">
-                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">导航
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu tab-titles constrain" role="menu" aria-labelledby="dropdownMenu" style="background-color:#4a86c3">
-                        <li role="presentation" style="color: white;line-height:200%">
-                            <a role="menuitem" tabindex="-1" href="/case">乐开作品</a>
-                        </li>
-                        <li role="presentation" style="color: white;line-height:200%">
-                            <a role="menuitem" tabindex="-1" href="/news">乐开文化</a>
-                        </li>
-                        <li role="presentation" style="color: white;line-height:200%">
-                            <a role="menuitem" tabindex="-1" href="/photo">乐开风采</a>
-                        </li>
-                        <li role="presentation" style="color: white;line-height:200%">
-                            <a role="menuitem" tabindex="-1" href="/job">加入乐开</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" style="color: white;height: auto;font-size: x-large;line-height: 120%">乐开儿童音乐王国</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" style="color: white;">首页</a></li>
+                    <li><a href="/case" style="color: white;">乐开作品</a></li>
+                    <li><a href="/photo" style="color: white;">乐开风采</a></li>
+                    <li><a href="/news" style="color: white;">乐开文化</a></li>
+                    <li><a href="/job" style="color: white;">加入乐开</a></li>
+                </ul>
             </div>
         </div>
-        <div class="header-wrapper">&nbsp;</div>
+        <div class="header-wrapper"></div>
     </nav>
     <!--head end-->
     <!--轮播 start-->
@@ -213,7 +99,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="music">
-                    <div class="container">
+                    <div class="container paddingrow">
                         <div class="row">
                             <div class="col-md-2 col-md-offset-1 padding" style="text-align:center;">
                                 <div><img src="img/a11.png" height="100px"></div>
@@ -252,20 +138,20 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="teacher">
-                    <div class="container" style="padding:50px 0 50px 0">
-                        <div class="row" style="text-align:center;font-size:40px;color:white;padding:10px">
+                    <div class="container paddingrow">
+                        <div class="row" style="text-align:center;font-size:40px;color:white;padding:20px 0 20px 0">
                         专注 . 极致 . 用心 . 严谨
                         </div>
-                        <div class="row" style="text-align:center;font-size:30px;color:white;padding:10px">
+                        <div class="row" style="text-align:center;font-size:30px;color:white;padding:20px 0 20px 0">
                         带给孩子最动听的儿童音乐
                         </div>
-                        <div class="row" style="text-align:center;font-size:30px;color:white;padding:10px">
+                        <div class="row" style="text-align:center;font-size:30px;color:white;padding:20px 0 20px 0">
                         玩的是<span style="font-size:50px">快乐</span>，学的是<span style="font-size:50px">知识</span>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="activity">
-                    <div class="container">
+                    <div class="container paddingrow">
                         <div class="row">
                             <div class="col-md-6" style="text-align:right; padding:20px">
                                 <img src="./img/content/b1.png" width="350px; padding:20px"/>
@@ -288,7 +174,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="about">
-                    <div class="container">
+                    <div class="container paddingrow">
                         <div class="row">
                             <div class="col-md-6 padding" style="font-color:white">
                                 <dl class="dl-horizontal">
@@ -303,7 +189,7 @@
                                 </dl>
                             </div>
                             <div class="col-md-6 padding">
-                                <iframe src="map.html" width="100%" height="50%"></iframe>
+                                <iframe src="map.html" width="100%" height="60%"></iframe>
                             </div>
                         </div>
                     </div>
@@ -314,7 +200,7 @@
     <!--标签页 end-->
     <!--固定start-->
     <div class="container">
-        <div class="row">
+        <div class="row paddingrow">
             <div class="col-md-6 padding">
                 <h2>乐开作品</h2>
                 <div id="content-music-player">
@@ -385,7 +271,7 @@
                 <h2>乐开文化</h2>
                 {@foreach from=$newsList item=news@}
                     <div style="color:orange;line-height:200%;font-size:20px">{@$news.add_time@}</div>
-                    <h3>{@$news.title|truncate:30:"...":true@}</h3>
+                    <h4>{@$news.title|truncate:30:"...":true@}</h4>
                     <p style="margin:5px 0;line-height:150%;">{@$news.description@}<span><a href="/news/detail/id/{@$news.id@}">>>查看详情</a></span></p>
                     <hr/>
                 {@/foreach@}
@@ -397,12 +283,9 @@
     </div>
     <!--固定end-->
     <div style="background-color: orange">
-        <div class="container text-center" style="color: white;padding: 15px">
-        <h3>乐开儿童音乐王国全国加盟，即将开启，敬请期待</h3>
+        <div class="container text-center">
+        <h3 style="color: white;padding: 15px">乐开儿童音乐王国全国加盟，即将开启，敬请期待</h3>
         </div>
-    </div>
-    <div style="background-color: #EEEEEE">
-        <div class="container" style="padding: 20px">©2017 {@$config.name@}版权所有 沪ICP备15002392号 24小时热线电话：{@$config.mobile@}<span style="float:right"><a href="/job">加入我们</a></span></div>
     </div>
     <div class="modal fade" id="videoModal" tabindex="-1">
         <div class="modal-dialog" role="document" style="width: auto;">

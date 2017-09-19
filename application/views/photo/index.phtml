@@ -1,122 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>乐开音乐</title>
-    <meta name="description"
-          content="乐开音乐是专注于游戏动漫音乐音效外包制作的专业音乐团队，公司成立于2011年，团队成员均为业内资深音乐制作人，为诸多网游、单机游戏、Webgame、ios、SNS及其动画片、电影等创作音乐、音效和主题歌，并与诸多一线游戏、动漫公司保持深度合作。"/>
-    <meta name="keywords" content="游戏音乐视频外包"/>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link href="http://www.lkmusic.cn/css/index.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="./css/bootstrap.css" rel="stylesheet">
-    <style>
-        #masonry
-        {
-            padding: 0;
-            min-height: 450px;
-            margin: 0 auto;
-        }
-        #masonry .thumbnail
-        {
-            width: 330px;
-            margin: 20px;
-            padding: 0;
-            border-width: 1px;
-            -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-        }
-        #masonry .thumbnail .imgs
-        {
-            padding: 10px;
-        }
-        #masonry .thumbnail .imgs img
-        {
-            margin-bottom: 5px;
-        }
-        #masonry .thumbnail .caption
-        {
-            background-color: #fff;
-            padding-top: 0;
-            font-size: 13px;
-        }
-        #masonry .thumbnail .caption .title
-        {
-            font-size: 13px;
-            font-weight: bold;
-            margin: 5px 0;
-            text-align: left;
-        }
-        #masonry .thumbnail .caption .author
-        {
-            font-size: 11px;
-            text-align: right;
-        }
-
-    </style>
-</head>
-<body data-spy="scroll" data-target=".bs-docs-sidebar">
-
-<!--header start-->
-<div class="header">
-    <div class="inner">
-        <!--logo-->
-        <div class="logo fl"><a href="/index" title="乐开音乐网">logo</a></div>
-
-        <!--menu-->
-        <div class="menu fr">
-            <dl>
-                <dd class="m1"><a href="/#banner">首页</a></dd>
-                <dd class="m2"><a href="/#service">服务</a></dd>
-                <dd class="m3"><a href="/case">作品</a></dd>
-                <dd class="m4"><a href="/news">动态</a></dd>
-                <dd class="m5"><a href="/#aboutUs">关于</a></dd>
-                <dd class="m6"><a href="/#contact">联系</a></dd>
-            </dl>
-        </div>
-        <!--/menu-->
-
-        <div class="clearboth"></div>
-    </div>
-</div>
-<!--header end-->
+{@include 'header.phtml'@}
 
 <!--mainContent start-->
-<div class="container">
+<div class="mainContent">
+    <div class="container content">
+        <!--标题-->
+        <div class="pageTit">乐开风采</div>
+        <!--/标题-->
 
-    <div id="masonry" class="container-fluid">
-    </div>
-
-    <div id="masonry_ghost" class="hide">
-        {@foreach from=$list item=photo@}
-        <div class="thumbnail col-md-6">
-            <div class="imgs">
-                <input type="hidden" value="{@$photo.img@}">
-            </div>
-            <div class="caption">
-                <div class="title_1">{@$photo.title@}</div>
-                <div class="content_1">
-                    {@$photo.content@}
-                </div>
-                <div class="author">
-                    {@$photo.add_time@}
-                </div>
-            </div>
+        <div id="masonry" class="container-fluid">
         </div>
-        {@/foreach@}
-    </div>
 
+        <div id="masonry_ghost" class="hide">
+            {@foreach from=$list item=photo@}
+            <div class="thumbnail col-md-4">
+                <div class="imgs">
+                    <input type="hidden" value="{@$photo.img@}">
+                </div>
+                <div class="caption">
+                    <div class="title_1">{@$photo.title@}</div>
+                    <div class="content_1">
+                        {@$photo.content@}
+                    </div>
+                    <div class="author">
+                        {@$photo.add_time@}
+                    </div>
+                </div>
+            </div>
+            {@/foreach@}
+        </div>
+
+    </div>
 </div>
 <!--mainContent end-->
 
-<!--copy start-->
-<div class="footer">
-    <div class="inner">
-        <p class="txtC">24小时热线电话：13917605543</p>
-        <p class="txtC">乐开音乐All Rights Reserved.</p>
-        <p class="txtC"><a href="/job">招聘</a></p>
+<div style="background-color: #EEEEEE">
+    <div class="container" style="padding: 20px">
+        ©2017 {@$config.name@}版权所有 沪ICP备15002392号 24小时热线电话：{@$config.mobile@}
+        <span style="float:right">
+            <a href="/job">加入我们</a>
+        </span>
     </div>
 </div>
-<!--copy end-->
 
 <script src="./js/jquery-3.2.1.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
@@ -125,15 +49,15 @@
 <script src="./js/imagesloaded.pkgd.min.js"></script>
 
 <script>
-    $(function() {
+    $(function () {
 
         var ghostNode = $('#masonry_ghost').find('.thumbnail'), i, ghostIndexArray = [];
         var ghostCount = ghostNode.length;
-        for(i=0; i<ghostCount; i++){
+        for (i = 0; i < ghostCount; i++) {
             ghostIndexArray[i] = i;
         }
-        ghostIndexArray.sort(function(a, b) {
-            if(Math.random() > 0.5) {
+        ghostIndexArray.sort(function (a, b) {
+            if (Math.random() > 0.5) {
                 return a - b;
             } else {
                 return b - a;
@@ -146,8 +70,8 @@
 
         function getNewItems() {
             var newItemContainer = $('<div/>');
-            for(var i=0; i<6; i++) {
-                if(currentIndex < ghostCount) {
+            for (var i = 0; i < 6; i++) {
+                if (currentIndex < ghostCount) {
                     newItemContainer.append(ghostNode.get(ghostIndexArray[currentIndex]));
                     currentIndex++;
                 }
@@ -156,7 +80,7 @@
         }
 
         function processNewItems(items) {
-            items.each(function() {
+            items.each(function () {
                 var $this = $(this);
                 var imgsNode = $this.find('.imgs');
                 var title = $this.find('.title').text();
@@ -165,8 +89,8 @@
                 var lightboxName = 'lightbox_'; // + imgNames[0];
 
                 var imgNames = imgsNode.find('input[type=hidden]').val().split(',');
-                $.each(imgNames, function(index, item) {
-                    imgsNode.append('<a href="./img/'+ item +'" data-lightbox="'+ lightboxName +'" title="'+ title +'"><img src="./img/'+ item +'" /></a>');
+                $.each(imgNames, function (index, item) {
+                    imgsNode.append('<a href="./img/' + item + '" data-lightbox="' + lightboxName + '" title="' + title + '"><img src="./img/' + item + '" /></a>');
                 });
             });
         }
@@ -177,7 +101,7 @@
             masNode.append(items);
 
             imagesLoading = true;
-            items.imagesLoaded(function(){
+            items.imagesLoaded(function () {
                 imagesLoading = false;
                 items.css('opacity', 1);
                 masNode.masonry({
@@ -193,20 +117,20 @@
             masNode.append(items);
 
             imagesLoading = true;
-            items.imagesLoaded(function(){
+            items.imagesLoaded(function () {
                 imagesLoading = false;
                 items.css('opacity', 1);
-                masNode.masonry('appended',  items);
+                masNode.masonry('appended', items);
             });
         }
 
         initMasonry();
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
 
-            if($(document).height() - $(window).height() - $(document).scrollTop() < 10) {
+            if ($(document).height() - $(window).height() - $(document).scrollTop() < 10) {
 
-                if(!imagesLoading) {
+                if (!imagesLoading) {
                     appendToMasonry();
                 }
 
