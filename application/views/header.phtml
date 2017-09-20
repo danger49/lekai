@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="en">
 <head>
     {@if isset($meta_title) AND $meta_title@}
     <title>{@$meta_title|escape:'htmlall':'UTF-8'@}</title>
@@ -19,7 +18,7 @@
     <link href="{@$css_uri@}" rel="stylesheet" type="text/css" media="all"/>
     {@/foreach@}
     {@/if@}
-    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="http://{@$config.host@}/js/jquery-3.2.1.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 

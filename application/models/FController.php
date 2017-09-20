@@ -27,9 +27,10 @@ class FControllerModel extends Yaf_Controller_Abstract {
         $this->css = array(
             'index' => 'http://' . $configs['host'] . '/css/newstyle.css',
             'bootstrap' => 'http://' . $configs['host'] . '/css/bootstrap.css',
+            'player' => 'http://' . $configs['host'] . '/jplayer/case/jplayer.css',
         );
         $this->js = array(
-//            'http://' . $configs['host'] . '/js/jquery1.4.2.min.js',
+            'http://' . $configs['host'] . '/js/bootstrap.min.js',
             'http://' . $configs['host'] . '/js/jquery-1.js',
             'http://' . $configs['host'] . '/js/jquery-migrate.js',
             'http://' . $configs['host'] . '/js/jplayer.js',
