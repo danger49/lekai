@@ -266,7 +266,7 @@ a:hover {color:#4a86c3;text-decoration:underline;border-style:none;}
 
 /*---------轮播---------*/
 .marqueeScroll { width:100%; margin:0 auto;padding:20px 0 0 22px;position:relative; background:#fff}
-.marqueeScroll_con {width:90%;height:160px;overflow:hidden }/*显示宽度 是li的倍数*/
+.marqueeScroll_con {width:98%;height:160px;overflow:hidden }/*显示宽度 是li的倍数*/
 .marqueeScroll_con ul { margin-left:0;}
 .marqueeScroll_con ul li { width:115px;height:160px;float:left; position:relative; color:#929292}
 .marqueeScroll_con ul li img {
