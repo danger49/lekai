@@ -30,13 +30,17 @@ class CaseModel extends BaseModel{
         return $this->db->getRow($sql);
     }
 
-    public function getCaseList($type = null, $page = 1, $gap = 5, $order='`order` desc') {
-        $start = ($page - 1) * $gap;
+    public function getCaseList($type = null, $page = 1, $gap = 0, $order='`order` desc') {
         $where = '';
+        $limit = '';
+        if ($gap) {
+            $start = ($page - 1) * $gap;
+            $limit = ' limit ' . $start .',' . $gap;
+        }        
         if ($type) {
             $where = ' where `type` = ' . $type;
         }
-        $sql = 'select * from ' . $this->_table . $where . ' order by ' . $order . ' limit ' . $start .',' . $gap;
+        $sql = 'select * from ' . $this->_table . $where . ' order by ' . $order . $limit;
         return $this->db->executeS($sql);
     }
 
