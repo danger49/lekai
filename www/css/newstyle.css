@@ -41,13 +41,15 @@ a:hover {color:#222;text-decoration:underline;border-style:none;}
 .gray { color:#ccc}
 
 /*--------General----------*/
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
 
 .header-wrapper {
     background-color: #222;
 }
 .header-wrapper:after {
     display: block;
-    margin-top: -8px;
+    margin-top: -2px;
     height: 24px;
     width: 100%;
     content: " ";
@@ -103,7 +105,7 @@ a:hover {color:#222;text-decoration:underline;border-style:none;}
 }
 
 .nav li a:hover {
-    background-color: #a32b2d;
+    background-color: #ee8a18;
     color: #fff
 }
 
@@ -112,7 +114,7 @@ a:hover {color:#222;text-decoration:underline;border-style:none;}
 }
 .header-bar :hover{
     color:#fff;
-    background-color: #a32b2d;
+    background-color: #ee8a18;
 }
 
 .padding {
@@ -277,8 +279,8 @@ a:hover {color:#222;text-decoration:underline;border-style:none;}
 .page_turn a:hover,.page_turn a.current {color:#fff;background:#999; text-decoration:none}
 
 /*---------content---------*/
-.mainContent{ width:100%;background:#ffffff; padding:35px 0;}
-.content { width:80%; margin:50px auto;border-radius: 10px;border: 1px solid #eee}
+.mainContent{ width:100%;min-height:91%;background:#ffffff; padding:35px 0;}
+.content { width:80%;min-height:91%; margin:50px auto;border-radius: 10px;border: 1px solid #eee}
 .pageTit { height:47px;font:normal 24px/47px "微软雅黑";text-indent:22px; position:relative; }
 .conBase { padding:0 40px;}
 .conBase p { margin-bottom:15px; line-height: 150%}

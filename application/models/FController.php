@@ -29,13 +29,14 @@ class FControllerModel extends Yaf_Controller_Abstract {
             'bootstrap' => 'http://' . $configs['host'] . '/css/bootstrap.css',
             'player' => 'http://' . $configs['host'] . '/jplayer/case/jplayer.css',
         );
-        $this->js = array(
-            'http://' . $configs['host'] . '/js/bootstrap.min.js',
+        $this->js = array(            
             'http://' . $configs['host'] . '/js/jquery-1.js',
             'http://' . $configs['host'] . '/js/jquery-migrate.js',
             'http://' . $configs['host'] . '/js/jplayer.js',
             'http://' . $configs['host'] . '/js/jquery_003.js',
+            'http://' . $configs['host'] . '/js/jquery-3.2.1.min.js',
             'http://' . $configs['host'] . '/js/index.js',
+            'http://' . $configs['host'] . '/js/bootstrap.min.js',
         );
         $this->_view->assign('css_files', $this->css);
         $this->_view->assign('js_files', $this->js);

@@ -15,7 +15,7 @@
 <body>
     <!--head start-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid" style="background-color:#222">
+        <div class="container-fluid" style="background-color:#242629">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">导航</span>
@@ -23,7 +23,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/" style="color: white;height: auto;font-size: x-large;line-height: 120%">乐开儿童音乐王国</a>
+                <span style="display: block;padding:0 0 0 20px;">
+                    <img src="./img/logosmall.png" width="50px">
+                    <a class="" href="/" style="color: white;font-size: x-large;line-height:70px">乐开儿童音乐王国</a>
+                </span>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -52,19 +55,19 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="./img/carousel/slide3.jpg" alt="Third slide">
+                    <img src="{@$config.carousel_img1@}" alt="Third slide">
                 </div>
                 <div class="item">
-                    <img src="./img/carousel/slide1.jpg" alt="First slide">
+                    <img src="{@$config.carousel_img2@}" alt="First slide">
                 </div>
                 <div class="item">
-                    <img src="./img/carousel/slide2.jpg" alt="Second slide">
+                    <img src="{@$config.carousel_img3@}" alt="Second slide">
                 </div>
                 <div class="item">
-                    <img src="./img/carousel/slide4.jpg" alt="Third slide">
+                    <img src="{@$config.carousel_img4@}" alt="Third slide">
                 </div>
                 <div class="item">
-                    <img src="./img/carousel/slide5.jpg" alt="Third slide">
+                    <img src="{@$config.carousel_img5@}" alt="Third slide">
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
@@ -73,7 +76,7 @@
         </div>
         <div class="videoTop">
             <div class="play-video-btn">
-                <a href="#" data-toggle="modal" data-target="#videoModal">
+                <a data-toggle="modal" data-target="#videoModal"oncli>
                     <img src="./img/play-video-btn.png" alt="Play Video" width="70px" height="70ox">
                 </a>
             </div>
@@ -81,7 +84,7 @@
     </div>
     <!--轮播 end-->
     <!--标签页 start-->
-    <div style="background-color: #222">
+    <div style="background-color: #a32b2d">
         <div class="container">
             <ul id="myTab" class="nav nav-pills col-md-offset-4">
                 <li class="active">
@@ -106,36 +109,38 @@
                     <div class="container paddingrow">
                         <div class="row">
                             <div class="col-md-2 col-md-offset-1" style="text-align:center;">
-                                <div><a style='background: url("../images/bgIco.png") no-repeat; width: 120px;height: 120px; padding: 10px; text-align: center;position: relative;display: inline-block'><img src="img/a11.png" style="width:100px; height: 100px"></a></div>
-                                <h3 class="descriptionTitle">音乐启蒙</h3>
+                                <div><a class="descriptionIcon"><img src="img/ico1.png" style="width:100px; height: 100px"></a></div>
+                                <h3 class="descriptionTitle">{@$config.music_title1@}</h3>
                                 <div class="description">
-                                    以音乐的聆听和赏析为主体内容，伴随唱歌，游戏，体态律动为主的节奏性练习，建立良好的基础乐感和音乐兴趣；
+                                    {@$config.music_description1@}
                                 </div>
                             </div>
                             <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/a21.png" style="width:100px; height: 100px"></a></div>
-                                <h3 class="descriptionTitle">节奏王国</h3>
+                                <div><a class="descriptionIcon"><img src="img/ico2.png" style="width:100px; height: 100px"></a></div>
+                                <h3 class="descriptionTitle">{@$config.music_title2@}</h3>
                                 <div class="description">
-                                    以节奏为教学主题，伴随基础音高，游戏，体态律动，声势为主的节奏性教学，掌握节拍，识谱，并用基础奥尔夫乐器作课堂节奏练习；
+                                    {@$config.music_description2@}
                                 </div>
                             </div>
                             <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/a31.png" style="width:100px; height: 100px"></a></div>
-                                <h3 class="descriptionTitle">乐音王国</h3>
+                                <div><a class="descriptionIcon"><img src="img/ico3.png" style="width:100px; height: 100px"></a></div>
+                                <h3 class="descriptionTitle">{@$config.music_title3@}</h3>
                                 <div class="description">
-                                    音高视唱练习为主题，引入复合型节奏练习及切分，让孩子建立在自然音阶基础上保持稳定的演唱状态，具备基础的合唱能力，同时提升有难度的奥尔夫乐器演奏教学；
+                                    {@$config.music_description3@}
                                 </div>
                             </div>
                             <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/a41.png" style="width:100px; height: 100px"></a></div>
-                                <h3 class="descriptionTitle">乐队王国</h3>
-                                <div class="description">以节奏和音高教学为基础，奥尔夫乐器演奏及视唱为教学主体，建立良好的奥尔夫乐器演奏及配合能力；
+                                <div><a class="descriptionIcon"><img src="img/ico4.png" style="width:100px; height: 100px"></a></div>
+                                <h3 class="descriptionTitle">{@$config.music_title4@}</h3>
+                                <div class="description">
+                                {@$config.music_description4@}
                                 </div>
                             </div>
                             <div class="col-md-2" style="text-align:center;">
                                 <div><a class="descriptionIcon"><img src="img/ico5.png" style="width:100px; height: 100px"></a></div>
-                                <h3 class="descriptionTitle">音乐之旅</h3>
-                                <div class="description">复杂的节奏练习及音高视唱，了解各种音乐风格特征，以及团队性的节奏练习，让孩子拥有一流的音乐素养及听想能力；
+                                <h3 class="descriptionTitle">{@$config.music_title5@}</h3>
+                                <div class="description">
+                                {@$config.music_description5@}
                                 </div>
                             </div>
                         </div>
@@ -278,7 +283,7 @@
                     <hr/>
                 {@/foreach@}
                 <div style="text-align: center;margin:20px;">
-                <a href="/news"><span class="more">更多知识</span></a>
+                <a href="/news"><span class="more">更多文化</span></a>
                 </div>
             </div>
         </div>
@@ -294,7 +299,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <video id="videoSource" controls="controls" style="width: 100%">
-                        <source src="./img/ConfidentCustomer.mp4" type="video/mp4">
+                        <source src="{@$config.video@}" type="video/mp4">
                         你的浏览器不支持该视频播放！
                     </video>
                 </div>
