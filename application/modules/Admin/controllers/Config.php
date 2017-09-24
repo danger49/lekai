@@ -25,4 +25,21 @@ class ConfigController extends BControllerModel {
 		return true;
 	}
 
+    public function saveAction() {
+        $id = $_POST['id'];
+        $key = $_POST['key'];
+        $value = $_POST['value'];
+        $type = $_POST['type'];
+        // var_dump($value);exit;
+        $configModel = ConfigModel::getInstance();
+        $res = false;
+        $msg = '更新失败';
+        if ($type != 'file') {
+            $res = $configModel->updateConfig(array('value'=>$value),$id);
+        }
+        if ($res != false) {
+            $msg = '更新成功';
+        }
+        $this->ajax(array('msg' => $msg));
+    }
 }

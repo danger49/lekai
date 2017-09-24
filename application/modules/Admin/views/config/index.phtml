@@ -23,9 +23,9 @@
                     {@if $item.type eq "input"@}
                     <input id="{@$item.id@}" name="{@$item.key@}" value="{@$item.value@}" size="50" />
                     {@elseif $item.type eq "textarea"@}
-                    <textarea name="{@$item.key@}" rows="5" cols="80"> {@$item.value@}</textarea>
+                    <textarea id="{@$item.id@}" name="{@$item.key@}" rows="5" cols="80"> {@$item.value@}</textarea>
                     {@elseif $item.type eq "file"@}
-                    <input name="{@$item.key@}" type="file" size="20"/><span>{@$item.value@}</span>
+                    <input id="{@$item.id@}" name="{@$item.key@}" type="file" size="20"/><span>{@$item.value@}</span>
                     {@/if@}
                     </div>
                     <div class="col-sm-1">
@@ -43,7 +43,25 @@
 {@include 'footer.phtml'@}
 <script type="text/javascript">
     function update(id){
-        alert(id);
+        var data = {}
+        data.id = id;
+        data.key = $("#" + id).attr("name");
+        data.value = $("#" + id).attr("value") ? $("#" + id).attr("value") : '';
+        data.type = $("#" + id).attr("type") ? $("#" + id).attr("type") : '';
+        console.log(data);
+        $.ajax({
+        type: "POST",
+        url:"./save",
+        data:data,
+        dataType:'json',
+        success:function(response){
+            if(response.code && response.code != undefined && response.code != null && response.code != '' && response.code=='200'){                
+                alert(rep.msg);
+            }else{
+                alert('更新失败');
+            }
+        }
+    });
     }
 </script>
 

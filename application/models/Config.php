@@ -17,7 +17,7 @@ class ConfigModel extends BaseModel{
 
     public function updateConfig($data, $ConfigId) {
         $where = ' id = ' . $ConfigId;
-        $this->db->update($this->_table, $data, $where);
+        return $this->db->update($this->_table, $data, $where);
     }
 
     public function deleteConfig($ConfigId) {

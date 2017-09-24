@@ -22,4 +22,16 @@ class BControllerModel extends Yaf_Controller_Abstract {
         }
         $this->_view->assign('config', $configs);
 	}
+
+    public function ajax($response)
+    {
+        header('Content-type: application/json');
+        header("Pragma:no-cache"); 
+        $response = array(
+            'code' => 200,
+            'rep' => $response
+        );
+        $response = json_encode($response);
+        exit($response);
+    }
 }
