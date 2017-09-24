@@ -1,0 +1,49 @@
+{@include 'header.phtml'@}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <!--menu-->
+            {@include 'menu.phtml'@}
+            <!--/menu-->
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header">网站配置</h2>
+            <div class="row placeholders">
+                <h4><a href="/admin/index/main">返回</a></h4>
+            </div>
+            <div class="table-responsive">
+                <form id='form' enctype="multipart/form-data" method="post" action="#">
+                {@foreach from=$list item=item@}
+                <div class="row" style="padding:5px">
+                    <div class="col-sm-2">
+                        {@$item.title@}
+                    </div>
+                    <div class="col-sm-8">
+                    {@if $item.type eq "input"@}
+                    <input id="{@$item.id@}" name="{@$item.key@}" value="{@$item.value@}" size="50" />
+                    {@elseif $item.type eq "textarea"@}
+                    <textarea name="{@$item.key@}" rows="5" cols="80"> {@$item.value@}</textarea>
+                    {@elseif $item.type eq "file"@}
+                    <input name="{@$item.key@}" type="file" size="20"/><span>{@$item.value@}</span>
+                    {@/if@}
+                    </div>
+                    <div class="col-sm-1">
+                        <button onclick="javascript:update({@$item.id@});">更新</button>
+                    </div>
+                </div>
+                {@/foreach@}
+                <input id='submit' type="submit" value="提交"/> <input id='reset' type="reset" value="重置"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{@include 'footer.phtml'@}
+<script type="text/javascript">
+    function update(id){
+        alert(id);
+    }
+</script>
+
