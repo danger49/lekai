@@ -13,10 +13,10 @@
             <h2 class="sub-header">新闻中心</h2>
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/news/add">增加新闻</a></h4>
+                    <a href="/admin/news/add"><button class="btn btn-primary">增加新闻</button></a>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/index/main">返回</a></h4>
+                    <a href="/admin/index/main"><button class="btn btn-default">返回</button></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -35,8 +35,8 @@
                         <td>{@$news.id@}</td>
                         <td>{@$news.title@}</td>
                         <td>{@$news.add_time@}</td>
-                        <td><a href="/admin/news/edit/?id={@$news.id@}">修改</a> | <a
-                                    href="/admin/news/del/?id={@$news.id@}">删除</a></td>
+                        <td><a href="/admin/news/edit/?id={@$news.id@}"><button class="btn btn-primary">修改</button></a>   <a
+                                    href="/admin/news/del/?id={@$news.id@}"><button class="btn btn-danger">删除</button></a></td>
                     </tr>
                     {@/foreach@}
                     </tbody>

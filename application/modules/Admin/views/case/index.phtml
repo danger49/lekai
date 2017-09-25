@@ -13,10 +13,10 @@
             <h2 class="sub-header">案例中心</h2>
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/case/add">增加案例</a></h4>
+                    <a href="/admin/case/add"><button class="btn btn-primary">增加案例</button></a>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/index/main">返回</a></h4>
+                    <a href="/admin/index/main"><button class="btn btn-default">返回</button></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -37,9 +37,9 @@
                         <td>{@$case.name@}</td>
                         <td>{@$case.client@}</td>
                         <td>{@$case.icon@}</td>
-                        <td><a href="/admin/case/edit/?id={@$case.id@}">修改</a> | <a
-                                    href="/admin/case/details/?id={@$case.id@}">查看明细列表</a> | <a
-                                    href="/admin/case/del/?id={@$case.id@}">删除</a></td>
+                        <td><a href="/admin/case/edit/?id={@$case.id@}"><button class="btn btn-primary">修改</button></a>   <a
+                                    href="/admin/case/details/?id={@$case.id@}"><button class="btn btn-info">查看明细列表</button></a>   <a
+                                    href="/admin/case/del/?id={@$case.id@}"><button class="btn btn-danger">删除</button></a></td>
                     </tr>
                     {@/foreach@}
                     </tbody>
