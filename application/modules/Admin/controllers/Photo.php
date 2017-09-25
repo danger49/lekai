@@ -33,12 +33,30 @@ class PhotoController extends BControllerModel {
         $id = isset($_POST['id']) ? $_POST['id'] : '';
         $title = $_POST['title'];
         $content = $_POST['content'];
-        $img = $_POST['img'];
         $photoData = array(
             'title' => $title,
             'content' => $content,
-            'img' => $img,
         );
+
+        $src = 'img';
+        $up = new Fileupload();
+        //设置属性(上传的位置， 大小， 类型， 名是是否要随机生成)
+        $up -> set("path", "./upload/" . date('Y-m-d'));
+        $up -> set("maxsize", 2000000);
+        $up -> set("allowtype", array("gif", "png", "jpg","jpeg","wmv","mp3",));
+        $up -> set("israndname", true);
+
+        //使用对象中的upload方法， 就可以上传文件， 方法需要传一个上传表单的名子 pic, 如果成功返回true, 失败返回false
+        if($up -> upload($src)) {
+            //获取上传后文件名子
+            $src = $up->getFileName();
+            $upImg = isset($src[0]) ? $up->getPath() . '/' . $src[0] : '';
+            if ($upImg) {
+                $photoData['img'] = $upImg;
+            }
+        }
+
+
         $photoModel = PhotoModel::getInstance();
         if ($id) {
             $photoModel->updatePhoto($photoData, $id);
