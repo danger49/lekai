@@ -36,6 +36,7 @@ class PhotoController extends BControllerModel {
         $photoData = array(
             'title' => $title,
             'content' => $content,
+            'add_time' => date('Y-m-d H:i:s'),
         );
 
         $src = 'img';
@@ -61,7 +62,6 @@ class PhotoController extends BControllerModel {
         if ($id) {
             $photoModel->updatePhoto($photoData, $id);
         } else {
-            $PhotoData['add_time'] = date('Y-m-d H:i:s');
             $photoModel->insertPhoto($photoData);
         }
         $this->redirect('/admin/photo/index');
