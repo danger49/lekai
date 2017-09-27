@@ -26,7 +26,7 @@ Author: Chen Wei Gang
 }
 
 #music-player-header {
-	background: #272727;
+	background: #205f8a;
 	border-radius: 10px 10px 0 0;
 	box-shadow: 0 0 5px rgba(78,17,0,0.7);
 	height: 60px;
@@ -234,7 +234,7 @@ Author: Chen Wei Gang
 }
 
 .jp-playlist li a.jp-playlist-item {
-	background: #686868 url(../img/playlist-play.png) no-repeat right center;
+	background: #84bade url(../img/playlist-play.png) no-repeat right center;
 	border-radius: 10px;
 	color: #fff;
 	display: block;
@@ -246,11 +246,11 @@ Author: Chen Wei Gang
 }
 
 .jp-playlist li a.jp-playlist-item:hover {
-	background-color: #a32b2d;
+	background-color: #ff9a00;
 }
 
 .jp-playlist li a.jp-playlist-current {
-	background: #a32b2d url(../img/playlist-playing.png) no-repeat right center;
+	background: #ff9a00 url(../img/playlist-playing.png) no-repeat right center;
 }
 
 .jp-playlist li a.jp-playlist-item span {
