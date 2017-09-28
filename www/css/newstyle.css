@@ -11,38 +11,16 @@ select {border: 1px solid #744219;font-size: 12px;color: #313030;}
 button{margin:0;padding:0;border:0; cursor:pointer}
 i,em{ font-style:normal}
 
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
+h1 {font-size: 2em;margin: 0.67em 0;}
+h2 {font-size: 1.5em;margin: 0.83em 0;}
+h3 {font-size: 1.17em;margin: 1em 0;}
+h4 {font-size: 1em;margin: 1.33em 0;}
+h5 {font-size: 0.83em;margin: 1.67em 0;}
+h6 {font-size: 0.67em;margin: 2.33em 0;}
 
-h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
-}
-
-h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
-}
-
-h4 {
-    font-size: 1em;
-    margin: 1.33em 0;
-}
-
-h5 {
-    font-size: 0.83em;
-    margin: 1.67em 0;
-}
-
-h6 {
-    font-size: 0.67em;
-    margin: 2.33em 0;
-}
-
+a{text-decoration:none;}
 a:visited,a:link {color:#205f8a;text-decoration:none;border-style:none;}
-a:hover {color:#4a86c3;text-decoration:none;border-style:none;}
+a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 
 .margin_auto {margin-right:auto;margin-left:auto;}
 .margin_top10 {margin-top:10px;}
@@ -64,12 +42,14 @@ a:hover {color:#4a86c3;text-decoration:none;border-style:none;}
 .gray { color:#ccc}
 
 /*--------General----------*/
-a{text-decoration:none;}
-a:hover{color: #205f8a;}
+.background{background-color:#4a86c3;}
+.background1{background-color:#84bade;}
+.background2{background-color:#ff9a00;}
+.background3{background-color:#eee;}
 
-.header-wrapper {
-    background-color: #4a86c3;
-}
+.padding1{padding: 10px 0 20px 0;}
+
+.header-wrapper {background-color: #4a86c3;}
 .header-wrapper:after {
     display: block;
     margin-top: -2px;
@@ -81,32 +61,69 @@ a:hover{color: #205f8a;}
     z-index: 10;
     background-color: transparent;
 }
- @media (min-width: 63.75em) {
-     .carouselImg img{
-         height: 35.85938em;
+.header-title{
+    color: white;font-size: x-large;line-height:60px;
+}
+
+ @media all and (min-width: 768px) {
+     .carousel-indicators{
+         bottom: 50px;!important;
+     }
+     .myCarouselMargin{
+         position:relative;
+         margin: 0;
+     }
+     .carouselImg{
+         height: 45em;
+     }
+     .carouselImg img{height: 45em;}
+     .videoTop {
+         position: absolute;
+         height: auto;
+         margin: 0 auto;
+         text-align: center;
+         z-index: 5;
+         top: 40%;
+         left: 50%;
+         display: inline-block;
+         vertical-align: middle;
+     }
+     .myTabPostion{
+         position: relative;  z-index: 5;  top: -40px;
      }
  }
-@media all and (min-width: 37.5em) {
-    .carouselImg img{
-        height: 420px;
+
+@media all and (max-width: 45em) {
+    .padding1{padding:10px 0 5px 5px;}
+    .header-title{color: white;font-size: large;line-height:50px;}
+    .carousel-indicators{
+        bottom: 10px;!important;
+    }
+    .myCarouselMargin{
+        position:relative;
+        margin-top: 50px;
+    }
+    .carouselImg{
+        height: auto;
+    }
+    .carouselImg img{height: auto;}
+    .videoTop {
+        position: absolute;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 5;
+        top: 40%;
+        left: 50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .myTabPostion{
+        position: relative;  z-index: 5;  top: 0px;
     }
 }
-@media all and (min-width: 45em) {
-    .carouselImg img{
-        height: 360px;
-    }
-}
-.videoTop {
-    position: absolute;
-    height: auto;
-    margin: 0 auto;
-    text-align: center;
-    z-index: 5;
-    top: 40%;
-    left: 50%;
-    display: inline-block;
-    vertical-align: middle;
-}
+
+
 
 .play-video-btn {
     height: 70px;
@@ -118,6 +135,15 @@ a:hover{color: #205f8a;}
     cursor: pointer;
     position: relative;
     z-index: 2;
+    height: 70px;
+    width: 70px;
+}
+
+@media (max-width: 767px) {
+    .play-video-btn,.play-video-btn img{
+        height: 30px;
+        width: 30px;
+    }
 }
 
 .play-video-btn:after {
@@ -130,18 +156,37 @@ a:hover{color: #205f8a;}
     background: transparent url("../img/dotted-line.png") repeat-x;
     content: '';
 }
-.nav-pills > li > a {
-    color: #313030;
-    background-color: #ecf0f1;
-    border-radius: 0;
+
+.close-video-btn {
+    height: 20px;
+    z-index: 2;
 }
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-    color: #fff;
-    background-color: #84bade;
+.close-video-btn img {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 6px;
+    width: 34px;
+    z-index: 1000;
+    top: 6px;
 }
-.nav-pills > li.active > a:hover {
-    background-color: #ecf0f1;
-    color: #205f8a
+
+@media all {
+    .nav-pills > li > a {
+        color: #313030;
+        background-color: #ecf0f1;
+        border-radius: 0;
+    }
+
+    .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+        color: #fff;
+        background-color: #84bade;
+    }
+
+    .nav-pills > li > a:hover {
+        background-color: #84bade;
+        color: #fff
+    }
 }
 @media (min-width: 767px) {
     .nav-pills > li > a {
@@ -153,9 +198,11 @@ a:hover{color: #205f8a;}
     text-align: center;
     font-size: 1.2em;
     border-radius: 4px;
+    color: #fff;
 }
-.navbar-nav > li > a{
+.navbar-inverse .navbar-nav > li > a{
     padding: 10px;
+    color: #fff;
 }
 .navbar-nav li:hover {
     background-color: #84bade;
@@ -165,7 +212,7 @@ a:hover{color: #205f8a;}
 @media (max-width: 767px) {
     .navbar-nav li{
         font-size: 1.5em;
-        border-bottom: solid #84bade 1px;
+        border-bottom: solid #4a86c3 1px;
     }
 }
 
@@ -181,10 +228,15 @@ a:hover{color: #205f8a;}
     padding: 20px 10px 0 10px;
 }
 
-.paddingrow {
-    padding: 20px 0 20px 0;
+.myTabPadding {
+    padding-bottom:20px;
 }
-
+@media (max-width: 767px) {
+    .myTabPadding {
+        padding-bottom:20px;
+        margin-top: 20px;
+    }
+}
 .description {
     padding: 10px;
     border-radius: 10px;
@@ -215,6 +267,24 @@ a:hover{color: #205f8a;}
     font-size:30px;
     color:#fff;
     padding:20px 0 20px 0;
+}
+.teacher1{
+    font-size:50px;
+}
+.teacher2{
+    font-size:40px;
+}
+@media (max-width: 767px) {
+    .teacher{
+        font-size:20px;
+        padding:10px 0 10px 0;
+    }
+    .teacher1{
+        font-size:40px;
+    }
+    .teacher2{
+        font-size:30px;
+    }
 }
 
 .dl-horizontal a{

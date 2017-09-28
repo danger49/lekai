@@ -15,7 +15,7 @@
 <body>
     <!--head start-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div  style="background-color:#4a86c3;padding: 15px 0 10px 0;">
+        <div  class="background padding1">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,17 +25,17 @@
                         <span class="icon-bar"></span>
                     </button>
                     <span style="display: block;padding:0 0 0 20px;">
-                        <img src="./img/logosmall.png" width="50px">
-                        <a class="" href="/" style="color: white;font-size: x-large;line-height:70px">乐开儿童音乐王国</a>
+                        <img src="./img/logosmall.png" width="50px" height="50px">
+                        <a class="header-title" href="/" style="color: #fff">乐开儿童音乐王国</a>
                     </span>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
+                <div id="navbar" class="navbar-collapse collapse" style="margin-top: 20px;">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/" style="color: white;">首页</a></li>
-                        <li><a href="/case" style="color: white;">乐开作品</a></li>
-                        <li><a href="/photo" style="color: white;">乐开风采</a></li>
-                        <li><a href="/news" style="color: white;">乐开文化</a></li>
-                        <li><a href="/job" style="color: white;">加入乐开</a></li>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/case">乐开作品</a></li>
+                        <li><a href="/photo">乐开风采</a></li>
+                        <li><a href="/news">乐开文化</a></li>
+                        <li><a href="/job">加入乐开</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,10 +44,10 @@
     </nav>
     <!--head end-->
     <!--轮播 start-->
-    <div style="position:relative;">
+    <div class="myCarouselMargin">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- 轮播（Carousel）指标 -->
-            <ol class="carousel-indicators" style="bottom: 50px;!important;">
+            <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -78,16 +78,16 @@
         </div>
         <div class="videoTop">
             <div class="play-video-btn">
-                <a data-toggle="modal" data-target="#videoModal"oncli>
-                    <img src="./img/play-video-btn.png" alt="Play Video" width="70px" height="70ox">
+                <a data-toggle="modal" data-target="#videoModal">
+                    <img src="./img/play-video-btn.png" alt="Play Video">
                 </a>
             </div>
         </div>
     </div>
     <!--轮播 end-->
     <!--标签页 start-->
-    <div style="position: relative;z-index: 5;background-color: #84bade;">
-        <div class="container" style="position: relative;  z-index: 5;  top: -40px;">
+    <div class="background1" style="position: relative;z-index: 5;">
+        <div class="container myTabPostion">
             <ul id="myTab" class="nav nav-pills col-md-offset-4">
                 <li class="active">
                     <a href="#music" data-toggle="tab">乐开音乐</a>
@@ -106,7 +106,7 @@
         <div class="container">
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="music">
-                    <div class="container" style="padding-bottom: 20px;">
+                    <div class="container myTabPadding">
                         <div class="row">
                             <div class="col-md-2 col-md-offset-1" style="text-align:center;">
                                 <div><a class="descriptionIcon"><img src="img/ico1.png" style="width:100px; height: 100px"></a></div>
@@ -147,20 +147,20 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="teacher">
-                    <div class="container" style="padding-bottom: 20px;">
+                    <div class="container myTabPadding">
                         <div class="row teacher" style="padding-top: 0px;">
-                        专注 . 极致 . 用心 . 严谨
+                            <span class="teacher2">专注 . 极致 . 用心 . 严谨</span>
                         </div>
                         <div class="row teacher">
                         带给孩子最动听的儿童音乐
                         </div>
                         <div class="row teacher">
-                        玩的是<span style="font-size:50px">快乐</span>，学的是<span style="font-size:50px">知识</span>
+                        玩的是<span class="teacher1">快乐</span>，学的是<span class="teacher1">知识</span>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="activity">
-                    <div class="container" style="padding-bottom: 20px;">
+                    <div class="container myTabPadding">
                         <div class="row">
                             <div class="col-md-3" style="padding:0px 20px 0px 20px">
                                 <img src="{@$config.index_photo1@}" width="240px;"/>
@@ -181,7 +181,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="about">
-                    <div class="container" style="padding-bottom: 20px;">
+                    <div class="container myTabPadding">
                         <div class="row">
                             <div class="col-md-6">
                                 <dl class="dl-horizontal">
@@ -295,7 +295,7 @@
         </div>
     </div>
     <!--固定end-->
-    <div style="background-color: #ff9a00">
+    <div class="background2">
         <div class="container text-center">
         <h2 style="color: white;">乐开儿童音乐王国全国加盟，即将开启，敬请期待</h2>
         </div>
@@ -303,6 +303,11 @@
     <div class="modal fade" id="videoModal" tabindex="-1">
         <div class="modal-dialog" role="document" style="width: auto;">
             <div class="modal-content">
+                <div class="modal-header">
+                    <div class="close-video-btn" data-dismiss="modal">
+                        <img src="./img/close-button.png" alt="Close Video" style="display: block;">
+                    </div>
+                </div>
                 <div class="modal-body">
                     <video id="videoSource" controls="controls" style="width: 100%">
                         <source src="{@$config.video@}" type="video/mp4">
