@@ -108,40 +108,50 @@
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="music">
                     <div class="container myTabPadding">
-                        <div class="row">
-                            <div class="col-md-2 col-md-offset-1" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/ico1.png" style="width:100px; height: 100px"></a></div>
+                        <div class="row" style="text-align:center;">
+                            <div class="col-md-2 col-xs-12 col-md-offset-1 music0">
+                                <div class="music1">
+                                <div><a class="descriptionIcon"><img src="img/ico1.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title1@}</h3>
-                                <div class="description">
+                                </div>
+                                <div class="music2 description">
                                     {@$config.music_description1@}
                                 </div>
                             </div>
-                            <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/ico2.png" style="width:100px; height: 100px"></a></div>
+                            <div class="col-md-2 col-xs-12 music0">
+                                <div class="music1">
+                                <div><a class="descriptionIcon"><img src="img/ico2.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title2@}</h3>
-                                <div class="description">
+                                </div>
+                                <div class="music2 description">
                                     {@$config.music_description2@}
                                 </div>
                             </div>
-                            <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/ico3.png" style="width:100px; height: 100px"></a></div>
+                            <div class="col-md-2 col-xs-12 music0">
+                                <div class="music1">
+                                <div><a class="descriptionIcon"><img src="img/ico3.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title3@}</h3>
-                                <div class="description">
+                                </div>
+                                <div class="music2 description">
                                     {@$config.music_description3@}
                                 </div>
                             </div>
-                            <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/ico4.png" style="width:100px; height: 100px"></a></div>
+                            <div class="col-md-2 col-xs-12 music0">
+                                <div class="music1">
+                                <div><a class="descriptionIcon"><img src="img/ico4.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title4@}</h3>
-                                <div class="description">
-                                {@$config.music_description4@}
+                                </div>
+                                <div class="music2 description">
+                                    {@$config.music_description4@}
                                 </div>
                             </div>
-                            <div class="col-md-2" style="text-align:center;">
-                                <div><a class="descriptionIcon"><img src="img/ico5.png" style="width:100px; height: 100px"></a></div>
+                            <div class="col-md-2 col-xs-12 music0">
+                                <div class="music1">
+                                <div><a class="descriptionIcon"><img src="img/ico5.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title5@}</h3>
-                                <div class="description">
-                                {@$config.music_description5@}
+                                </div>
+                                <div class="music2 description">
+                                    {@$config.music_description5@}
                                 </div>
                             </div>
                         </div>
@@ -161,19 +171,19 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="activity">
-                    <div class="container myTabPadding">
+                    <div class="container myTabPadding myTabPadding1">
                         <div class="row">
-                            <div class="col-md-3" style="padding:0px 20px 0px 20px">
-                                <img src="{@$config.index_photo1@}" width="240px;"/>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="{@$config.index_photo1@}"/>
                             </div>
-                            <div class="col-md-3" style="padding:0px 20px 0px 20px">
-                                <img src="{@$config.index_photo2@}" width="240px"/>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="{@$config.index_photo2@}"/>
                             </div>
-                            <div class="col-md-3" style="padding:0px 20px 0px 20px">
-                                <img src="{@$config.index_photo3@}" width="240px"/>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="{@$config.index_photo3@}"/>
                             </div>
-                            <div class="col-md-3" style="padding:0px 20px 0px 20px">
-                                <img src="{@$config.index_photo4@}" width="240px"/>
+                            <div class="col-md-3 col-xs-6">
+                                <img src="{@$config.index_photo4@}"/>
                             </div>
                         </div>
                         <div  style="text-align: center;margin:20px;">
@@ -195,14 +205,14 @@
                             </div>
                             <div class="col-md-6">
                                 <dl class="dl-horizontal">
-                                    <dt><a>名称：</a></dt><dd>{@$config.name@}</dd>
-                                    <dt><a>网址：</a></dt><dd>http://{@$config.host@}</dd>
-                                    <dt><a>地址：</a></dt><dd><a href="/map.html" target="_blank">{@$config.address@}（打开地图）</a></dd>
-                                    <dt><a>邮箱：</a></dt><dd>{@$config.email@}</dd>
-                                    <dt><a>手机：</a></dt><dd><a href="tel:{@$config.mobile@}">{@$config.mobile@}</a></dd>
-                                    <dt><a>传真：</a></dt><dd>{@$config.fax@}</dd>
-                                    <dt><a>Q Q： </a></dt><dd>{@$config.qq@}</dd>
-                                    <dt><a>微信： </a></dt><dd>lekaimusic</dd>
+                                    <dd>名称：{@$config.name@}</dd>
+                                    <dd>网址：http://{@$config.host@}</dd>
+                                    <dd>地址：<a href="/map.html" target="_blank">{@$config.address@}（打开地图）</a></dd>
+                                    <dd>邮箱：{@$config.email@}</dd>
+                                    <dd>手机：<a href="tel:{@$config.mobile@}">{@$config.mobile@}</a></dd>
+                                    <dd>传真：{@$config.fax@}</dd>
+                                    <dd>Q Q： {@$config.qq@}</dd>
+                                    <dd>微信： lekaimusic</dd>
                                 </dl>
                             </div>
                         </div>

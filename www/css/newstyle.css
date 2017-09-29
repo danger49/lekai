@@ -209,13 +209,6 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     border-radius: 4px;
 }
 
-@media (max-width: 767px) {
-    .navbar-nav li{
-        font-size: 1.5em;
-        border-bottom: solid #4a86c3 1px;
-    }
-}
-
 .header-bar{
     color:#fff;
 }
@@ -231,12 +224,14 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 .myTabPadding {
     padding-bottom:20px;
 }
-@media (max-width: 767px) {
-    .myTabPadding {
-        padding-bottom:20px;
-        margin-top: 20px;
-    }
+.myTabPadding1 img{
+    width: 240px;
 }
+
+.music0{}
+.music1{}
+.music2{}
+
 .description {
     padding: 10px;
     border-radius: 10px;
@@ -254,8 +249,7 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 
 .descriptionIcon {
     background: url("../images/bgIco.png") no-repeat;
-    width: 120px;
-    height: 120px;
+    background-size: 100px 100px;
     padding: 10px;
     text-align: center;
     position: relative;
@@ -275,6 +269,20 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     font-size:40px;
 }
 @media (max-width: 767px) {
+    .navbar-nav li{
+        font-size: 1.5em;
+        border-bottom: solid #205f8a 1px;
+    }
+    .myTabPadding {
+        padding-bottom:20px;
+        margin-top: 20px;
+    }
+    .myTabPadding1 img{
+        width: 160px;
+    }
+    .music0{border-bottom: 1px dotted #205f8a;margin-bottom: 10px;}
+    .music1{position:relative;width: 50%;float: left}
+    .music2{position:relative;width: 50%;float: right}
     .teacher{
         font-size:20px;
         padding:10px 0 10px 0;
@@ -284,6 +292,12 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     }
     .teacher2{
         font-size:30px;
+    }
+    .description{
+        padding: 0;
+    }
+    .descriptionTitle {
+        line-height: 100%
     }
 }
 
@@ -439,6 +453,11 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 .pageTit { height:47px;font:normal 24px/47px "微软雅黑";text-indent:22px; position:relative; }
 .conBase { padding:0 40px;}
 .conBase p { margin-bottom:15px; line-height: 150%}
+
+@media (max-width: 767px) {
+    .content { width:95%;}
+    .conBase { padding:0 20px;}
+}
 
 /*---------轮播---------*/
 .marqueeScroll { width:100%; margin:0 auto;padding:20px 0 0 22px;position:relative; background:#fff}
