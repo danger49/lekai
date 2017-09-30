@@ -473,7 +473,7 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 .marqueeScroll_con ul li a { display:block}.marqueeScroll_con ul li a.current i { width:106px; height:106px; position:absolute; top:0; left:-1px; background:url(../images/bgVideo.png) no-repeat}
 .marqueeScroll_control_left a,.marqueeScroll_control_right a {width:15px; height:32px; background:url(../images/main.png) no-repeat -184px -198px; text-indent:-9999px; outline:none;position:absolute; top:60px; z-index:30;}
 .marqueeScroll_control_left a { left:5px;}
-.marqueeScroll_control_right a { background-position:-184px -230px;right:5px;}
+.marqueeScroll_control_right a { background-position:-184px -230px;right:-10px;}
 /*---------case---------*/
 .case { width:100%; background:#FFF; padding:15px 0}
 /*.caseCon { width:999px; margin:0 auto; background:url(../images/bgVideoR.png) repeat-y}*/

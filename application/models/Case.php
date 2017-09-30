@@ -30,7 +30,7 @@ class CaseModel extends BaseModel{
         return $this->db->getRow($sql);
     }
 
-    public function getCaseList($type = null, $page = 1, $gap = 0, $order='`order` desc') {
+    public function getCaseList($type = null, $page = 1, $gap = 0, $order=' `id` desc') {
         $where = '';
         $limit = '';
         if ($gap) {
@@ -50,7 +50,7 @@ class CaseModel extends BaseModel{
         if ($type) {
             $where = ' where `type` = ' . $type;
         }
-        $sql = 'select count(1) as total from ' . $this->_table . $where . ' order by `order`';
+        $sql = 'select count(1) as total from ' . $this->_table . $where;
         $rs = $this->db->getRow($sql);
         return isset($rs['total']) ? $rs['total'] : 0;
     }
