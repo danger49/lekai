@@ -63,7 +63,7 @@
         <!--标题-->
         <div class="pageTit">游戏配乐欣赏</div>
         <!--播放-->
-        <div class="row">
+        <div class="row"id="case1">
             <!--视频-->
             <div class="col-md-6">
                 <!--jplayer-->
@@ -131,7 +131,7 @@
                     <!--控制按钮 end-->
                     <div class="marqueeScroll_con">
                         <ul>
-                            {@foreach from=$list2.list item=item@}
+                            {@foreach from=$list1.list item=item@}
                             <li>
                                 <a href="Javascript:void(0)" onclick ="detail(this,1, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
                                 <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
@@ -157,7 +157,7 @@
         <!--标题-->
         <div class="pageTit">游戏音效欣赏</div>
         <!--播放-->
-        <div class="row">
+        <div class="row"id="case2">
             <!--视频-->
             <div class="col-md-6">
                 <!--jplayer-->
@@ -227,7 +227,7 @@
                         <ul>
                             {@foreach from=$list2.list item=item@}
                             <li>
-                                <a href="Javascript:void(0)" onclick ="detail(this,1, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
+                                <a href="Javascript:void(0)" onclick ="detail(this,2, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
                                 <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
                             </li>
                             {@/foreach@}
@@ -251,7 +251,7 @@
         <!--标题-->
         <div class="pageTit">游戏配音欣赏</div>
         <!--播放-->
-        <div class="row">
+        <div class="row"id="case3">
             <!--视频-->
             <div class="col-md-6">
                 <!--jplayer-->
@@ -321,7 +321,7 @@
                         <ul>
                             {@foreach from=$list3.list item=item@}
                             <li>
-                                <a href="Javascript:void(0)" onclick ="detail(this,1, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
+                                <a href="Javascript:void(0)" onclick ="detail(this,3, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
                                 <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
                             </li>
                             {@/foreach@}
@@ -345,7 +345,7 @@
         <!--标题-->
         <div class="pageTit">CG视频欣赏</div>
         <!--播放-->
-        <div class="row">
+        <div class="row"id="case4">
             <!--视频-->
             <div class="col-md-6">
                 <!--jplayer-->
@@ -415,7 +415,7 @@
                         <ul>
                             {@foreach from=$list4.list item=item@}
                             <li>
-                                <a href="Javascript:void(0)" onclick ="detail(this,1, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
+                                <a href="Javascript:void(0)" onclick ="detail(this,4, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
                                 <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
                             </li>
                             {@/foreach@}
@@ -439,7 +439,7 @@
         <!--标题-->
         <div class="pageTit">影视动漫欣赏</div>
         <!--播放-->
-        <div class="row">
+        <div class="row"id="case5">
             <!--视频-->
             <div class="col-md-6">
                 <!--jplayer-->
@@ -509,7 +509,7 @@
                         <ul>
                             {@foreach from=$list5.list item=item@}
                             <li>
-                                <a href="Javascript:void(0)" onclick ="detail(this,1, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
+                                <a href="Javascript:void(0)" onclick ="detail(this,5, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
                                 <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
                             </li>
                             {@/foreach@}
