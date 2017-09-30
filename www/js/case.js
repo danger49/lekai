@@ -8,9 +8,9 @@ function detail(obj,type, caseId){
 		dataType:'json',
 		success:function(response){
             if(response.code && response.code != undefined && response.code != null && response.code != '' && response.code=='200'){
-            	$("#case"+type+" .caseCon .casePlay .caseInfro_aTit").html(response.rep.caseInfo.name);
-            	$("#case"+type+" .caseCon .casePlay .caseInfro_aSty").html(response.rep.caseInfo.client+' '+response.rep.caseInfo.lable);
-            	$("#case"+type+" .caseCon .casePlay .caseInfro_description").html(response.rep.caseInfo.description);
+            	$("#case"+type+" .caseInfro_aTit").html(response.rep.caseInfo.name);
+            	$("#case"+type+" .caseInfro_aSty").html(response.rep.caseInfo.client+' '+response.rep.caseInfo.lable);
+            	$("#case"+type+" .caseInfro_description").html(response.rep.caseInfo.description);
 
 				$("#jquery_jplayer_"+type).jPlayer("destroy");//重置视频
 				//视频
