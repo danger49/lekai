@@ -194,6 +194,12 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     .tab-content{
         min-height: 600px;
     }
+    .absoluteRow{
+        padding-bottom: 20px;min-height: 600px;
+    }
+    .absoluteRow1{
+        padding:50px 10px;color: white;line-height: 150%;font-size: 1.5em;
+    }
 }
 @media (min-width: 767px) {
     .nav-pills > li {

@@ -30,7 +30,7 @@ class NewsModel extends BaseModel{
         return $this->db->getRow($sql);
     }
 
-    public function getNewsList($type = null, $page = 1, $pageSize = 5, $order='`order` desc') {
+    public function getNewsList($type = null, $page = 1, $pageSize = 5, $order='`id` desc') {
         $start = ($page - 1) * $pageSize;
         $where = '';
         if ($type) {
