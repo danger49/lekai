@@ -1,0 +1,40 @@
+{@include 'header.phtml'@}
+
+<!--banner start-->
+<div class="pageBanner">
+    <img src="../{@$config.contact_banner@}">
+</div>
+<!--banner end-->
+
+<!--mainContent start-->
+<div class="mainContent">
+    <!--内容-->
+    <div class="container content1">
+        <!--标题-->
+        <div class="pageTit">联系乐开</div>
+        <!--/标题-->
+        <div class="conBase">
+            <div class="text-center">
+                <iframe src="/map.html" class="map"></iframe>
+            </div>
+            <div class="text-center">
+                <ul class="ul-horizontal">
+                    <li>名称：{@$config.name@}</li>
+                    <li>网址：http://{@$config.host@}</li>
+                    <li>地址：{@$config.address@}</li>
+                    <li>邮箱：{@$config.email@}</li>
+                    <li>手机：<a href="tel:{@$config.mobile@}">{@$config.mobile@}</a></li>
+                    <li>传真：{@$config.fax@}</li>
+                    <li>Q Q： {@$config.qq@}</li>
+                    <li>微信： lekaimusic</li>
+                    <li><img src="../img/qr.png" style="width:120px;height:120px"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/内容-->
+</div>
+<!--mainContent end-->
+
+{@include 'footer.phtml'@}
+

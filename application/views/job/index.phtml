@@ -1,11 +1,17 @@
 {@include 'header.phtml'@}
 
+<!--banner start-->
+<div class="pageBanner">
+    <img src="{@$config.job_banner@}">
+</div>
+<!--banner end-->
+
 <!--mainContent start-->
 <div class="mainContent">
     <!--内容-->
-    <div class="container content">
+    <div class="container content1">
             <!--标题-->
-            <div class="pageTit">加入乐开</div>
+            <div class="pageTit">乐开招聘</div>
             <!--/标题-->
             <div class="conBase">
                 {@foreach from=$list item=job@}
@@ -15,7 +21,6 @@
                 {@/foreach@}
             </div>
         </div>
-        <div class="clearboth"></div>
     </div>
     <!--/内容-->
 </div>
