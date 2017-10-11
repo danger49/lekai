@@ -89,7 +89,7 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
          vertical-align: middle;
      }
      .myTabPostion{
-         position: relative;  z-index: 5;  top: -50px;
+         position: relative;  z-index: 5;  top: -49px;
      }
  }
 
@@ -172,6 +172,9 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 }
 
 @media all {
+    .nav-pills{
+        background: transparent;
+    }
     .nav-pills > li {
         text-align: center;
         margin: 0 5px 0 5px;
@@ -182,20 +185,27 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
         border-radius: 0;
     }
 
+    nav-pills > li > a:focus, .nav-pills > li > a:hover {
+        color: #205f8a;
+        background-color: #ecf0f1;
+        border-radius: 0;
+    }
+
     .nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+        -moz-transition: background-color 1s;
+        -o-transition: background-color 1s;
+        -webkit-transition: background-color 1s;
+        transition: background-color 1s;
+        cursor: pointer;
         color: #fff;
         background-color: #84bade;
     }
 
-    .nav-pills > li > a:hover {
-        background-color: #84bade;
-        color: #fff
-    }
     .tab-content{
-        min-height: 600px;
+        min-height: 800px;
     }
     .absoluteRow{
-        padding-bottom: 20px;min-height: 600px;
+        padding-bottom: 20px;min-height: 800px;
     }
     .absoluteRow1{
         padding:50px 10px;color: white;line-height: 150%;font-size: 1.5em;
@@ -228,6 +238,12 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     font-size: 1.2em;
     border-radius: 4px;
     color: #fff;
+}
+.navbar-nav > li{
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    -webkit-transition: 500ms;
+    transition: 500ms;
 }
 .navbar-inverse .navbar-nav > li > a{
     padding: 10px;

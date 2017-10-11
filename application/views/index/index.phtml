@@ -328,6 +328,16 @@
 {@include 'footer.phtml'@}
 
 <script>
+    var scroll = function(){
+      var scrollLocation = $('nav').height();
+      var height = 370;
+      if (scrollLocation < 90) {
+        height = 120;
+      }
+      $('html, body').animate({
+        scrollTop: height
+      })
+    }
     $(function () {
         var video = document.getElementById('videoSource');
         $('#videoModal').on('hide.bs.modal', function () {
@@ -336,5 +346,12 @@
         $('#videoModal').on('shown.bs.modal', function () {
             video.play();
         })
+
+        //滚动位置
+      $('#myTab').on('click',function(e){
+        scroll();
+      });
     });
+
+
 </script>
