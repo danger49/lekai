@@ -9,8 +9,10 @@
 class NewsController extends FControllerModel {
     public function indexAction() {
         $page = $this->getParam('page', 1);
+        $type = $this->getParam('type', 1);
 		$newsModel = NewsModel::getInstance();
-        $list = $newsModel->getNewsList(null, $page, self::PAGE_SIZE);
+        $list = $newsModel->getNewsList($type, $page, self::PAGE_SIZE);
+        $newsType = $newsModel->getNewsType($type);
         if ($list) {
             $classes = array(
                 'yellow',
@@ -23,9 +25,10 @@ class NewsController extends FControllerModel {
             }
             unset($news);
         }
-        $count = $newsModel->getNewsCount();
+        $count = $newsModel->getNewsCount($type);
         $pagebar = new Pagination(self::PAGE_SIZE, $count, $page, self::SUB_PAGES,'/index/news/index/page/');
         $this->_view->assign('list', $list);
+        $this->_view->assign('type', $newsType);
         $this->_view->assign('pagebar', $pagebar->GetContent(self::PAGE_STYLE));
 		return true;
 	}

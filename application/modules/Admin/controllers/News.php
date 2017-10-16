@@ -29,12 +29,8 @@ class NewsController extends BControllerModel {
     }
     
     public function addAction() {
-        $newsCategory = array(
-            array(
-                'id' => 1,
-                'name' => '新闻',
-            ),
-        );
+        $newsModel = NewsModel::getInstance();
+        $newsCategory = $newsModel->getAllNewsType();
         $this->_view->assign('newsCategory', $newsCategory);
         return true;
     }
@@ -70,13 +66,8 @@ class NewsController extends BControllerModel {
     
     public function editAction() {
         $id = $_GET['id'];
-        $newsCategory = array(
-            array(
-                'id' => 1,
-                'name' => '新闻',
-            ),
-        );
         $newsModel = NewsModel::getInstance();
+        $newsCategory = $newsModel->getAllNewsType();
         $news = $newsModel->getNews($id);
         $this->_view->assign('newsCategory', $newsCategory);
         $this->_view->assign('news', $news);

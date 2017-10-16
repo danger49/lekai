@@ -17,7 +17,8 @@ class IndexController extends FControllerModel {
 
     public function indexAction() {
         $newsModel = NewsModel::getInstance();
-        $newsList = $newsModel->getLatestNews();
+        $newsList1 = $newsModel->getLatestNews(1);
+        $newsList2 = $newsModel->getLatestNews(2);
         $casedetailModel = CasedetailModel::getInstance();
         $caseList = $casedetailModel->getLatestCase(10);
         foreach ($caseList as &$case) {
@@ -37,12 +38,12 @@ class IndexController extends FControllerModel {
         }
         unset($case);
         $this->_view->assign('caseList', $caseList);
-        $this->_view->assign('newsList', $newsList);
+        $this->_view->assign('newsList1', $newsList1);
+        $this->_view->assign('newsList2', $newsList2);
         return true;
     }
 
     public function mapAction() {
-        echo 'aaaaaaaaaaaaaaaaaa';exit;
         $this->_view->assign();
         return true;
     }

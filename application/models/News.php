@@ -34,9 +34,9 @@ class NewsModel extends BaseModel{
         $start = ($page - 1) * $pageSize;
         $where = '';
         if ($type) {
-            $where = ' `type` = ' . $type;
+            $where = ' where `type` = ' . $type;
         }
-        $sql = 'select * from ' . $this->_table . $where . ' order by ' . $order .' LIMIT ' . $start . ',' . $pageSize;
+        $sql = 'select * from ' . $this->_table . $where . ' order by ' . $order .' limit ' . $start . ',' . $pageSize;
         return $this->db->executeS($sql);
     }
 
@@ -44,15 +44,25 @@ class NewsModel extends BaseModel{
     {
         $where = '';
         if ($type) {
-            $where = ' `type` = ' . $type;
+            $where = ' where `type` = ' . $type;
         }
         $sql = 'select count(1) as total from ' . $this->_table . $where . ' order by `order`';
         $rs = $this->db->getRow($sql);
         return isset($rs['total']) ? $rs['total'] : 0;
     }
 
-    public function getLatestNews($count = 2) {
-        $sql = 'select * from ' . $this->_table . ' ORDER BY id DESC LIMIT ' . $count;
+    public function getLatestNews($type = 1, $count = 2) {
+        $sql = 'select * from ' . $this->_table . ' where `type` = ' . $type . ' order by id desc limit ' . $count;
+        return $this->db->executeS($sql);
+    }
+
+    public function getNewsType($type) {
+        $sql = 'select * from ' . $this->_table . '_category where id = ' . $type;
+        return $this->db->getRow($sql);
+    }
+
+    public function getAllNewsType() {
+        $sql = 'select * from ' . $this->_table . '_category  order by id asc';
         return $this->db->executeS($sql);
     }
 }

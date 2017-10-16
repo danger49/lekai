@@ -2,7 +2,7 @@
 
 <!--banner start-->
 <div class="pageBanner">
-    <img src="{@$config.news_banner@}">
+    <img src="http://{@$config.host@}/{@$config.news_banner@}">
 </div>
 <!--banner end-->
 
@@ -11,19 +11,21 @@
     <!--内容-->
     <div class="container content1">
         <!--标题-->
-        <div class="pageTit">乐开分享</div>
+        <div class="pageTit">{@$type.site_title@}</div>
         <!--/标题-->
         <!--新闻列表-->
+        {@if $list@}
         {@foreach from=$list item=news@}
         <div class="row newsbottom">
             <div class="col-md-10">
-                <a href="/news/detail/id/{@$news.id@}" class="{@$news.class@}">【新闻】{@$news.title@}</a>
+                <a href="/news/detail/id/{@$news.id@}" class="{@$news.class@}">【{@$type.name@}】{@$news.title@}</a>
             </div>
             <div class="col-md-2 fr">
                 <span>{@$news.add_time@}</span>
             </div>
         </div>
         {@/foreach@}
+        {@/if@}
 
         <!--翻页-->
         <div class="page_turn page_turnSpe txtC">

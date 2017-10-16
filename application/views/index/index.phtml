@@ -34,7 +34,7 @@
                 <div id="navbar" class="navbar-collapse collapse" style="margin-top: 20px;">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/">首页</a></li>
-                        <li><a href="/news">乐开分享</a></li>
+                        <li><a href="/news/index/type/3">乐开分享</a></li>
                         <li><a href="/about" style="color: #fff">关于乐开</a></li>
                         <li><a href="/about/contact" style="color: #fff">联系乐开</a></li>
                         <li><a href="/job">乐开招聘</a></li>
@@ -259,24 +259,28 @@
             </div>
             <div class="col-md-6 padding">
                 <h2>乐开动态</h2>
-                {@foreach from=$newsList item=news@}
+                {@if $newsList1@}
+                {@foreach from=$newsList1 item=news@}
                 <div style="margin: 5px 0 5px 0;"><span class="news-date">{@$news.add_time@}</span></div>
                     <h3 style="font-weight: bold;">{@$news.title|truncate:30:"...":true@}</h3>
                     <p style="margin:5px 0;line-height:150%;">{@$news.description@}<span style="margin-left: 10px;"><a href="/news/detail/id/{@$news.id@}">>>查看详情</a></span></p>
                     <hr/>
                 {@/foreach@}
+                {@/if@}
                 <div style="text-align: center;margin:20px;">
-                <a href="/news"><span class="btn">更多动态</span></a>
+                <a href="/news/index/type/1"><span class="btn">更多动态</span></a>
                 </div>
                 <h2>乐开合作</h2>
-                {@foreach from=$newsList item=news@}
+                {@if $newsList2@}
+                {@foreach from=$newsList2 item=news@}
                 <div style="margin: 5px 0 5px 0;"><span class="news-date">{@$news.add_time@}</span></div>
                 <h3 style="font-weight: bold;">{@$news.title|truncate:30:"...":true@}</h3>
                 <p style="margin:5px 0;line-height:150%;">{@$news.description@}<span style="margin-left: 10px;"><a href="/news/detail/id/{@$news.id@}">>>查看详情</a></span></p>
                 <hr/>
                 {@/foreach@}
+                {@/if@}
                 <div style="text-align: center;margin:20px;">
-                    <a href="/news"><span class="btn">更多合作</span></a>
+                    <a href="/news/index/type/2"><span class="btn">更多合作</span></a>
                 </div>
             </div>
         </div>
