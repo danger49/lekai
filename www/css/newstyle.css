@@ -47,7 +47,7 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 .background2{background-color:#ff9a00;}
 .background3{background-color:#eee;}
 
-.padding1{padding: 10px 0 20px 0;}
+.padding1{padding: 18px 0 45px 0;}
 
 .header-wrapper {background-color: #4a86c3;}
 .header-wrapper:after {
@@ -71,7 +71,7 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
      }
      .myCarouselMargin{
          position:relative;
-         margin: 0;
+         margin-top: 83px;
      }
      .carouselImg{
          height: 45em;
@@ -88,6 +88,13 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
          display: inline-block;
          vertical-align: middle;
      }
+     .videoClose {
+         position: absolute;
+         z-index: 10001;
+         top: 2%;
+         left: 8.3%;
+         display: none;
+     }
      .myTabPostion{
          position: relative;  z-index: 5;  top: -49px;
      }
@@ -101,7 +108,7 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     }
     .myCarouselMargin{
         position:relative;
-        margin-top: 50px;
+        margin-top: 73px;
     }
     .carouselImg{
         height: auto;
@@ -117,6 +124,13 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
         left: 50%;
         display: inline-block;
         vertical-align: middle;
+    }
+    .videoClose {
+        position: absolute;
+        z-index: 10001;
+        top: 2%;
+        left: 8.3%;
+        display: none;
     }
     .myTabPostion{
         position: relative;  z-index: 5;  top: 0px;
@@ -155,20 +169,6 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     margin-top: -40px;
     background: transparent url("../img/dotted-line.png") repeat-x;
     content: '';
-}
-
-.close-video-btn {
-    height: 20px;
-    z-index: 2;
-}
-.close-video-btn img {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    left: 6px;
-    width: 34px;
-    z-index: 1000;
-    top: 6px;
 }
 
 @media all {

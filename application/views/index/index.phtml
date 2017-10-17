@@ -78,12 +78,19 @@
             <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
+        <div id="videoFrame" style="position: absolute;top:1%;left:8%;z-index: 10000;width: 84%;height: auto;display: none;">
+            <video id="videoSource" controls="controls" style="width: 100%;height: auto;display: inline-block">
+                <source src="{@$config.video@}" type="video/mp4">
+                你的浏览器不支持该视频播放！
+            </video>
+        </div>
         <div class="videoTop">
             <div class="play-video-btn">
-                <a data-toggle="modal" data-target="#videoModal">
-                    <img src="./img/play-video-btn.png" alt="Play Video">
-                </a>
+                <img id="play-video-btn" src="./img/play-video-btn.png" alt="Play Video">
             </div>
+        </div>
+        <div class="videoClose">
+            <img id="close-video-btn" src="./img/close-button.png" alt="Close Video">
         </div>
     </div>
     <!--轮播 end-->
@@ -166,18 +173,75 @@
                 </div>
                 <div class="tab-pane fade" id="teacher">
                     <div class="container myTabPadding">
-                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h3 class="descriptionTitle">乐开课程三大特色</h3></div>
-                        <div class="row">
-                            <div class="col-md-4"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">特色1</div></div>
-                            <div class="col-md-4"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">特色2</div></div>
-                            <div class="col-md-4"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">特色3</div></div>
+                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h2 class="descriptionTitle">乐开课程三大特色</h2></div>
+                        <div class="row ">
+                            <div class="col-md-4">
+                                <div style="height: 300px;border: 1px #eee dotted;">
+                                    <div id="products1" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item">特色a1</div>
+                                        <div class="item">特色a2</div>
+                                        <div class="item">特色a3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="height: 300px;border: 1px #eee dotted;">
+                                    <div id="products2" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item">特色b1</div>
+                                        <div class="item">特色b2</div>
+                                        <div class="item">特色b3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="height: 300px;border: 1px #eee dotted;">
+                                    <div id="products3" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                        <div class="item">特色c1</div>
+                                        <div class="item">特色c2</div>
+                                        <div class="item">特色c3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h3 class="descriptionTitle">乐开课程四大优势</h3></div>
-                        <div class="row">
-                            <div class="col-md-3 col-xs-6"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">原创音乐</div></div>
-                            <div class="col-md-3 col-xs-6"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">创造性交互</div></div>
-                            <div class="col-md-3 col-xs-6"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">阶梯式学习</div></div>
-                            <div class="col-md-3 col-xs-6"><div style="height: 300px;border-radius: 10px;border: 1px #eee dotted;">游戏式学习</div></div>
+                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h2 class="descriptionTitle">乐开课程四大优势</h2></div>
+                        <div class="row descriptionTitle">
+                            <div class="col-md-3 col-xs-6">
+                                <div style="height: 300px;border-right: 1px #eee dotted;padding-right: 20px;">
+                                    <h3 class="descriptionTitle text-center">原创音乐</h3>
+                                    <p>所有的教学音乐均为资深作曲家全新创作，为孩子们呈现真正具有时代审美的儿童音乐作品，让孩子们不再听着父辈的儿歌长大。</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div style="height: 300px;border-right: 1px #eee dotted;padding-right: 20px;">
+                                    <h3 class="descriptionTitle text-center">创造性交互</h3>
+                                    <p>我们重新定义了音高和节奏的学习方式，让教学质量不再受限于老师的专业能力，为每个孩子呈现最科学严谨的音乐学习</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div style="height: 300px;border-right: 1px #eee dotted;padding-right: 20px;">
+                                    <h3 class="descriptionTitle text-center">阶梯式学习</h3>
+                                    <p>每次课时都是为了最终的教学目标而精心编排，由简入难的专业梯度设计，让孩子在科学完善的教学体系下进行学习</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-6">
+                                <div style="height: 300px;">
+                                    <h3 class="descriptionTitle text-center">游戏式学习</h3>
+                                    <p>
+                                    <ul>
+                                        <li>每一首儿歌都结合了奇思妙想的游戏玩法；</li>
+                                        <li>每一条音高视唱都以全新的视角进行学习；</li>
+                                        <li>每一条节奏练习都以律动游戏的方式来学习；</li>
+                                        <li>每一首古典作品都是一个动人的故事；</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,7 +268,7 @@
                 </div>
                 <div class="tab-pane fade" id="about">
                     <div class="container myTabPadding">
-                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h3 class="descriptionTitle">乐开加盟四大服务支持</h3></div>
+                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h2 class="descriptionTitle">乐开加盟四大服务支持</h2></div>
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
                                 <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">专家教研团队支持</div>
@@ -221,7 +285,7 @@
                                 <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">乐开课程教具支持</div>
                             </div>
                         </div>
-                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h3 class="descriptionTitle">乐开部分案例展示</h3></div>
+                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h2 class="descriptionTitle">乐开部分案例展示</h2></div>
                         <div class="row">
                             <div class="col-md-2 col-xs-4">
                                 <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">案例一</div>
@@ -286,23 +350,6 @@
         </div>
     </div>
     <!--固定end-->
-    <div class="modal fade" id="videoModal" tabindex="-1">
-        <div class="modal-dialog" role="document" style="width: auto;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="close-video-btn" data-dismiss="modal">
-                        <img src="./img/close-button.png" alt="Close Video" style="display: block;">
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <video id="videoSource" controls="controls" style="width: 100%">
-                        <source src="{@$config.video@}" type="video/mp4">
-                        你的浏览器不支持该视频播放！
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
 
 {@include 'footer.phtml'@}
 
@@ -319,10 +366,14 @@
     }
     $(function () {
         var video = document.getElementById('videoSource');
-        $('#videoModal').on('hide.bs.modal', function () {
-            video.pause();
+        $('#close-video-btn').on('click', function () {
+          $('#videoFrame').hide();
+          $('.videoClose').hide();
+          video.pause();
         })
-        $('#videoModal').on('shown.bs.modal', function () {
+        $('#play-video-btn').on('click', function () {
+            $('#videoFrame').show();
+            $('.videoClose').show();
             video.play();
         })
 
