@@ -19,6 +19,8 @@ class IndexController extends FControllerModel {
         $newsModel = NewsModel::getInstance();
         $newsList1 = $newsModel->getLatestNews(1);
         $newsList2 = $newsModel->getLatestNews(2);
+        $photoModel = PhotoModel::getInstance();
+        $photos = $photoModel->getLatestPhoto(8);
         $casedetailModel = CasedetailModel::getInstance();
         $caseList = $casedetailModel->getLatestCase(10);
         foreach ($caseList as &$case) {
@@ -40,6 +42,7 @@ class IndexController extends FControllerModel {
         $this->_view->assign('caseList', $caseList);
         $this->_view->assign('newsList1', $newsList1);
         $this->_view->assign('newsList2', $newsList2);
+        $this->_view->assign('photos', $photos);
         return true;
     }
 

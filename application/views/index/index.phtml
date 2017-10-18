@@ -118,8 +118,13 @@
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade in active" id="music">
                     <div class="container myTabPadding">
-                        <div class="row" style="text-align:center;">
-                            <div class="col-md-3 col-xs-6">
+                        <div class="row text-center" style="line-height: 200%;color: white">
+                            <h2 class="descriptionTitle">乐开课程<span class="fontRed">四大体系</span></h2>
+                            <h3>The Four Major System</h3>
+                            <h3>乐开音乐教学体系面向3~12岁的儿童，以多元化的音乐学习内容，为儿童学习音乐提供一站式服务</h3>
+                        </div>
+                        <div class="row text-center" style="margin: 20px 0 20px 0;">
+                            <div class="col-md-3 col-xs-6" style="border-right: 1px #eee dotted;">
                                 <div class="">
                                 <div><a class="descriptionIcon"><img src="img/ico1.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title1@}</h3>
@@ -128,7 +133,7 @@
                                     {@$config.music_description1@}
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6">
+                            <div class="col-md-3 col-xs-6" style="border-right: 1px #eee dotted;">
                                 <div class="">
                                 <div><a class="descriptionIcon"><img src="img/ico2.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title2@}</h3>
@@ -137,7 +142,7 @@
                                     {@$config.music_description2@}
                                 </div>
                             </div>
-                            <div class="col-md-3 col-xs-6">
+                            <div class="col-md-3 col-xs-6" style="border-right: 1px #eee dotted;">
                                 <div class="">
                                 <div><a class="descriptionIcon"><img src="img/ico3.png"></a></div>
                                 <h3 class="descriptionTitle">{@$config.music_title3@}</h3>
@@ -156,27 +161,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row" style="height: 100px">
+                        <div class="row" style="height: 60px">
                             <div class="text-center"><h3 class="descriptionTitle">0-3岁音乐启蒙</h3></div>
                         </div>
-                        <div class="row" style="height: 100px">
+                        <div class="row" style="height: 60px">
                             <div class="text-center"><h3 class="descriptionTitle">3-6岁音乐素养</h3></div>
                         </div>
-                        <div class="row" style="height: 100px">
+                        <div class="row" style="height: 60px">
                             <div class="text-center"><h3 class="descriptionTitle">5-12岁乐器学习</h3></div>
                         </div>
-                        <div class="row" style="height: 100px">
+                        <div class="row" style="height: 60px">
                             <div class="text-center"><h3 class="descriptionTitle">家庭亲子乐队</h3></div>
                         </div>
-                        <div class="row" style="height: 100px">
+                        <div class="row" style="height: 60px">
                             <div class="text-center"><h3 class="descriptionTitle">乐开儿童合唱团</h3></div>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="teacher">
                     <div class="container myTabPadding">
-                        <div class="row text-center" style="line-height: 200%;"><h2 class="descriptionTitle">乐开课程<span class="fontRed">三大特色</span></h2></div>
-                        <div class="row ">
+                        <div class="row text-center" style="line-height: 200%;">
+                            <h2 class="descriptionTitle">乐开课程<span class="fontRed">三大特色</span></h2>
+                            <h3 style="color: white">The Three Major Characteristic</h3>
+                        </div>
+                        <div class="row text-center">
                             <div class="col-md-4">
                                 <div style="height: 300px;border: 1px #eee dotted;">
                                     <div id="products1" class="carousel slide" style="position:static">
@@ -186,9 +194,9 @@
                                             <li data-target="#products1" data-slide-to="2"></li>
                                         </ol>
                                         <div class="carousel-inner">
-                                            <div class="item active">特色c1</div>
-                                            <div class="item">特色c2</div>
-                                            <div class="item">特色c3</div>
+                                            <div class="item active">特色a1</div>
+                                            <div class="item">特色a2</div>
+                                            <div class="item">特色a3</div>
                                         </div>
                                     </div>
                                 </div>
@@ -202,9 +210,9 @@
                                             <li data-target="#products2" data-slide-to="2"></li>
                                         </ol>
                                         <div class="carousel-inner">
-                                            <div class="item active">特色c1</div>
-                                            <div class="item">特色c2</div>
-                                            <div class="item">特色c3</div>
+                                            <div class="item active">特色b1</div>
+                                            <div class="item">特色b2</div>
+                                            <div class="item">特色b3</div>
                                         </div>
                                     </div>
                                 </div>
@@ -228,6 +236,7 @@
                         </div>
                         <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;">
                             <h2 class="descriptionTitle">乐开课程<span class="fontRed">四大优势</span></h2>
+                            <h3 style="color: white">The Four Major Advantage</h3>
                         </div>
                         <div class="row descriptionTitle">
                             <div class="col-md-3 col-xs-6">
@@ -269,19 +278,23 @@
                 </div>
                 <div class="tab-pane fade" id="activity">
                     <div class="container myTabPadding myTabPadding1">
+                        <div class="row myTabPadding">
+                            <div class="col-md-4 col-xs-12">
+                                <video style="width: 100%;height: auto"><source src="{@$config.video@}" type="video/mp4"></video>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <video style="width: 100%;height: auto"><source src="{@$config.video@}" type="video/mp4"></video>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <video style="width: 100%;height: auto"><source src="{@$config.video@}" type="video/mp4"></video>
+                            </div>
+                        </div>
                         <div class="row">
-                            <div class="col-md-3 col-xs-6">
-                                <img src="{@$config.index_photo1@}"/>
+                            {@foreach from=$photos item=photo@}
+                            <div class="col-md-3 col-xs-6" style="padding: 10px;">
+                                <img class="img-rounded" src="{@$photo.img@}" alt="{@$photo.title@}" style="width: 100%;height: auto"/>
                             </div>
-                            <div class="col-md-3 col-xs-6">
-                                <img src="{@$config.index_photo2@}"/>
-                            </div>
-                            <div class="col-md-3 col-xs-6">
-                                <img src="{@$config.index_photo3@}"/>
-                            </div>
-                            <div class="col-md-3 col-xs-6">
-                                <img src="{@$config.index_photo4@}"/>
-                            </div>
+                            {@/foreach@}
                         </div>
                         <div  style="text-align: center;margin:20px;">
                             <a href="/photo"><span class="btn btn-1">更多精彩</span></a>
@@ -292,24 +305,36 @@
                     <div class="container myTabPadding">
                         <div class="row text-center" style="line-height: 200%;">
                             <h2 class="descriptionTitle">乐开加盟<span class="fontRed">四大服务支持</span></h2>
+                            <h3 style="color: white">The Four Major Service Support</h3>
                         </div>
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-md-6 col-xs-12">
-                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">专家教研团队支持</div>
+                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">
+                                    专家教研团队支持
+                                </div>
                             </div>
                             <div class="col-md-6 col-xs-12">
-                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">乐开课程培训支持</div>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 10px;">
-                            <div class="col-md-6 col-xs-12">
-                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">乐开课程教材支持</div>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">乐开课程教具支持</div>
+                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">
+                                    乐开课程培训支持
+                                </div>
                             </div>
                         </div>
-                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;"><h2 class="descriptionTitle">乐开部分<span class="fontRed">案例</span>展示</h2></div>
+                        <div class="row text-center" style="margin-top: 10px;">
+                            <div class="col-md-6 col-xs-12">
+                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">
+                                    乐开课程教材支持
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <div style="height: 200px;border-radius: 10px;border: 1px #eee dotted;">
+                                    乐开课程教具支持
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center" style="margin: 10px 0;padding:10px 0;line-height: 200%;">
+                            <h2 class="descriptionTitle">乐开部分<span class="fontRed">案例</span>展示</h2>
+                            <h3 style="color: white">Part Of The Case Show</h3>
+                        </div>
                         <div class="row text-center">
                             <div class="col-md-2 col-xs-4">
                                 <div>
