@@ -332,6 +332,14 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     font-size:40px;
 }
 
+.borderRight{
+    border-right: 1px dotted white;
+}
+
+.borderRightHide{
+    border-right: 1px dotted white;
+}
+
 .courseTitle{
     border-radius: 20px;position: relative;display: inline-block;
 }
@@ -373,6 +381,17 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
     }
     .descriptionTitle {
         line-height: 100%
+    }
+    .courseTitleHead{
+        width: 25%;
+        padding: 12px 5px;
+    }
+    .courseTitleContent{
+        width: 75%;
+        word-wrap: break-word;
+    }
+    .borderRightHide{
+        border-right: 0;
     }
 }
 
