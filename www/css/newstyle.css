@@ -18,6 +18,8 @@ h4 {font-size: 1em;margin: 1.33em 0;}
 h5 {font-size: 0.83em;margin: 1.67em 0;}
 h6 {font-size: 0.67em;margin: 2.33em 0;}
 
+p{line-height: 150%}
+
 a{text-decoration:none;}
 a:visited,a:link {color:#205f8a;text-decoration:none;border-style:none;}
 a:hover {color:#205f8a;text-decoration:none;border-style:none;}
@@ -46,8 +48,22 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 .background1{background-color:#84bade;}
 .background2{background-color:#ff9a00;}
 .background3{background-color:#eee;}
+.background4{background-color:green;}
+.background5{background-color:#d01a14;}
 
-.fontRed{color: #d01a14;font-weight: bold}
+.fontColor{color: #4a86c3;font-weight: bold}
+.fontColor1{color: #84bade;font-weight: bold}
+.fontColor2{color: #ff9a00;font-weight: bold}
+.fontColor3{color: #eee;font-weight: bold}
+.fontColor4{color: green;font-weight: bold}
+.fontColor5{color: #d01a14;font-weight: bold}
+
+.border{border:1px solid #4a86c3;}
+.border1{border:1px solid #84bade;}
+.border2{border:1px solid #ff9a00;}
+.border3{border:1px solid #eee;}
+.border4{border:1px solid green;}
+.border5{border:1px solid #d01a14;}
 
 .padding1{padding: 18px 0 45px 0;}
 
@@ -315,6 +331,18 @@ a:hover {color:#205f8a;text-decoration:none;border-style:none;}
 .teacher2{
     font-size:40px;
 }
+
+.courseTitle{
+    border-radius: 20px;position: relative;display: inline-block;
+}
+.courseTitleHead{
+    padding: 5px;font-weight: bold;background-color:white;border:1px solid white;border-radius: 20px;
+}
+.courseTitleContent{
+    padding: 5px;
+    word-wrap: break-word;
+}
+
 @media (max-width: 767px) {
     .navbar-nav li{
         font-size: 1.5em;
