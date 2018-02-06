@@ -13,10 +13,10 @@
             <h2 class="sub-header">招聘中心</h2>
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/job/add">增加招聘</a></h4>
+                    <a href="/admin/job/add"><button class="btn btn-primary">增加招聘</button></a>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/index/main">返回</a></h4>
+                    <a href="/admin/index/main"><button class="btn btn-default">返回</button></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -35,7 +35,9 @@
                         <td>{@$job.id@}</td>
                         <td>{@$job.title@}</td>
                         <td>{@$job.add_time@}</td>
-                        <td><a href="/admin/job/edit/?id={@$job.id@}">修改</a> | <a href="/admin/job/del/?id={@$job.id@}">删除</a>
+                        <td>
+                            <a href="/admin/job/edit/?id={@$job.id@}"><button class="btn btn-primary">修改</button></a>
+                            <a href="/admin/job/del/?id={@$job.id@}"><button class="btn btn-danger">删除</button></a>
                         </td>
                     </tr>
                     {@/foreach@}

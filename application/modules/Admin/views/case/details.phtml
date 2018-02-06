@@ -13,10 +13,10 @@
             <h2 class="sub-header">案例中心</h2>
             <div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/case/addDetail/?id={@$case.id@}">增加案例明细</a></h4>
+                    <a href="/admin/case/addDetail/?id={@$case.id@}"><button class="btn btn-primary">增加案例明细</button></a>
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
-                    <h4><a href="/admin/case/index">返回</a></h4>
+                    <a href="/admin/case/index"><button class="btn btn-default">返回</button></a>
                 </div>
             </div>
             <div class="table-responsive">
@@ -37,8 +37,8 @@
                         <td>{@$case.name@}</td>
                         <td>{@$detail.name@}</td>
                         <td>{@$detail.order@}</td>
-                        <td><a href="/admin/case/editDetail/?id={@$detail.id@}&case_id={@$case.id@}">修改</a> | <a
-                                    href="/admin/case/delDetail/?id={@$detail.id@}&case_id={@$case.id@}">删除</a></td>
+                        <td><a href="/admin/case/editDetail/?id={@$detail.id@}&case_id={@$case.id@}"><button class="btn btn-primary">修改</button></a>   <a
+                                    href="/admin/case/delDetail/?id={@$detail.id@}&case_id={@$case.id@}"><button class="btn btn-danger">删除</button></a></td>
                     </tr>
                     {@/foreach@}
                     </tbody>

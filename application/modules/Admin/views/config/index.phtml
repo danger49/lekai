@@ -10,58 +10,71 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h2 class="sub-header">网站配置</h2>
             <div class="row placeholders">
-                <h4><a href="/admin/index/main">返回</a></h4>
+                <a href="/admin/index/main"><button class="btn btn-default">返回</button></a>
             </div>
-            <div class="table-responsive">
-                <form id='form' enctype="multipart/form-data" method="post" action="#">
-                {@foreach from=$list item=item@}
-                <div class="row" style="padding:5px">
+            {@foreach from=$list item=item@}
+            <form id='form{@$item.id@}' enctype="multipart/form-data" method="post" action="#">
+                <div class="row" style="padding:5px 0 5px 0">
                     <div class="col-sm-2">
-                        {@$item.title@}
+                        {@$item.title@} {@$item.condition@}
                     </div>
                     <div class="col-sm-8">
-                    {@if $item.type eq "input"@}
-                    <input id="{@$item.id@}" name="{@$item.key@}" value="{@$item.value@}" size="50" />
-                    {@elseif $item.type eq "textarea"@}
-                    <textarea id="{@$item.id@}" name="{@$item.key@}" rows="5" cols="80"> {@$item.value@}</textarea>
-                    {@elseif $item.type eq "file"@}
-                    <input id="{@$item.id@}" name="{@$item.key@}" type="file" size="20"/><span>{@$item.value@}</span>
-                    {@/if@}
+                        {@if $item.type eq "input"@}
+                        <input id="{@$item.id@}" title="{@$item.title@}" name="{@$item.key@}" value="{@$item.value@}" size="50"/>
+                        {@elseif $item.type eq "textarea"@}
+                        <textarea id="{@$item.id@}" title="{@$item.title@}" name="{@$item.key@}" rows="5"
+                                  cols="80"> {@$item.value@}</textarea>
+                        {@elseif $item.type eq "file"@}
+                        <input id="{@$item.id@}" title="{@$item.title@}" name="{@$item.key@}[]" type="file"
+                               size="20"/><span>{@$item.value@}</span><span id="process{@$item.id@}"></span>
+                        {@/if@}
                     </div>
                     <div class="col-sm-1">
-                        <button onclick="javascript:update({@$item.id@});">更新</button>
+                        <a onclick="javascript:update({@$item.id@});">
+                            <button class="btn btn-primary">更新</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-1">
+                        <input id='reset' type="reset" value="重置"/>
                     </div>
                 </div>
-                {@/foreach@}
-                <input id='submit' type="submit" value="提交"/> <input id='reset' type="reset" value="重置"/>
-                </form>
-            </div>
+            </form>
+            {@/foreach@}
         </div>
     </div>
 </div>
 
 {@include 'footer.phtml'@}
 <script type="text/javascript">
-    function update(id){
-        var data = {}
-        data.id = id;
-        data.key = $("#" + id).attr("name");
-        data.value = $("#" + id).attr("value") ? $("#" + id).attr("value") : '';
-        data.type = $("#" + id).attr("type") ? $("#" + id).attr("type") : '';
-        console.log(data);
-        $.ajax({
-        type: "POST",
-        url:"./save",
-        data:data,
-        dataType:'json',
-        success:function(response){
-            if(response.code && response.code != undefined && response.code != null && response.code != '' && response.code=='200'){                
-                alert(rep.msg);
-            }else{
-                alert('更新失败');
-            }
+  function update(id) {
+    var data = {}
+    data.id = id;
+    data.key = $("#" + id).attr("name");
+    data.title = $("#" + id).attr("title");
+    data.value = $("#" + id).val();
+    data.type = $("#" + id).attr("type") ? $("#" + id).attr("type") : '';
+
+    $("#form" + id).ajaxSubmit({
+      type: "POST",
+      url: "./save",
+      data: data,
+      dataType: 'json',
+      success: function (response) {
+        if (response.code && response.code != undefined && response.code != null && response.code != '' && response.code == '200') {
+          alert(data.title + response.rep.msg);
+        } else {
+          alert(data.title + '更新失败');
         }
+      },
+      uploadProgress: function (event, position, total, percentComplete) {//上传的过程
+        //position 已上传了多少
+        //total 总大小
+        //已上传的百分数
+        var percentVal = percentComplete + '%';
+        $("#process" + id).html("上传进度：" + percentVal);
+        //console.log(percentVal, position, total);
+      },
     });
-    }
+  }
 </script>
 
