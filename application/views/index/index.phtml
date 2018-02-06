@@ -1,7 +1,8 @@
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <title>乐开儿童音乐王国|中国最权威的儿童音乐教育品牌</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -13,23 +14,17 @@
 </head>
 <body>
     <!--head start-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">导航</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <span style="display: block;">
-                    <a class="" href="/">乐开音乐王国</a>
-                </span>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
+    <nav class="navbar fixed-top">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">乐开音乐王国</span>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">导航</span>
+                <span class="icon-bar"></span>
+            </button>
+            <div id="navbar" class="navbar-collapse collapse">1
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/" >首页</a></li>
-                    <li><a href="/case">乐开课程</a></li>
+                    <li class="active"><a href="/" >首页</a></li>
+                    <li ><a href="/case">乐开课程</a></li>
                     <li><a href="/photo">活动剪影</a></li>
                     <li><a href="/news">乐开分享</a></li>
                     <li><a href="/job">关于我们</a></li>
@@ -39,120 +34,137 @@
     </nav>
     <!--head end-->
     <!--轮播 start-->
-    <div style="position:relative;">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- 轮播（Carousel）指标 -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-            </ol>
-            <!-- 轮播（Carousel）项目 -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="{@$config.carousel_img1@}" alt="1">
-                </div>
-                <div class="item">
-                    <img src="{@$config.carousel_img2@}" alt="2">
-                </div>
-                <div class="item">
-                    <img src="{@$config.carousel_img3@}" alt="3">
-                </div>
-                <div class="item">
-                    <img src="{@$config.carousel_img4@}" alt="4">
-                </div>
-                <div class="item">
-                    <img src="{@$config.carousel_img5@}" alt="5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{@$config.carousel_img1@}" alt="1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>sfasdfadsfadsfasdfadsf</h5>
+                    <p>1123123213</p>
                 </div>
             </div>
-            <!-- 轮播（Carousel）导航 -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{@$config.carousel_img2@}" alt="2">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{@$config.carousel_img3@}" alt="3">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{@$config.carousel_img4@}" alt="4">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{@$config.carousel_img5@}" alt="5">
+            </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
     <!--轮播 end-->
-    <!--part1 start-->
     <div class="container">
+    <!--part1 start-->
         <div class="row">
             <div class="col-md-6">
-                <h3>音乐素养？</h3>
-                <p>音乐素养教育，所谓由律动训练和音乐实践而获得的一种音乐修养。内容涵盖读谱、视唱听音、节奏训练、多声部和声、音乐赏析等多方面的综合理论基础。</p>
-                <h3>为什么要学音乐素养？</h3>
-                <p>一个学习音乐的人，不学习音乐素养就等于是一个机械地弹奏和歌唱的机器人，因为前期对音乐节奏，音高及音乐理论缺乏基础性的掌握，在学习乐器的过程中非常容易放弃，更无法谈对音乐及艺术建立良好的审美和理解。
+                <h3 style="line-height: 400%;margin-top: 20px;">音乐素养？</h3>
+                <p style="line-height: 200%;margin-top: 20px;">音乐素养教育，所谓由律动训练和音乐实践而获得的一种音乐修养。内容涵盖读谱、视唱听音、节奏训练、多声部和声、音乐赏析等多方面的综合理论基础。</p>
+                <h3 style="line-height: 400%;">为什么要学音乐素养？</h3>
+                <p style="line-height: 200%;margin-top: 20px;">一个学习音乐的人，不学习音乐素养就等于是一个机械地弹奏和歌唱的机器人，因为前期对音乐节奏，音高及音乐理论缺乏基础性的掌握，在学习乐器的过程中非常容易放弃，更无法谈对音乐及艺术建立良好的审美和理解。
     学习音乐素养是为了全面提孩子的艺术综合素质，并以此提升学员对乐器和歌唱的学习质量，拥有良好的音乐听想能力，增强对音乐的感悟、理解和创造能力，这也是未来时代人群最核心的竞争力——感性能力。</p>
-                <img src=""/>
+                <img class="carousel-inner img-responsive" style="width: 100%" src="./images/index/a.jpg"/>
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-6"><img src=""/></div>
-                    <div class="col-md-6"><img src=""/></div>
-                    <div class="col-md-6"><img src=""/></div>
-                    <div class="col-md-6"><img src=""/></div>
-                    <div class="col-md-6"><img src=""/></div>
-                    <div class="col-md-6"><img src=""/></div>
+                    <div class="col-md-6" style="background-color: #6fad6d"><img class="carousel-inner img-responsive" src="./images/index/d1.jpg"/></div>
+                    <div class="col-md-6" style="background-color: #ada36d"><img class="carousel-inner img-responsive" src="./images/index/d2.jpg"/></div>
+                    <div class="col-md-6" style="background-color: #ad806d"><img class="carousel-inner img-responsive" src="./images/index/d3.jpg"/></div>
+                    <div class="col-md-6" style="background-color: #6e6dad"><img class="carousel-inner img-responsive" src="./images/index/d4.jpg"/></div>
+                    <div class="col-md-6" style="background-color: #ada36d"><img class="carousel-inner img-responsive" src="./images/index/d5.jpg"/></div>
+                    <div class="col-md-6" style="background-color: #6fad6d"><img class="carousel-inner img-responsive" src="./images/index/d6.jpg"/></div>
                 </div>
             </div>
         </div>
-    </div>
     <!--part1 end-->
 
     <!--part2 start-->
-    <div class="container">
-        <div class="row">
+        <div class="row" style="margin-top: 50px">
             <div class="col-md-4">
-                <div class="col-md-2"><img src=""/></div>
-                <div class="col-md-10">
-                    <h4>音乐原创</h4>
-                    <p>所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                <div class="row">
+                    <div class="col-md-2"><img src="./images/index/1.png"/></div>
+                    <div class="col-md-10">
+                        <h4 style="line-height: 300%">音乐原创</h4>
+                        <p style="line-height: 200%">所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="col-md-2"><img src=""/></div>
-                <div class="col-md-10">
-                    <h4>音乐原创</h4>
-                    <p>所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                <div class="row">
+                    <div class="col-md-2"><img src="./images/index/2.png"/></div>
+                    <div class="col-md-10">
+                        <h4 style="line-height: 300%">音乐原创</h4>
+                        <p style="line-height: 200%">所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="col-md-2"><img src=""/></div>
-                <div class="col-md-10">
-                    <h4>音乐原创</h4>
-                    <p>所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="col-md-2"><img src=""/></div>
-                <div class="col-md-10">
-                    <h4>音乐原创</h4>
-                    <p>所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="col-md-2"><img src=""/></div>
-                <div class="col-md-10">
-                    <h4>音乐原创</h4>
-                    <p>所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="col-md-2"><img src=""/></div>
-                <div class="col-md-10">
-                    <h4>音乐原创</h4>
-                    <p>所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                <div class="row">
+                    <div class="col-md-2"><img src="./images/index/3.png"/></div>
+                    <div class="col-md-10">
+                        <h4 style="line-height: 300%">音乐原创</h4>
+                        <p style="line-height: 200%">所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row" style="margin-top: 50px">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-2"><img src="./images/index/4.png"/></div>
+                    <div class="col-md-10">
+                        <h4 style="line-height: 300%">音乐原创</h4>
+                        <p style="line-height: 200%">所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-2"><img src="./images/index/5.png"/></div>
+                    <div class="col-md-10">
+                        <h4 style="line-height: 300%">音乐原创</h4>
+                        <p style="line-height: 200%">所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-2"><img src="./images/index/6.png"/></div>
+                    <div class="col-md-10">
+                        <h4 style="line-height: 300%">音乐原创</h4>
+                        <p style="line-height: 200%">所有音乐均为作曲家全新创作;每一首作品都为了教学而设计;音乐作品风格多元化拓展视野</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!--part2 end-->
-
+    </div>
     <!--banner start-->
-    <div style="background-color: #ccc">
-        <div class="container text-center">
-        <h3>乐开儿童音乐王国全国加盟，即将开启，敬请期待</h3>
+    <div style="background-color: #4f4f4f;margin-top: 50px">
+        <div class="container">
+        <div class="row" style="padding: 10px;">
+            <div class="col-md-6 text-center"><h1 style="line-height: 300%;color: white">匠心打造</h1></div>
+            <div class="col-md-6 text-center"><img src="./img/qr.png" width="100px" height="100px"></div>
+        </div>
         </div>
     </div>
     <!--banner end-->
@@ -160,17 +172,20 @@
     <!--part3 start-->
     <div class="container">
         <div class="row">
-            <div class="col-md-6"><img src="" /></div>
-            <div class="col-md-6">
-                <h3>全新作品</h3>
-                <p>所有的教学音乐均为资深作曲家全新创作，为孩子们呈现真正具有时代审美的儿童音乐作品，让孩子们不再听着父辈的儿歌长大</p>
-                <h3>量身创作</h3>
-                <p>每一首音乐作品不仅仅是歌曲，而是为了特定的教学目标而设计，我们把知识点融入作品本身，让孩子们在歌唱中学习音乐。
+            <div class="col-md-6"><img class="carousel-inner img-responsive" src="./images/index/c.jpg" /></div>
+            <div class="col-md-6" style="padding-left: 40px;padding-right:40px;background-color: #f2f2ea">
+                <h3 style="line-height: 300%">全新作品</h3>
+                <p style="line-height: 200%">所有的教学音乐均为资深作曲家全新创作，为孩子们呈现真正具有时代审美的儿童音乐作品，让孩子们不再听着父辈的儿歌长大</p>
+                <h3 style="line-height: 300%">量身创作</h3>
+                <p style="line-height: 200%">每一首音乐作品不仅仅是歌曲，而是为了特定的教学目标而设计，我们把知识点融入作品本身，让孩子们在歌唱中学习音乐。
                 </p>
-                <h3>风格多元</h3>
-                <p>我们的作品，从热情澎湃的世界民俗音乐到严谨的古典音乐，风格极其多元化，让孩子们的音乐视野不再被局限</p>
+                <h3 style="line-height: 300%">风格多元</h3>
+                <p style="line-height: 200%">我们的作品，从热情澎湃的世界民俗音乐到严谨的古典音乐，风格极其多元化，让孩子们的音乐视野不再被局限</p>
             </div>
         </div>
     </div>
 
 {@include 'footer.phtml'@}
+
+    <script>
+    </script>
