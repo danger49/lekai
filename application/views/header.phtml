@@ -10,39 +10,63 @@
     {@if isset($meta_keywords) AND $meta_keywords@}
     <meta name="keywords" content="{@$meta_keywords|escape:html:'UTF-8'@}"/>
     {@/if@}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     {@if isset($css_files)@}
     {@foreach from=$css_files item=css_uri@}
     <link href="{@$css_uri@}" rel="stylesheet" type="text/css" media="all"/>
     {@/foreach@}
     {@/if@}
-    <script src="http://{@$config.host@}/js/jquery-3.2.1.min.js"></script>
+    {@if isset($js_files)@}
+    {@foreach from=$js_files item=js_uri@}
+    <script type="text/javascript" src="{@$js_uri@}"></script>
+    {@/foreach@}
+    {@/if@}
 </head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">导航</span>
-                <span class="icon-bar"></span>
-            </button>
-            <span style="display: block;">
-                <a class="" href="/">乐开音乐王国</a>
-            </span>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">1
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/" >首页</a></li>
-                <li><a href="/case">乐开课程</a></li>
-                <li><a href="/photo">活动剪影</a></li>
-                <li><a href="/news">乐开分享</a></li>
-                <li><a href="/job">关于我们</a></li>
+<nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">乐开音乐王国</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/case">乐开课程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/photo">活动剪影</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/news">乐开分享</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/job">关于我们</a>
+                </li>
+                <li class="nav-item text-center">
+                    <div class="center-vertical" style="margin-left:20px;color:white;background-color: #ccc;border-radius: 50%;width: 20px;height: 20px;">
+                        <span class="center-vertical">w</span>
+                    </div>
+                </li>
+                <li class="nav-item text-center">
+                    <div class="center-vertical" style="margin-left:20px;color:white;background-color: #ccc;border-radius: 50%;width: 20px;height: 20px;">
+                        <span class="center-vertical">q</span>
+                    </div>
+                </li>
+                <li class="nav-item text-center">
+                    <div class="center-vertical" style="margin-left:20px;color:white;background-color: #ccc;border-radius: 50%;width: 20px;height: 20px;">
+                        <span class="center-vertical">b</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-<div class="clearboth"></div>
