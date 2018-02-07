@@ -257,3 +257,10 @@ a:hover{text-decoration:underline;}
 .caseInfro_b dd { line-height:26px;}
 .caseInfro_bTit{ font-size:20px}
 .caseInfro_bSubTit{ font-size:16px}
+
+.center-vertical{
+    position: relative;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+}

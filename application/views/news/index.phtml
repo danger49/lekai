@@ -1,42 +1,25 @@
 {@include 'header.phtml'@}
 
-<!--mainContent start-->
-<div class="mainContent" style="min-height:91%;">
-    <!--内容-->
-    <div class="container content">
-        <!--标题-->
-        <div class="pageTit">乐开文化</div>
-        <!--/标题-->
-        <!--新闻列表-->
-        {@foreach from=$list item=news@}
-        <div class="row newsbottom">
-            <div class="col-md-10">
-                <a href="/news/detail/id/{@$news.id@}" class="{@$news.class@}">【新闻】{@$news.title@}</a>
-            </div>
-            <div class="col-md-2 fr">
-                <span>{@$news.add_time@}</span>
-            </div>
-        </div>
-        {@/foreach@}
-
-        <!--翻页-->
-        <div class="page_turn page_turnSpe txtC">
-            {@$pagebar@}
-        </div>
-        <!--/翻页-->
-
-        <!--/新闻列表-->
-        <div class="clearboth"></div>
+<div style="background-color:#e7efef">
+    <div class="container">
+        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
     </div>
-    <!--/内容-->
 </div>
-<!--mainContent end-->
 
-<script type="text/javascript">
-$(function() {
-	//顶部导航 选中状态
-	$(".menu dd.m4 a").addClass("current")
-})
-</script>
+<div class="container">
+    <div class="row"><h3 style="line-height: 200%">一起给孩子一个有声童年</h3></div>
+    {@foreach from=$list item=news@}
+    <div class="row"><h4 style="line-height: 200%">【分享】{@$news.title@}</h4></div>
+    <div class="row"><h5>{@$news.add_time@}</h5></div>
+    <div class="row"><div class="col-md-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/news/1.jpg"></div></div>
+    <div class="row"><p style="line-height: 200%">{@$news.description@}</p></div>
+    <div class="row"><h5 style="line-height: 300%"><a href="/news/detail/id/{@$news.id@}">详细内容</a></h5></div>
+    {@/foreach@}
+    <!--翻页-->
+    <div class="row">
+        {@$pagebar@}
+    </div>
+    <!--/翻页-->
+</div>
 
 {@include 'footer.phtml'@}

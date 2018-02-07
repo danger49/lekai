@@ -12,13 +12,9 @@ class CaseController extends FControllerModel {
 
     public function init() {
         parent::init();
-        $this->css['jplayer'] = 'http://www.lkmusic.cn/jplayer/case/jplayer.css';
         $this->js = array(
             'http://www.lkmusic.cn/js/jquery1.4.2.min.js',
-            'http://www.lkmusic.cn/js/jquery.easing.1.3.js',
-            'http://www.lkmusic.cn/js/allOneScroll.js',
-            'http://www.lkmusic.cn/jplayer/jquery.jplayer.min.js',
-            'http://www.lkmusic.cn/js/case.js',
+            'http://www.lkmusic.cn/js/bootstrap.min.js',
         );
         $this->_view->assign('css_files', $this->css);
         $this->_view->assign('js_files', $this->js);

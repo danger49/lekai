@@ -1,32 +1,107 @@
 {@include 'header.phtml'@}
 
-<!--mainContent start-->
-<div class="mainContent">
-    <!--内容-->
-    <div class="container content">
-            <!--标题-->
-            <div class="pageTit">加入乐开</div>
-            <!--/标题-->
-            <div class="conBase">
-                {@foreach from=$list item=job@}
-                <h4>{@$job.title@}</h4>
-                <hr/>
-                <p>{@$job.content@}</p>
-                {@/foreach@}
+<div style="background-color:#e7efef">
+    <div class="container">
+        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
+    </div>
+</div>
+
+<div class="container" style="margin-top: 50px;">
+    <h2 style="line-height: 200%">关于我们 / About us</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <p style="line-height: 200%">乐开音乐王国专注于中国儿童音乐教育，致力于提升全体国民儿童的音乐素养，用最具时代审美和气质的儿童音乐，让亿万儿童及家庭享有更具艺术高度的音乐教育服务。</p>
+            <p style="line-height: 200%">LK Musical Kingdom focus on Chinese Children musical education, we devote ourself to riseing musical accomplishment of the whole kids of our nationwild. And let hundereds of millions of children and familes to enjoy furthermore higher artistic musical education service via our most current aesthetic and temperamental children’s music.</p>
+            <div class="row" style="margin-top: 20px">
+                <div class="col-md-6">
+                    <h4>愿景</h4>
+                    <ul>
+                        <li>xxxxxxxxxxxxxxxxxxx</li>
+                        <li>xxxxxxxxxxxxxxxxxxx</li>
+                        <li>xxxxxxxxxxxxxxxxxxx</li>
+                        <li>xxxxxxxxxxxxxxxxxxxxx</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>使命</h4>
+                    <ul>
+                        <li>xxxxxxxxxxxxxxxxxxx</li>
+                        <li>xxxxxxxxxxxxxxxxxxx</li>
+                        <li>xxxxxxxxxxxxxxxxxxx</li>
+                        <li>xxxxxxxxxxxxxxxxxxxxx</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="clearboth"></div>
+        <div class="col-md-4"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/about/1.jpg"></div>
     </div>
-    <!--/内容-->
-</div>
-<!--mainContent end-->
 
-<script type="text/javascript">
-    $(function() {
-        //顶部导航 选中状态
-        $(".menu dd.m4 a").addClass("current")
-    })
-</script>
+    <div class="row" style="margin-top: 50px;margin-bottom: 50px;">
+        <div class="col-md-8"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/about/2.jpg"></div>
+        <div class="col-md-4"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/about/3.jpg"></div>
+        <div class="col-md-4"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/about/4.jpg"></div>
+        <div class="col-md-8"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/about/5.jpg"></div>
+    </div>
+
+    <h3 style="line-height: 300%">团队成员</h3>
+
+    <div class="row" style="margin-top: 10px;margin-bottom: 50px">
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top carousel-inner img-responsive" src="http://{@$config.host@}/images/about/a.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">CEO</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top carousel-inner img-responsive" src="http://{@$config.host@}/images/about/b.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">COO</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top carousel-inner img-responsive" src="http://{@$config.host@}/images/about/c.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">CFO</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top carousel-inner img-responsive" src="http://{@$config.host@}/images/about/d.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">CIO</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #cccccc;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>成就梦想</h3>
+                <ul>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                </ul>
+            </div>
+            <div class="col-md-6"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/about/6.jpg"></div>
+        </div>
+    </div>
+</div>
 
 {@include 'footer.phtml'@}
 

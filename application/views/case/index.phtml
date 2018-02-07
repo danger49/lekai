@@ -1,658 +1,247 @@
-<!--{@include 'header.phtml'@}-->
-<html lang="en">
-<head>
-    {@if isset($meta_title) AND $meta_title@}
-    <title>{@$meta_title|escape:'htmlall':'UTF-8'@}</title>
-    {@/if@}
-    {@if isset($meta_description) AND $meta_description@}
-    <meta name="description" content="{@$meta_description|escape:html:'UTF-8'@}"/>
-    {@/if@}
-    {@if isset($meta_keywords) AND $meta_keywords@}
-    <meta name="keywords" content="{@$meta_keywords|escape:html:'UTF-8'@}"/>
-    {@/if@}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    {@if isset($css_files)@}
-    {@foreach from=$css_files item=css_uri@}
-    <link href="{@$css_uri@}" rel="stylesheet" type="text/css" media="all"/>
-    {@/foreach@}
-    {@/if@}
-</head>
-<body data-spy="scroll" data-target=".bs-docs-sidebar">
+{@include 'header.phtml'@}
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid" style="background-color:#222">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>            
-            <span style="display: block;padding:0 0 0 20px;">
-                <img src="./img/logosmall.png" width="50px">
-                <a class="" href="/" style="color: white;font-size: x-large;line-height:70px">乐开儿童音乐王国</a>
-            </span>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/" style="color: white;">首页</a></li>
-                <li><a href="/case" style="color: white;">乐开作品</a></li>
-                <li><a href="/photo" style="color: white;">乐开风采</a></li>
-                <li><a href="/news" style="color: white;">乐开文化</a></li>
-                <li><a href="/job" style="color: white;">加入乐开</a></li>
-            </ul>
-        </div>
+<div style="background-color:#e7efef">
+    <div class="container">
+        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
     </div>
-    <div class="header-wrapper"></div>
-</nav>
-<link href="./jplayer/case/jplayer.pink.flag.css" rel="stylesheet" type="text/css" media="all"/>
-<style type="text/css">
-    .jp-title { text-align:center}
-    .jp-type-playlist { position:relative}
-    .jp-playlist ul { position:absolute; top:120px; left:650px; background:#fff; width:455px; height:230px !important; font-size:0.9em;overflow-y: scroll;z-index: 50;border: 1px solid #eee;}
-    .jp-playlist li {border-bottom:1px solid #eee; padding: 2px 20px;}
-    .jp-video .jp-playlist ul { margin:0}
-    div.jp-type-playlist div.jp-playlist li.jp-playlist-current { margin:0; background:#c6c4c4;border-bottom:1px solid #b7b7b7;border-top:1px solid #b7b7b7; }
-    div.jp-type-playlist div.jp-playlist a { color:#000}
-    div.jp-type-playlist div.jp-playlist a:hover { color:#F00}
-    div.jp-type-playlist div.jp-playlist li.jp-playlist-current a { color:#F00}
-    span.jp-artist {color:#666; margin-left:5px}
-</style>
-<!--mainContent start-->
-<div class="mainContent">
-    <div class="container content">
-    <!--内容-->
-<!--音乐作品欣赏-->
-<div class="case" id="case1">
-    <div class="caseCon">
-        <div class="caseTop">
-            <!--标题-->
-            <div class="pageTit">游戏配乐欣赏</div>
+</div>
 
-            <!--轮播-->
-            <div class="marqueeScroll" id="scroll01">
-                <!--控制按钮 start-->
-                <div class="marqueeScroll_control_left"><a href="javascript:void(0)">左箭头</a></div>
-                <div class="marqueeScroll_control_right"><a href="javascript:void(0)">右箭头</a></div>
-                <!--控制按钮 end-->
-                <div class="marqueeScroll_con">
-                    <ul>
-                        {@foreach from=$list1.list item=item@}
-                        <li>
-                            <a href="Javascript:void(0)" onclick ="detail(this,1, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
-                            <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
-                        </li>
-                        {@/foreach@}
-                    </ul>
+<div class="container">
+    <ul id="myTab" class="nav nav-pills">
+        <li class="active">
+            <a href="#one" data-toggle="tab">音乐启蒙</a>
+        </li>
+        <li>
+            <a href="#two" data-toggle="tab">音乐素养</a>
+        </li>
+        <li>
+            <a href="#three" data-toggle="tab">乐器学习</a>
+        </li>
+        <li>
+            <a href="#four" data-toggle="tab">合唱之旅</a>
+        </li>
+        <li>
+            <a href="#five" data-toggle="tab">乐队王国</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="one">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 style="line-height:300%">音乐启蒙</h4>
+                    <p style="line-height: 200%">2-4岁音乐启蒙教学系统；用趣味游戏的方式开启音乐感知之门</p>
+                    <h4 style="line-height:300%">课程特色</h4>
+                    <p style="line-height: 200%">音乐启蒙是乐开音乐王国教研委员会历时2年，针对2-4岁宝宝及托班孩子精心打磨的启蒙课程，旨在孩子的听觉敏感期，用音乐游戏的方式开启宝宝的音乐感知能力，开发左右脑的协调性，建立良好的律动基础，而这也是未来感知音乐的基础能力。</p>
+                    <h4 style="line-height:300%">课程效果</h4>
+                    <p style="line-height: 200%">敏锐的听觉感知能力；良好的肢体律动及协调能力；良好的亲子关系</p>
                 </div>
-                <div class="clearboth"></div>
-            </div>
-            <!--/轮播-->
-
-            <!--播放-->
-            <div class="casePlay">
-                <!--视频-->
-                <div class="video fl">
-                    <!--jplayer-->
-                    <div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
-                        <div class="jp-type-playlist">
-                            <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-                            <div class="jp-gui">
-                                <div class="jp-video-play">
-                                    <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-                                </div>
-                                <div class="jp-interface">
-                                    <div class="jp-progress">
-                                        <div class="jp-seek-bar">
-                                            <div class="jp-play-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                    <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-                                    <div class="jp-details">
-                                        <div class="jp-title" aria-label="title">&nbsp;</div>
-                                    </div>
-                                    <div class="jp-controls-holder">
-                                        <div class="jp-volume-controls">
-                                            <button class="jp-mute" role="button" tabindex="0">mute</button>
-                                            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-                                            <div class="jp-volume-bar">
-                                                <div class="jp-volume-bar-value"></div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-controls">
-                                            <button class="jp-previous" role="button" tabindex="0">previous</button>
-                                            <button class="jp-play" role="button" tabindex="0">play</button>
-                                            <button class="jp-stop" role="button" tabindex="0">stop</button>
-                                            <button class="jp-next" role="button" tabindex="0">next</button>
-                                        </div>
-                                        <div class="jp-toggles">
-                                            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-                                            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-                                            <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/course/1.png">
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding:50px 0;">
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">聆听</span>
                             </div>
-                            <div class="jp-playlist">
-                                <ul>
-                                    <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-                                    <li></li>
-                                </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">感知</span>
                             </div>
-                            <div class="jp-no-solution">
-                                <span>Update Required</span>
-                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">同化</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">模仿</span>
                             </div>
                         </div>
                     </div>
-                    <!--/jplayer-->
                 </div>
-                <!--/视频-->
-
-                <!--详细信息-->
-                <div class="caseInfro fr">
-                    <div class="caseInfro_a">
-                        <p><span class="caseInfro_aTit">{@$list1.case.name@}</span><span class="caseInfro_aSty">{@$list1.case.lable@} {@$list1.case.client@}</span> </p>
-                        <p style="height:35px;overflow-y:scroll"><span class="caseInfro_description">{@$list1.case.description@}</span></p>
-                    </div>
-                    <div class="line"></div>
-                </div>
-                <!--/详细信息-->
-
-                <div class="clearboth"></div>
             </div>
-            <!--/播放-->
-
-
-            <div class="clearboth"></div>
         </div>
-        <div class="caseBot"></div>
-    </div>
-</div>
-<!--/音乐作品欣赏-->
-
-<!--音效制作欣赏-->
-<div class="case" id="case2">
-    <div class="caseCon">
-        <div class="caseTop">
-            <!--标题-->
-            <div class="pageTit">游戏音效欣赏</div>
-
-            <!--轮播-->
-            <div class="marqueeScroll" id="scroll02">
-                <!--控制按钮 start-->
-                <div class="marqueeScroll_control_left"><a href="javascript:void(0)">左箭头</a></div>
-                <div class="marqueeScroll_control_right"><a href="javascript:void(0)">右箭头</a></div>
-                <!--控制按钮 end-->
-                <div class="marqueeScroll_con">
-                    <ul>
-                        {@foreach from=$list2.list item=item@}
-                        <li>
-                            <a href="Javascript:void(0)" onclick ="detail(this,2, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
-                            <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
-                        </li>
-                        {@/foreach@}
-                    </ul>
+        <div class="tab-pane fade" id="two">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 style="line-height:300%">音乐素养</h4>
+                    <p style="line-height: 200%">4-6岁音乐素养教育；
+                        用音乐和律动的方式提升国民儿童的音乐素养；
+                        音乐素养-所谓由律动训练和音乐实践而获得的一种音乐修养；</p>
+                    <h4 style="line-height:300%">课程特色</h4>
+                    <p style="line-height: 200%">LK课程内容涵盖读谱、视唱听音、节奏训练、乐器合奏，音乐赏析等多方面的综合理论基础，用音乐律动的方式帮助儿童一起建立良好的节奏级音准能力，其中所有儿歌作品词曲编配全部进行原创。</p>
+                    <h4 style="line-height:300%">课程效果</h4>
+                    <p style="line-height: 200%">良好的音乐审美；良好的艺术感知力；良好的节奏感及音准能力；未来学习音乐以及乐器将不再轻易放弃</p>
                 </div>
-                <div class="clearboth"></div>
-            </div>
-            <!--/轮播-->
-
-            <!--播放-->
-            <div class="casePlay">
-                <!--视频-->
-                <div class="video fl">
-                    <!--jplayer-->
-                    <div id="jp_container_2" class="jp-video jp-video-270p" role="application" aria-label="media player">
-                        <div class="jp-type-playlist">
-                            <div id="jquery_jplayer_2" class="jp-jplayer"></div>
-                            <div class="jp-gui">
-                                <div class="jp-video-play">
-                                    <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-                                </div>
-                                <div class="jp-interface">
-                                    <div class="jp-progress">
-                                        <div class="jp-seek-bar">
-                                            <div class="jp-play-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                    <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-                                    <div class="jp-details">
-                                        <div class="jp-title" aria-label="title">&nbsp;</div>
-                                    </div>
-                                    <div class="jp-controls-holder">
-                                        <div class="jp-volume-controls">
-                                            <button class="jp-mute" role="button" tabindex="0">mute</button>
-                                            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-                                            <div class="jp-volume-bar">
-                                                <div class="jp-volume-bar-value"></div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-controls">
-                                            <button class="jp-previous" role="button" tabindex="0">previous</button>
-                                            <button class="jp-play" role="button" tabindex="0">play</button>
-                                            <button class="jp-stop" role="button" tabindex="0">stop</button>
-                                            <button class="jp-next" role="button" tabindex="0">next</button>
-                                        </div>
-                                        <div class="jp-toggles">
-                                            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-                                            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-                                            <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/course/2.jpg">
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding:50px 0;">
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">思考</span>
                             </div>
-                            <div class="jp-playlist">
-                                <ul>
-                                    <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-                                    <li></li>
-                                </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">参与</span>
                             </div>
-                            <div class="jp-no-solution">
-                                <span>Update Required</span>
-                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">交互</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">创造</span>
                             </div>
                         </div>
                     </div>
-                    <!--/jplayer-->
                 </div>
-                <!--/视频-->
-
-                <!--详细信息-->
-                <div class="caseInfro fr">
-                    <div class="caseInfro_a">
-                        <p><span class="caseInfro_aTit">{@$list2.case.name@}</span><span class="caseInfro_aSty">{@$list2.case.lable@} {@$list2.case.client@}</span> </p>
-                        <p style="height:35px;overflow-y:scroll">{@$list2.case.description@}</p>
-                    </div>
-                    <div class="line"></div>
-                </div>
-                <!--/详细信息-->
-
-                <div class="clearboth"></div>
             </div>
-            <!--/播放-->
-
-
-            <div class="clearboth"></div>
         </div>
-        <div class="caseBot"></div>
-    </div>
-</div>
-<!--/音效制作欣赏-->
-
-<!--配音作品欣赏-->
-<div class="case" id="case3">
-    <div class="caseCon">
-        <div class="caseTop">
-            <!--标题-->
-            <div class="pageTit">游戏配音欣赏</div>
-
-            <!--轮播-->
-            <div class="marqueeScroll" id="scroll03">
-                <!--控制按钮 start-->
-                <div class="marqueeScroll_control_left"><a href="javascript:void(0)">左箭头</a></div>
-                <div class="marqueeScroll_control_right"><a href="javascript:void(0)">右箭头</a></div>
-                <!--控制按钮 end-->
-                <div class="marqueeScroll_con">
-                    <ul>
-                        {@foreach from=$list3.list item=item@}
-                        <li>
-                            <a href="Javascript:void(0)" onclick ="detail(this,3, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
-                            <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
-                        </li>
-                        {@/foreach@}
-                    </ul>
+        <div class="tab-pane fade" id="three">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 style="line-height:300%">乐器学习</h4>
+                    <p style="line-height: 200%">6-12岁乐器学习，用最钟爱的乐器去感知音乐的真谛</p>
+                    <h4 style="line-height:300%">课程特色</h4>
+                    <p style="line-height: 200%">在传统乐器学习基础之上，结合英国rock school考级研发的专门针对现代音乐的学习体系，旨在让孩子们学习乐器不再感受枯燥，而是学以致用，本着务实快乐的方式感受音乐真正的魅力。</p>
+                    <h4 style="line-height:300%">课程效果</h4>
+                    <p style="line-height: 200%">乐器学习的阶段性成果明显；极好的实用性；随时保持对乐器学习良好的兴趣度；良好的音乐理解能力</p>
                 </div>
-                <div class="clearboth"></div>
-            </div>
-            <!--/轮播-->
-
-            <!--播放-->
-            <div class="casePlay">
-                <!--视频-->
-                <div class="video fl">
-                    <!--jplayer-->
-                    <div id="jp_container_3" class="jp-video jp-video-270p" role="application" aria-label="media player">
-                        <div class="jp-type-playlist">
-                            <div id="jquery_jplayer_3" class="jp-jplayer"></div>
-                            <div class="jp-gui">
-                                <div class="jp-video-play">
-                                    <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-                                </div>
-                                <div class="jp-interface">
-                                    <div class="jp-progress">
-                                        <div class="jp-seek-bar">
-                                            <div class="jp-play-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                    <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-                                    <div class="jp-details">
-                                        <div class="jp-title" aria-label="title">&nbsp;</div>
-                                    </div>
-                                    <div class="jp-controls-holder">
-                                        <div class="jp-volume-controls">
-                                            <button class="jp-mute" role="button" tabindex="0">mute</button>
-                                            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-                                            <div class="jp-volume-bar">
-                                                <div class="jp-volume-bar-value"></div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-controls">
-                                            <button class="jp-previous" role="button" tabindex="0">previous</button>
-                                            <button class="jp-play" role="button" tabindex="0">play</button>
-                                            <button class="jp-stop" role="button" tabindex="0">stop</button>
-                                            <button class="jp-next" role="button" tabindex="0">next</button>
-                                        </div>
-                                        <div class="jp-toggles">
-                                            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-                                            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-                                            <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-10">
+                        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/course/3.png">
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding:50px 0;">
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">体会</span>
                             </div>
-                            <div class="jp-playlist">
-                                <ul>
-                                    <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-                                    <li></li>
-                                </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">畅想</span>
                             </div>
-                            <div class="jp-no-solution">
-                                <span>Update Required</span>
-                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">行动</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">释放</span>
                             </div>
                         </div>
                     </div>
-                    <!--/jplayer-->
                 </div>
-                <!--/视频-->
-
-                <!--详细信息-->
-                <div class="caseInfro fr">
-                    <div class="caseInfro_a">
-                        <p><span class="caseInfro_aTit">{@$list3.case.name@}</span><span class="caseInfro_aSty">{@$list3.case.lable@} {@$list3.case.client@}</span> </p>
-                        <p style="height:35px;overflow-y:scroll">{@$list3.case.description@}</p>
-                    </div>
-                    <div class="line"></div>
-
-                </div>
-                <!--/详细信息-->
-
-                <div class="clearboth"></div>
             </div>
-            <!--/播放-->
-
-
-            <div class="clearboth"></div>
         </div>
-        <div class="caseBot"></div>
-    </div>
-</div>
-<!--/配音作品欣赏-->
-
-<!--CG视频欣赏-->
-<div class="case" id="case4">
-    <div class="caseCon">
-        <div class="caseTop">
-            <!--标题-->
-            <div class="pageTit">CG视频欣赏</div>
-
-            <!--轮播-->
-            <div class="marqueeScroll" id="scroll04">
-                <!--控制按钮 start-->
-                <div class="marqueeScroll_control_left"><a href="javascript:void(0)">左箭头</a></div>
-                <div class="marqueeScroll_control_right"><a href="javascript:void(0)">右箭头</a></div>
-                <!--控制按钮 end-->
-                <div class="marqueeScroll_con">
-                    <ul>
-                        {@foreach from=$list4.list item=item@}
-                        <li>
-                            <a href="Javascript:void(0)" onclick ="detail(this,4, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
-                            <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
-                        </li>
-                        {@/foreach@}
-                    </ul>
+        <div class="tab-pane fade" id="four">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 style="line-height:300%">合唱之旅</h4>
+                    <p style="line-height: 200%">5-9岁儿童合唱，天籁之音就此开启，美妙童声演绎经典</p>
+                    <h4 style="line-height:300%">课程特色</h4>
+                    <p style="line-height: 200%">乐开合唱团是乐开音乐教委会针对5-9岁孩子研发的合唱教学体系，希望让中国的孩子拥有专业的声唱培养，尤其针对过往的经典作品全部进行全新编配，让音乐更符合现代的时代审美，让孩子能拥有国际化的审美能力及作品演唱。</p>
+                    <h4 style="line-height:300%">课程效果</h4>
+                    <p style="line-height: 200%">良好的节奏及音准能力；专业的发声及气息控制；优秀的舞台表现能力；个体自信心的培养；良好的艺术审美</p>
                 </div>
-                <div class="clearboth"></div>
-            </div>
-            <!--/轮播-->
-
-            <!--播放-->
-            <div class="casePlay">
-                <!--视频-->
-                <div class="video fl">
-                    <!--jplayer-->
-                    <div id="jp_container_4" class="jp-video jp-video-270p" role="application" aria-label="media player">
-                        <div class="jp-type-playlist">
-                            <div id="jquery_jplayer_4" class="jp-jplayer"></div>
-                            <div class="jp-gui">
-                                <div class="jp-video-play">
-                                    <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-                                </div>
-                                <div class="jp-interface">
-                                    <div class="jp-progress">
-                                        <div class="jp-seek-bar">
-                                            <div class="jp-play-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                    <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-                                    <div class="jp-details">
-                                        <div class="jp-title" aria-label="title">&nbsp;</div>
-                                    </div>
-                                    <div class="jp-controls-holder">
-                                        <div class="jp-volume-controls">
-                                            <button class="jp-mute" role="button" tabindex="0">mute</button>
-                                            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-                                            <div class="jp-volume-bar">
-                                                <div class="jp-volume-bar-value"></div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-controls">
-                                            <button class="jp-previous" role="button" tabindex="0">previous</button>
-                                            <button class="jp-play" role="button" tabindex="0">play</button>
-                                            <button class="jp-stop" role="button" tabindex="0">stop</button>
-                                            <button class="jp-next" role="button" tabindex="0">next</button>
-                                        </div>
-                                        <div class="jp-toggles">
-                                            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-                                            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-                                            <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-10">
+                        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/course/4.png">
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding:50px 0;">
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">自如</span>
                             </div>
-                            <div class="jp-playlist">
-                                <ul>
-                                    <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-                                    <li></li>
-                                </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">控制</span>
                             </div>
-                            <div class="jp-no-solution">
-                                <span>Update Required</span>
-                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">稳定</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">情绪</span>
                             </div>
                         </div>
                     </div>
-                    <!--/jplayer-->
                 </div>
-                <!--/视频-->
-
-                <!--详细信息-->
-                <div class="caseInfro fr">
-                    <div class="caseInfro_a">
-                        <p><span class="caseInfro_aTit">{@$list4.case.name@}</span><span class="caseInfro_aSty">{@$list4.case.lable@} {@$list4.case.client@}</span> </p>
-                        <p style="height:35px;overflow-y:scroll">{@$list4.case.description@}</p>
-                    </div>
-                    <div class="line"></div>
-
-
-                </div>
-                <!--/详细信息-->
-
-                <div class="clearboth"></div>
             </div>
-            <!--/播放-->
-
-
-            <div class="clearboth"></div>
         </div>
-        <div class="caseBot"></div>
-    </div>
-</div>
-<!--/CG视频欣赏-->
-
-<!--影视动漫欣赏-->
-<div class="case" id="case5">
-    <div class="caseCon">
-        <div class="caseTop">
-            <!--标题-->
-            <div class="pageTit">影视动漫</div>
-
-            <!--轮播-->
-            <div class="marqueeScroll" id="scroll05">
-                <!--控制按钮 start-->
-                <div class="marqueeScroll_control_left"><a href="javascript:void(0)">左箭头</a></div>
-                <div class="marqueeScroll_control_right"><a href="javascript:void(0)">右箭头</a></div>
-                <!--控制按钮 end-->
-                <div class="marqueeScroll_con">
-                    <ul>
-                        {@foreach from=$list5.list item=item@}
-                        <li>
-                            <a href="Javascript:void(0)" onclick ="detail(this,5, {@$item.id@});" id='{@$item.id@}'><img src="{@$item.icon@}" width="106" height="106" /><i></i></a>
-                            <p class="txtC">{@$item.name@}<br>{@$item.client@}</p>
-                        </li>
-                        {@/foreach@}
-                    </ul>
+        <div class="tab-pane fade" id="five">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 style="line-height:300%">乐队王国</h4>
+                    <p style="line-height: 200%">8-12岁亲子乐队；没错，我们可以组乐队了，甚至可以和爸爸妈妈一起真正的享受音乐</p>
+                    <h4 style="line-height:300%">课程特色</h4>
+                    <p style="line-height: 200%">亲子家庭乐队是乐开音乐王国的最高呈现形式，旨在孩子们及家庭拥有良好的音乐能力及乐器基础之上，进行的音乐最高形态的结合，为成员们定制的不同梯度的乐队练习曲目，定制化的总谱及伴奏体系，系统的音乐讲解，全面的音乐知识分享，让父母和孩子一起因为音乐而牵手腾飞。</p>
+                    <h4 style="line-height:300%">课程效果</h4>
+                    <p style="line-height: 200%">自我展示能力的培养；和睦的家庭亲子关系；舞台及演讲能力，领导力的培养；极好的音乐专综合能力； 扩充音乐及艺术视野</p>
                 </div>
-                <div class="clearboth"></div>
-            </div>
-            <!--/轮播-->
-
-            <!--播放-->
-            <div class="casePlay">
-                <!--视频-->
-                <div class="video fl">
-                    <!--jplayer-->
-                    <div id="jp_container_5" class="jp-video jp-video-270p" role="application" aria-label="media player">
-                        <div class="jp-type-playlist">
-                            <div id="jquery_jplayer_5" class="jp-jplayer"></div>
-                            <div class="jp-gui">
-                                <div class="jp-video-play">
-                                    <button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-                                </div>
-                                <div class="jp-interface">
-                                    <div class="jp-progress">
-                                        <div class="jp-seek-bar">
-                                            <div class="jp-play-bar"></div>
-                                        </div>
-                                    </div>
-                                    <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-                                    <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-                                    <div class="jp-details">
-                                        <div class="jp-title" aria-label="title">&nbsp;</div>
-                                    </div>
-                                    <div class="jp-controls-holder">
-                                        <div class="jp-volume-controls">
-                                            <button class="jp-mute" role="button" tabindex="0">mute</button>
-                                            <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-                                            <div class="jp-volume-bar">
-                                                <div class="jp-volume-bar-value"></div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-controls">
-                                            <button class="jp-previous" role="button" tabindex="0">previous</button>
-                                            <button class="jp-play" role="button" tabindex="0">play</button>
-                                            <button class="jp-stop" role="button" tabindex="0">stop</button>
-                                            <button class="jp-next" role="button" tabindex="0">next</button>
-                                        </div>
-                                        <div class="jp-toggles">
-                                            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-                                            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
-                                            <button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-10">
+                        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/course/5.png">
+                        </div>
+                    </div>
+                    <div class="row text-center" style="padding:50px 0;">
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">成长</span>
                             </div>
-                            <div class="jp-playlist">
-                                <ul>
-                                    <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-                                    <li></li>
-                                </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">快乐</span>
                             </div>
-                            <div class="jp-no-solution">
-                                <span>Update Required</span>
-                                To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">互动</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div style="color:white;background-color: #5bc0de;border-radius: 50%;width: 77px;height: 77px;">
+                                <span class="center-vertical">情感</span>
                             </div>
                         </div>
                     </div>
-                    <!--/jplayer-->
                 </div>
-                <!--/视频-->
-
-                <!--详细信息-->
-                <div class="caseInfro fr">
-                    <div class="caseInfro_a">
-                        <p><span class="caseInfro_aTit">{@$list5.case.name@}</span><span class="caseInfro_aSty">{@$list5.case.lable@} {@$list5.case.client@}</span> </p>
-                        <p style="height:35px;overflow-y:scroll">{@$list5.case.description@}</p>
-                    </div>
-                    <div class="line"></div>
-
-
-                </div>
-                <!--/详细信息-->
-
-                <div class="clearboth"></div>
             </div>
-            <!--/播放-->
-
-
-            <div class="clearboth"></div>
-        </div>
-        <div class="caseBot"></div>
-    </div>
-</div>
-<!--/影视动漫欣赏-->
-    </div>
-</div>
-
-<!--copyright-->
-<div style="background-color: #EEEEEE">
-    <div class="container" style="padding: 20px">
-        <div class="row">
-            <div class="col-md-9 col-sm-9">©2017 {@$config.name@}版权所有 沪ICP备15002392号 24小时热线电话：<a href="tel:{@$config.mobile@}">{@$config.mobile@}</a></div>
-            <div class="col-md-3 col-sm-3"><a href="/job" class="fr">加入乐开</a></div>
         </div>
     </div>
 </div>
-<!--/copyright-->
 
-<!--[if lte IE 6]>
-<script src="js/iepng.js" type="text/javascript"></script>
+{@include 'footer.phtml'@}
+
 <script>
-    DD_belatedPNG.fix('*');
+  $(function () {
+    $('#myTab li:eq(0) a').tab('show');
+  });
 </script>
-<![endif]-->
-<script type="text/javascript">
-    //$(function() {
-    //	//顶部导航 选中状态
-    //	$(".menu dd.m3 a").addClass("current")
-    //})
-</script>
-<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="./js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="./js/allOneScroll.js"></script>
-<script type="text/javascript" src="./jplayer/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="./jplayer/jplayer.playlist.min.js"></script>
-<script type="text/javascript" src="./js/case.js"></script>
-
-<!--{@include 'footer.phtml'@}-->
-</body>
-</html>
