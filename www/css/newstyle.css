@@ -3,9 +3,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 img {border-style:none;}
 ul,li {list-style-type:none;}
 form {margin:0;padding:0;}
-body {font-size:14px;font-family:"微软雅黑","Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;color:#313030;line-height:150%; background:#fff;}
-input {font-size:12px;color:#313030;line-height: 17px;}
-select {border: 1px solid #744219;font-size: 12px;color: #313030;}
+body {font-size:87.5% !important;font-family:"微软雅黑","Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;color:#313030;line-height:150%; background:#fff;}
 .clearboth {line-height:0px;height:0px;clear:both;*display:inline; font-size:0px;}
 
 button{margin:0;padding:0;border:0; cursor:pointer}
@@ -38,7 +36,7 @@ a:hover {color:#222;text-decoration:underline;border-style:none;}
 .clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
 * html .clearfix{ zoom: 1;}/*IE6*/
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-.gray { color:#ccc}
+
 
 /*--------General----------*/
 a{text-decoration:none;}
@@ -106,121 +104,13 @@ span:hover + .iconImg {
     line-height: 200%
 }
 
-
-
-.dl-horizontal a{
-    color: #313030;
-    line-height: 200%;
-}
-.dl-horizontal dd{
-    color: #313030;
-    line-height: 200%;
-}
-.dl-horizontal img{
-    width: 120px;
-    padding:10px;
-}
-
 .more {
     padding:10px 20px;
-    background-color:#a32b2d;
+    background-color: #18b1da;
     color:white;
     width:100px;
     border-radius: 5px;
 }
-/*---图片页面---*/
-
-#masonry
-{
-    padding: 0;
-    min-height: 450px;
-    margin: 0 auto;
-}
-#masonry .thumbnail
-{
-    /*width: 330px;*/
-    margin: 10px;
-    padding: 0;
-    border-width: 1px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-}
-#masonry .thumbnail .imgs
-{
-    padding: 10px;
-}
-#masonry .thumbnail .imgs img
-{
-    margin-bottom: 5px;
-}
-#masonry .thumbnail .caption
-{
-    background-color: #fff;
-    padding-top: 0;
-    font-size: 13px;
-}
-#masonry .thumbnail .caption .title
-{
-    font-size: 13px;
-    font-weight: bold;
-    margin: 5px 0;
-    text-align: left;
-}
-#masonry .thumbnail .caption .author
-{
-    font-size: 11px;
-    text-align: right;
-}
-
-/*---------newsIndex---------*/
-.newsIndexList { padding:70px 0}
-.newsIndexList dd { width:350px; height:auto; margin:0 75px; float:left; display:inline; line-height:22px; color:#555656}
-.newsIndexList dd h3{ height:30px; margin-bottom:10px; color:#2c2e2e; font-size:22px; font-weight:normal; border-bottom:1px solid #b4b4b4}
-
-/*---------news-------*/
-.newsbottom { border-bottom:1px dashed #e0e0e0; padding:5px}
-
- a.red:link,.newslist li a.red:visited { color:#d01a14;}
- a.red:hover { color:#d01a14;}
- a.redStrong:link,.newslist li a.redStrong:visited { color:#d01a14; font-weight:bold;}
- a.redStrong:hover { color:#d01a14; font-weight:bold;}
-
- a.yellow:link,.newslist li a.yellow:visited { color:#ff9b00;}
- a.yellow:hover { color:#ff9b00;}
- a.yellowStrong:link,.newslist li a.yellowStrong:visited { color:#ff9b00; font-weight:bold;}
- a.yellowStrong:hover { color:#ff9b00; font-weight:bold;}
-
- a.blue:link,.newslist li a.blue:visited { color:#00F;}
- a.blue:hover { color:#00F;}
- a.blueStrong:link,.newslist li a.blueStrong:visited { color:#00F; font-weight:bold;}
- a.blueStrong:hover { color:#00F; font-weight:bold;}
-
-.newsNav { height:48px; padding-top:13px; padding-left:1px}
-.newsNav li { width:110px; height:48px; text-align:center; border:1px solid #e0e0e0; position:relative; float:left; margin:0 0 0 -1px; border-bottom:none}
-.newsNav li a {width:114px;height:48px; font:18px/48px "微软雅黑"; position:absolute; top:0; left:0}
-.newsNav li a.current {background:url(../images/newsNavCur.png) no-repeat; color:#ff9e00; top:0; left:0}
-.newsNav li a:hover { text-decoration:none}
-
-.innerNewsTit {text-align:center; line-height:200%;font-size:14px; font-weight:bold;border-bottom:1px solid #e7e7e7}
-.publishTime {text-align:center; border-bottom:1px dashed #e0e0e0; height:30px; line-height:30px; color:#999}
-.innerCon { width:600px; padding:20px 0; line-height:24px}
-.innerCon img { max-width:600px; border:2px solid #999}
-.innerCon p { margin-bottom:10px}
-.newsInnerShow { padding:100px 0 20px 0}
-
-.shadowScroll {width:290px;height:310px;position:relative; padding:9px 0 0 0;}
-.shadowScroll_photo {width: 290px;height: 310px; position:absolute;overflow:hidden}
-.shadowScroll_photo img{ width:290px; height:310px;}
-.shadowScroll_photo a.ch_adG {position: absolute}
-.shadowScroll_control {width:88%;height:23px;text-align:right; padding:5px 0 0 0; position:absolute; right:15px; bottom:0; z-index:20;}
-.shadowScroll_control a { margin:0 4px 0 0; width:13px; height:13px;display:inline-block; text-indent:-9999px; background:#fff;opacity: 0.3; -moz-opacity: 0.3; filter: alpha(opacity=30)}
-.shadowScroll_control a.on,.shadowScroll_control a.current{opacity: 0.8; -moz-opacity: 0.8; filter: alpha(opacity=80)}
-.shadowScroll_over {width:100%;height:30px; position:absolute; display:none; left:0; bottom:0; z-index:15; background:#000;opacity: 0.6; -moz-opacity: 0.6; filter: alpha(opacity=60)}
-.shadowScroll_control_left a,.shadowScroll_control_right a { width:43px; height:43px; text-indent:-9999px; outline:none; display:none;position:absolute; top:100px;z-index:30; }
-
-#ScrollSpe { width:722px; padding-left:10px}
-#ScrollSpe .shadowScroll_photo {width: 722px;}
-#ScrollSpe .shadowScroll_photo img{ width:722px;}
 
 /*---------翻页---------*/
 .page_turn {color: #8c8d92; padding: 15px 0; font-size:12px; font-weight:bold}
@@ -228,45 +118,8 @@ span:hover + .iconImg {
 .page_turn a:link,.page_turn a:visited {color: #fff;}
 .page_turn a:hover {color:#fff;}
 .page_turn a:hover,.page_turn a.current {color:#fff;background:#999; text-decoration:none}
+/*---------翻页---------*/
 
-/*---------content---------*/
-.mainContent{ width:100%;min-height:91%;background:#ffffff; padding:35px 0;}
-.content { width:80%;min-height:91%; margin:50px auto;border-radius: 10px;border: 1px solid #eee}
-.pageTit { height:47px;font:normal 24px/47px "微软雅黑";text-indent:22px; position:relative; }
-.conBase { padding:0 40px;}
-.conBase p { margin-bottom:15px; line-height: 150%}
-
-/*---------轮播---------*/
-.marqueeScroll { width:100%; margin:0 auto;padding:20px 0 0 22px;position:relative;}
-.marqueeScroll_con {width:98%;height:160px;overflow:hidden }/*显示宽度 是li的倍数*/
-.marqueeScroll_con ul { margin-left:0;}
-.marqueeScroll_con ul li { width:115px;height:160px;float:left; position:relative; color:#fff}
-.marqueeScroll_con ul li img {
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius:15px;
-}
-.marqueeScroll_con ul li p { padding-right:9px}
-.marqueeScroll_con ul li a { display:block}.marqueeScroll_con ul li a.current i { width:106px; height:106px; position:absolute; top:0; left:-1px;}
-.marqueeScroll_control_left a,.marqueeScroll_control_right a {width:15px; height:32px; background:url(../images/main.png) no-repeat -184px -198px; text-indent:-9999px; outline:none;position:absolute; top:60px; z-index:30;}
-.marqueeScroll_control_left a { left:5px;}
-.marqueeScroll_control_right a { background-position:-184px -230px;right:5px;}
-/*---------case---------*/
-.case { width:100%; background:#FFF; padding:15px 0}
-/*.caseCon { width:999px; margin:0 auto; background:url(../images/bgVideoR.png) repeat-y}*/
-/*.caseTop { min-height:400px;_height:400px;background:url(../images/bgVideoT.png) no-repeat left top}*/
-/*.caseBot {height:12px;background:url(../images/bgVideoB1.png) no-repeat left bottom}*/
-/*.caseTop h2 {font:normal 24px/47px "微软雅黑"; color:#313030; height:48px; text-indent:25px}*/
-.casePlay { border-top:1px solid #e3e3e3; overflow:hidden}
-.video { width:492px;padding:13px 0 0 16px}
-.caseInfro { width:455px; padding:15px 25px 0 0;font-family:"微软雅黑";}
-.caseInfro_a p{ margin-bottom:10px}
-.caseInfro_a .caseInfro_aTit {font-size: 30px;margin-right: 20px; line-height:36px}
-.caseInfro_a .caseInfro_aSty {font-size: 18px;}
-.caseInfro_b {height: 250px;margin: 12px 0;overflow-y: scroll;padding-bottom: 20px;font-family:"微软雅黑";}
-.caseInfro_b dd { line-height:26px;}
-.caseInfro_bTit{ font-size:20px}
-.caseInfro_bSubTit{ font-size:16px}
 
 .center-vertical{
     position: relative;
