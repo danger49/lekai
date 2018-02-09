@@ -1,34 +1,31 @@
 {@include 'header.phtml'@}
 
-<!--mainContent start-->
-<div class="mainContent">
-    <!--内容-->
-    <div class="container content">
-        <!--标题-->
-        <div class="pageTit">乐开文化</div>
-        <!--/标题-->
-        <div class="conBase">
-        	<!--新闻标题-->
-            <div class="innerNewsTit">{@$news.title@}</div>
-            <!--新闻内容-->
-            <p>{@$news.content@}</p>
-            <p class="txtR">{@$news.add_time@}</p>
-        	<!--/新闻内容-->
-    	</div>
-        <div  style="text-align: center;margin:20px;">
-            <a href="/news"><span class="more">更多文化</span></a>
-        </div>
-        <div class="clearboth"></div>
-    </div>
-    <!--/内容-->	     
+<div style="background-color:#e7efef">
+    <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
 </div>
-<!--mainContent end-->
 
-<script type="text/javascript">
-$(function() {  
-	//顶部导航 选中状态
-	$(".menu dd.m4 a").addClass("current")	   
-})
-</script>
+<div class="container" style="padding: 10px 100px 100px 100px;">
+    <div class="row" style="padding: 20px 0;"><h3>{@$news.title@}</h3></div>
+    <div class="row" style="padding: 10px 0">
+        <div class="col-md-6">{@$news.add_time@}</div>
+        <div class="col-md-3">{@$news.click@}</div>
+        <div class="col-md-3">{@$news.good@}</div>
+    </div>
+    <div class="row" style="background-color: #f6f6f6;padding: 30px 0;">
+        {@$news.description@}
+    </div>
+    <div class="row" style="padding: 30px 0">
+        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}">
+    </div>
+    <div class="row"><p>{@$news.content@}</p></div>
+    <div class="row text-center" style="margin:20px;">
+        <div class="col-md-12"><a href="/news"><span class="more">更多文化</span></a></div>
+    </div>
+</div>
+
 
 {@include 'footer.phtml'@}
+
+<script>
+
+</script>

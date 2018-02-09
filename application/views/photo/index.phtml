@@ -1,12 +1,10 @@
 {@include 'header.phtml'@}
 
 <div style="background-color:#e7efef">
-    <div class="container">
-        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
-    </div>
+    <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
 </div>
 <!--mainContent start-->
-<div class="container">
+<div class="container" style="padding: 20px 0">
     <h3 style="line-height: 300%">乐开风采</h3>
     <div class="row">
         {@foreach from=$list item=photo@}
@@ -14,10 +12,8 @@
             <div>
                 <img class="carousel-inner img-responsive"  src="http://{@$config.host@}/{@$photo.img@}">
             </div>
-            <div class="text-center">{@$photo.title@}</div>
-            <div style="line-height: 150%;color: #cccccc">
-                {@$photo.content@}
-            </div>
+            <div class="text-center" style="padding: 10px">{@$photo.title@}</div>
+            <div style="line-height: 150%;color: #cccccc;padding: 10px;">{@$photo.content@}</div>
         </div>
         {@/foreach@}
     </div>

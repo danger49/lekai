@@ -55,4 +55,9 @@ class NewsModel extends BaseModel{
         $sql = 'select * from ' . $this->_table . ' ORDER BY id DESC LIMIT ' . $count;
         return $this->db->executeS($sql);
     }
+
+    public function updateClick($id) {
+        $sql = 'update ' . $this->_table .' set click = click + 1' . ' where id=' . $id;
+        return $this->db->executeS($sql);
+    }
 }

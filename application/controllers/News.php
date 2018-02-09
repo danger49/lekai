@@ -34,6 +34,7 @@ class NewsController extends FControllerModel {
         $newsId = $this->getParam('id');
         $newsModel = NewsModel::getInstance();
         $news = $newsModel->getNews($newsId);
+        $newsModel->updateClick($newsId);
 		$this->_view->assign('news', $news);
 		return true;
 	}

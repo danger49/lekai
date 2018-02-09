@@ -1,9 +1,7 @@
 {@include 'header.phtml'@}
 
 <div style="background-color:#e7efef">
-    <div class="container">
-        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
-    </div>
+    <img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/detail/cause.png">
 </div>
 
 <div class="container">
@@ -11,7 +9,7 @@
     {@foreach from=$list item=news@}
     <div class="row"><div class="col-md-12"><h5 style="line-height: 200%"><b>【分享】{@$news.title@}</b></h5></div></div>
         <div class="row"><div class="col-md-12"><h6>{@$news.add_time@}</h6></div></div>
-    <div class="row"><div class="col-md-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/images/news/1.jpg"></div></div>
+    <div class="row"><div class="col-md-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}"></div></div>
         <div class="row"><div class="col-md-12"><p style="line-height: 200%">{@$news.description@}</p></div></div>
         <div class="row"><div class="col-md-12"><h5 style="line-height: 300%"><a href="/news/detail/id/{@$news.id@}">详细内容</a></h5></div></div>
     {@/foreach@}
