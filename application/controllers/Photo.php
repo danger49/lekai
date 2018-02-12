@@ -12,6 +12,12 @@ class PhotoController extends FControllerModel {
 		$photoModel = PhotoModel::getInstance();
         $list = $photoModel->getPhotoList(null, $page, 6);
 
+        $listConfig = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_PHOTO);
+        foreach ($listConfig as $config) {
+            $pageConfigs[$config['key']] = $config['value'];
+        }
+        $this->_view->assign('pageConfig', $pageConfigs);
+
         $this->_view->assign('list', $list);
 		return true;
 	}

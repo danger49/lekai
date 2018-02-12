@@ -18,10 +18,13 @@ class ConfigController extends BControllerModel {
     }
     
     public function indexAction() {
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
 		$configModel = ConfigModel::getInstance();
-        $list = $configModel->getAllConfig();
+        $list = $configModel->getPageConfig($page);
+        $pageTitle = ConfigModel::PAGE_TITLE[$page];
 
         $this->_view->assign('list', $list);
+        $this->_view->assign('pageTitle', $pageTitle);
 		return true;
 	}
 
@@ -30,7 +33,6 @@ class ConfigController extends BControllerModel {
         $key = $_POST['key'];
         $value = $_POST['value'];
         $type = $_POST['type'];
-//         var_dump($_FILES);exit;
         $configModel = ConfigModel::getInstance();
         $res = false;
         $msg = '更新失败';

@@ -12,36 +12,16 @@ class CaseController extends FControllerModel {
 
     public function init() {
         parent::init();
-        $this->js = array(
-            'http://www.lkmusic.cn/js/jquery1.4.2.min.js',
-            'http://www.lkmusic.cn/js/bootstrap.min.js',
-        );
         $this->_view->assign('css_files', $this->css);
         $this->_view->assign('js_files', $this->js);
     }
 
     public function indexAction() {
-        $caseModle = CaseModel::getInstance();
-        $listTemp1 = $caseModle->getCaseList(1);
-        $list1['list'] = $listTemp1;
-        $list1['case'] = isset($listTemp1[0]['id']) ? $this->info($listTemp1[0]['id']) : '';
-        $listTemp2 = $caseModle->getCaseList(2);
-        $list2['list'] = $listTemp2;
-        $list2['case'] = isset($listTemp2[0]['id']) ? $this->info($listTemp2[0]['id']) : '';
-        $listTemp3 = $caseModle->getCaseList(3);
-        $list3['list'] = $listTemp3;
-        $list3['case'] = isset($listTemp3[0]['id']) ? $this->info($listTemp3[0]['id']) : '';
-        $listTemp4 = $caseModle->getCaseList(4);
-        $list4['list'] = $listTemp4;
-        $list4['case'] = isset($listTemp4[0]['id']) ? $this->info($listTemp4[0]['id']) : '';
-        $listTemp5 = $caseModle->getCaseList(5);
-        $list5['list'] = $listTemp5;
-        $list5['case'] = isset($listTemp5[0]['id']) ? $this->info($listTemp5[0]['id']) : '';
-		$this->_view->assign('list1', $list1);
-		$this->_view->assign('list2', $list2);
-		$this->_view->assign('list3', $list3);
-		$this->_view->assign('list4', $list4);
-		$this->_view->assign('list5', $list5);
+        $listConfig = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_CAUSE);
+        foreach ($listConfig as $config) {
+            $pageConfigs[$config['key']] = $config['value'];
+        }
+        $this->_view->assign('pageConfig', $pageConfigs);
 		return true;
 	}
 

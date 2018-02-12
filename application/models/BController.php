@@ -16,7 +16,7 @@ class BControllerModel extends Yaf_Controller_Abstract {
 		$this->setViewpath(APPLICATION_PATH . '/application/modules/' . $this->getModuleName() . '/views');
 		$views = $this->initView();
         $configs = array();
-        $list = ConfigModel::getInstance()->getAllConfig();
+        $list = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_BASE);
         foreach ($list as $config) {
             $configs[$config['key']] = $config['value'];
         }

@@ -16,7 +16,7 @@ class FControllerModel extends Yaf_Controller_Abstract {
 	public function init() {
 		$view = $this->initView();
 	    $configs = array();
-        $list = ConfigModel::getInstance()->getAllConfig();
+        $list = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_BASE);
         foreach ($list as $config) {
             $configs[$config['key']] = $config['value'];
         }

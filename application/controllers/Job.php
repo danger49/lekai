@@ -12,6 +12,12 @@ class JobController extends FControllerModel {
 		$jobModel = JobModel::getInstance();
         $list = $jobModel->getJobList(null, $page, 100);
 
+        $listConfig = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_ABOUT);
+        foreach ($listConfig as $config) {
+            $pageConfigs[$config['key']] = $config['value'];
+        }
+        $this->_view->assign('pageConfig', $pageConfigs);
+
         $this->_view->assign('list', $list);
 		return true;
 	}

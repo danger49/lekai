@@ -10,39 +10,20 @@ class IndexController extends FControllerModel {
 
     public function init() {
         parent::init();
-        $this->css['jplayer'] = 'http://www.lkmusic.cn/jplayer/index/jplayer.css';
         $this->_view->assign('css_files', $this->css);
         $this->_view->assign('js_files', $this->js);
     }
 
     public function indexAction() {
-        $newsModel = NewsModel::getInstance();
-        $newsList = $newsModel->getLatestNews();
-        $casedetailModel = CasedetailModel::getInstance();
-        $caseList = $casedetailModel->getLatestCase(10);
-        foreach ($caseList as &$case) {
-            if (strpos($case['src'], '.mp3')) {
-                $case['mp3'] = $case['src'];
-            } else if (strpos($case['src'], '.m4v')) {
-                $case['m4v'] = $case['src'];
-            } else if (strpos($case['src'], '.webm')) {
-                $case['webm'] = $case['src'];
-            } else if (strpos($case['src'], '.ogv')) {
-                $case['ogv'] = $case['src'];
-            } else if (strpos($case['src'], '.ogg')) {
-                $case['oga'] = $case['src'];
-            } else if (strpos($case['src'], '.jpg') or strpos($case['src'], '.png') or strpos($case['src'], '.bmp')) {
-                $case['poster'] = $case['src'];
-            }
+        $listConfig = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_INDEX);
+        foreach ($listConfig as $config) {
+            $pageConfigs[$config['key']] = $config['value'];
         }
-        unset($case);
-        $this->_view->assign('caseList', $caseList);
-        $this->_view->assign('newsList', $newsList);
+        $this->_view->assign('pageConfig', $pageConfigs);
         return true;
     }
 
     public function mapAction() {
-        echo 'aaaaaaaaaaaaaaaaaa';exit;
         $this->_view->assign();
         return true;
     }

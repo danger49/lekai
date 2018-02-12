@@ -25,6 +25,13 @@ class NewsController extends FControllerModel {
         }
         $count = $newsModel->getNewsCount();
         $pagebar = new Pagination(self::PAGE_SIZE, $count, $page, self::SUB_PAGES,'/index/news/index/page/');
+
+        $listConfig = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_NEWS);
+        foreach ($listConfig as $config) {
+            $pageConfigs[$config['key']] = $config['value'];
+        }
+        $this->_view->assign('pageConfig', $pageConfigs);
+
         $this->_view->assign('list', $list);
         $this->_view->assign('pagebar', $pagebar->GetContent(self::PAGE_STYLE));
 		return true;
