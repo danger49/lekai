@@ -1,0 +1,69 @@
+<!--header-->
+{@include 'header.phtml'@}
+<!--/header-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <!--menu-->
+            {@include 'menu.phtml'@}
+            <!--/menu-->
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header">新增课程类型</h2>
+            <div class="row placeholders">
+                <a href="/admin/course/index"><button class="btn btn-default">返回</button></a>
+            </div>
+            <div class="table-responsive">
+                <form enctype="multipart/form-data" method="post" action="/admin/course/save">
+                    <table class="table table-striped">
+                        <tr>
+                            <td>课程分类名称</td>
+                            <td><input name="name" type="text"/></td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td>排序</td>
+                            <td><input name="order" type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td>描述</td>
+                            <td><textarea name="description" rows="5" cols="80"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>标题一</td>
+                            <td><input name="title_1" type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td>内容一</td>
+                            <td><textarea name="content_1" rows="5" cols="80"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>标题二</td>
+                            <td><input name="title_2" type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td>内容二</td>
+                            <td><textarea name="content_2" rows="5" cols="80"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>标签</td>
+                            <td><input name="labels" type="text"/>逗号分割</td>
+                        </tr>
+                        <tr>
+                            <td>多媒体资源</td>
+                            <td><input name="media" type="file"/>图片或视频</td>
+                        </tr>
+                        <tr>
+                            <td colspan=2><input type="submit" value="提交"/> <input type="reset" value="重置"/></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+{@include 'footer.phtml'@}
+<!--/footer-->

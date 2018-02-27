@@ -1,0 +1,67 @@
+<!--header-->
+{@include 'header.phtml'@}
+<!--/header-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <!--menu-->
+            {@include 'menu.phtml'@}
+            <!--/menu-->
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h2 class="sub-header">课程分类</h2>
+            <div class="row placeholders">
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <a href="/admin/course/add"><button class="btn btn-primary">增加课程分类</button></a>
+                </div>
+                <div class="col-xs-6 col-sm-3 placeholder">
+                    <a href="/admin/index/main"><button class="btn btn-default">返回</button></a>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>排序</th>
+                        <th>描述</th>
+                        <th>媒体</th>
+                        <th>标题一</th>
+                        <th>内容一</th>
+                        <th>标题二</th>
+                        <th>内容二</th>
+                        <th>标签</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {@foreach from=$list item=course@}
+                    <tr>
+                        <td>{@$course.id@}</td>
+                        <td>{@$course.name@}</td>
+                        <td>{@$course.order@}</td>
+                        <td>{@$course.description@}</td>
+                        <td>{@$course.media@}</td>
+                        <td>{@$course.title_1@}</td>
+                        <td>{@$course.content_1@}</td>
+                        <td>{@$course.title_2@}</td>
+                        <td>{@$course.content_2@}</td>
+                        <td>{@$course.labels@}</td>
+                        <td>
+                            <a href="/admin/course/edit/?id={@$course.id@}"><button class="btn btn-primary">修改</button></a>
+                            <a href="/admin/course/del/?id={@$course.id@}"><button class="btn btn-danger">删除</button></a>
+                        </td>
+                    </tr>
+                    {@/foreach@}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+{@include 'footer.phtml'@}
+<!--/footer-->

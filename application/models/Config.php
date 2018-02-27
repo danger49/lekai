@@ -4,7 +4,7 @@ class ConfigModel extends BaseModel
 {
     const PAGE_BASE = 1;//基础通用配置
     const PAGE_INDEX = 2;//首页配置
-    const PAGE_CAUSE = 3;//课程页配置
+    const PAGE_COURSE = 3;//课程页配置
     const PAGE_PHOTO = 4;//活动页配置
     const PAGE_NEWS = 5;//文章页配置
     const PAGE_ABOUT = 6;//关于我们页配置
