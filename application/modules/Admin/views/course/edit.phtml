@@ -21,7 +21,7 @@
                             <td>名称</td>
                             <td>
                                 <input name="id" type="hidden" value="{@$course.id@}"/>
-                                <input name="name" type="text" alue="{@$course.name@}"/>
+                                <input name="name" type="text" value="{@$course.name@}"/>
                             </td>
                         </tr>
                         <tr>
@@ -34,23 +34,23 @@
                         </tr>
                         <tr>
                             <td>标题一</td>
-                            <td><input name="title_1" type="text"/></td>
+                            <td><input name="title_1" type="text" value="{@$course.title_1@}"/></td>
                         </tr>
                         <tr>
                             <td>内容一</td>
-                            <td><textarea name="content_1" rows="5" cols="80"></textarea></td>
+                            <td><textarea name="content_1" rows="5" cols="80">{@$course.content_1@}</textarea></td>
                         </tr>
                         <tr>
                             <td>标题二</td>
-                            <td><input name="title_2" type="text"/></td>
+                            <td><input name="title_2" type="text" value="{@$course.title_2@}"/></td>
                         </tr>
                         <tr>
                             <td>内容二</td>
-                            <td><textarea name="content_2" rows="5" cols="80"></textarea></td>
+                            <td><textarea name="content_2" rows="5" cols="80">{@$course.content_2@}</textarea></td>
                         </tr>
                         <tr>
                             <td>标签</td>
-                            <td><input name="labels" type="text" value="{@$course.labels@}"/></td>
+                            <td><input name="labels" type="text" value="{@$course.labels@}"/>英文逗号分割</td>
                         </tr>
                         <tr>
                             <td>多媒体资源</td>

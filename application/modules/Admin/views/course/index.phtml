@@ -23,23 +23,21 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>名称</th>
-                        <th>排序</th>
-                        <th>描述</th>
-                        <th>媒体</th>
-                        <th>标题一</th>
-                        <th>内容一</th>
-                        <th>标题二</th>
-                        <th>内容二</th>
-                        <th>标签</th>
-                        <th>操作</th>
+                        <th style="width: 5%">名称</th>
+                        <th style="width: 5%">排序</th>
+                        <th style="width: 15%">描述</th>
+                        <th style="width: 15%">媒体</th>
+                        <th style="width: 5%">标题一</th>
+                        <th style="width: 20%">内容一</th>
+                        <th style="width: 5%">标题二</th>
+                        <th style="width: 20%">内容二</th>
+                        <th style="width: 5%">标签</th>
+                        <th style="width: 5%">操作</th>
                     </tr>
                     </thead>
                     <tbody>
                     {@foreach from=$list item=course@}
                     <tr>
-                        <td>{@$course.id@}</td>
                         <td>{@$course.name@}</td>
                         <td>{@$course.order@}</td>
                         <td>{@$course.description@}</td>
