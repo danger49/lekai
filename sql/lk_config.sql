@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-02-12 18:25:05
+Date: 2018-02-27 17:06:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -22,14 +22,14 @@ DROP TABLE IF EXISTS `lk_config`;
 CREATE TABLE `lk_config` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `key` varchar(20) NOT NULL DEFAULT '',
-  `value` varchar(200) NOT NULL DEFAULT '',
+  `value` varchar(255) NOT NULL DEFAULT '',
   `title` varchar(100) DEFAULT '',
   `type` varchar(20) DEFAULT 'input' COMMENT '类型',
   `condition` varchar(200) DEFAULT '' COMMENT '条件',
   `page` tinyint(1) DEFAULT '1' COMMENT '页面 1：基础配置 2首页 3课程页 4活动剪影 5乐开分享 6关于我们',
   PRIMARY KEY (`id`),
   UNIQUE KEY `idx_key_page` (`key`,`page`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of lk_config
@@ -86,3 +86,25 @@ INSERT INTO `lk_config` VALUES ('51', 'carousel_img2_title', '轮播标题二', 
 INSERT INTO `lk_config` VALUES ('52', 'carousel_img3_title', '轮播标题三', '轮播标题三', 'input', '', '2');
 INSERT INTO `lk_config` VALUES ('53', 'carousel_img4_title', '轮播标题四', '轮播标题四', 'input', '', '2');
 INSERT INTO `lk_config` VALUES ('54', 'carousel_img5_title', '轮播标题五', '轮播标题五', 'input', '', '2');
+INSERT INTO `lk_config` VALUES ('55', 'description', '乐开音乐王国专注于中国儿童音乐教育，致力于提升全体国民儿童的音乐素养，用最具时代审美和气质的儿童音乐，让亿万儿童及家庭享有更具艺术高度的音乐教育服务。LK Musical Kingdom focus on Chinese Children musical education, we devote ourself to riseing musical accomplishment of the whole kids of our nationwild. And let hundereds of millio', '关于我们', 'textarea', '', '6');
+INSERT INTO `lk_config` VALUES ('56', 'content_1', '愿景愿景愿景愿景愿景愿景愿景愿景愿景', '愿景', 'textarea', '', '6');
+INSERT INTO `lk_config` VALUES ('57', 'content_2', '使命使命使命使命使命使命使命使命使命使命', '使命', 'textarea', '', '6');
+INSERT INTO `lk_config` VALUES ('58', 'img1', 'images/about/1.jpg', '右侧图', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('59', 'img2', 'images/about/2.jpg', '图一', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('60', 'img3', 'images/about/3.jpg', '图二', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('61', 'img4', 'images/about/4.jpg', '图三', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('62', 'img5', 'images/about/5.jpg', '图四', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('63', 'member1_name', 'Rocky', '成员一姓名', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('64', 'member1_description', '创始人,CEO.', '成员一描述', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('65', 'member1_img', 'images/about/a.jpg', '成员一图片', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('66', 'member2_name', '老崔', '成员二姓名', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('67', 'member2_description', '联合创始人,COO.', '成员二描述', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('68', 'member2_img', 'images/about/b.jpg', '成员二图片', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('69', 'member3_name', 'Andy', '成员三姓名', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('70', 'member3_description', '课程设计.', '成员三描述', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('71', 'member3_img', 'images/about/c.jpg', '成员三图片', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('72', 'member4_name', '古月', '成员四姓名', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('73', 'member4_description', '产品设计师.', '成员四描述', 'input', '', '6');
+INSERT INTO `lk_config` VALUES ('74', 'member4_img', 'images/about/d.jpg', '成员四图片', 'file', '', '6');
+INSERT INTO `lk_config` VALUES ('75', 'content_3', '成就梦想成就梦想成就梦想成就梦想成就梦想成就梦想成就梦想', '成就梦想', 'textarea', '', '6');
+INSERT INTO `lk_config` VALUES ('76', 'img6', 'images/about/6.jpg', '右下图', 'file', '', '6');
