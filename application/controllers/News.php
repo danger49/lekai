@@ -42,6 +42,13 @@ class NewsController extends FControllerModel {
         $newsModel = NewsModel::getInstance();
         $news = $newsModel->getNews($newsId);
         $newsModel->updateClick($newsId);
+        
+        $listConfig = ConfigModel::getInstance()->getPageConfig(ConfigModel::PAGE_NEWS);
+        foreach ($listConfig as $config) {
+            $pageConfigs[$config['key']] = $config['value'];
+        }
+        $this->_view->assign('pageConfig', $pageConfigs);
+        
 		$this->_view->assign('news', $news);
 		return true;
 	}
