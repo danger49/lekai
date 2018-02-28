@@ -34,11 +34,11 @@ class CourseController extends BControllerModel {
         $order = $_POST['order'];
         $description = $_POST['description'];
         $media = 'media';
-        $lables = $_POST['lables'];
+        $labels = $_POST['labels'];
         $title_1 = $_POST['title_1'];
         $content_1 = $_POST['content_1'];
         $title_2 = $_POST['title_2'];
-        $content_2 = $_POST['content_21'];
+        $content_2 = $_POST['content_2'];
         $upImg = '';
         $up = new Fileupload();
         //设置属性(上传的位置， 大小， 类型， 名是是否要随机生成)
@@ -62,7 +62,7 @@ class CourseController extends BControllerModel {
             'name' => $name,
             'order' => $order,
             'description' => $description,
-            'lables' => $lables,
+            'labels' => $labels,
             'title_1' => $title_1,
             'content_1' => $content_1,
             'title_2' => $title_2,

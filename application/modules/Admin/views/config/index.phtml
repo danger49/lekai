@@ -56,7 +56,7 @@
 
     $("#form" + id).ajaxSubmit({
       type: "POST",
-      url: "./save",
+      url: "/admin/config/save",
       data: data,
       dataType: 'json',
       success: function (response) {
