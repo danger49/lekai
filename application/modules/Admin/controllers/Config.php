@@ -21,7 +21,7 @@ class ConfigController extends BControllerModel {
         $page = isset($_GET['page']) ? $_GET['page'] : 1;
 		$configModel = ConfigModel::getInstance();
         $list = $configModel->getPageConfig($page);
-        $pageTitle = ConfigModel::PAGE_TITLE[$page];
+        $pageTitle = ConfigModel::$pageTitles[$page];
 
         $this->_view->assign('list', $list);
         $this->_view->assign('pageTitle', $pageTitle);

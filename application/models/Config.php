@@ -8,14 +8,14 @@ class ConfigModel extends BaseModel
     const PAGE_PHOTO = 4;//活动页配置
     const PAGE_NEWS = 5;//文章页配置
     const PAGE_ABOUT = 6;//关于我们页配置
-    const PAGE_TITLE = [
-        1 => '网站配置',
-        2 => '首页配置',
-        3 => '课程页面',
-        4 => '活动页面',
-        5 => '分享页面',
-        6 => '关于我们页面'
-    ];
+    public static $pageTitles = array(
+        '1' => '网站配置',
+        '2' => '首页配置',
+        '3' => '课程页面',
+        '4' => '活动页面',
+        '5' => '分享页面',
+        '6' => '关于我们页面'
+    );
     private static $_instance;
     public $_table = 'lk_config';
 
