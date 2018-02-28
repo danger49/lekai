@@ -48,6 +48,25 @@ class NewsController extends BControllerModel {
         $type = $_POST['type'];
         $link = $_POST['link'];
         $content = $_POST['content'];
+        $img = 'img';
+        $upImg = '';
+        $up = new Fileupload();
+        //设置属性(上传的位置， 大小， 类型， 名是是否要随机生成)
+        $up -> set("path", "./upload/" . date('Y-m-d'));
+        $up -> set("maxsize", 2000000);
+        $up -> set("allowtype", array("gif", "png", "jpg","jpeg"));
+        $up -> set("israndname", true);
+        //使用对象中的upload方法， 就可以上传文件， 方法需要传一个上传表单的名子 pic, 如果成功返回true, 失败返回false
+        if($up->upload($img)) {
+            //获取上传后文件名子
+            $img = $up->getFileName();
+            $upImg = isset($img[0]) ? $up->getPath() . '/' . $img[0] : '';
+        } else {
+            echo '<pre>';
+            print_r($up->getErrorMsg());exit;
+            $this->redirect('/admin/news/index');
+            return false;
+        }
         $newsData = array(
             'title' => $title,
             'order' => $order,
@@ -57,6 +76,7 @@ class NewsController extends BControllerModel {
             'link' => $link,
             'content' => $content,
         );
+        if ($upImg) $newsData['img'] = $upImg;
         $newsModel = NewsModel::getInstance();
         if ($id) {
             $newsModel->updateNews($newsData, $id);
