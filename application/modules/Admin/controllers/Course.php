@@ -68,7 +68,7 @@ class CourseController extends BControllerModel {
             'title_2' => $title_2,
             'content_2' => $content_2,
         );
-        if ($upImg) $detailData['media'] = $upImg;
+        if ($upImg) $courseData['media'] = $upImg;
         if ($id) {
             $courseModle->updateCourse($courseData, $id);
         } else {
