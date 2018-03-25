@@ -1,7 +1,7 @@
 {@include 'header.phtml'@}
 
 <!--轮播 start-->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 95px;">
+<div id="carouselExampleIndicators" class="carousel slide margin_head" data-ride="carousel" >
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -71,13 +71,13 @@
             <div class="row">
                 <div class="col-6" style="padding: 0;cursor: pointer;">
                     <div id="courseDesc1" class="musicDescription" style="background-color: #6fad6d">
-                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">音乐启蒙<br/>0-3岁</span>
+                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">{@$pageConfig.course1_title@}<br/>{@$pageConfig.course1_description@}</span>
                     </div>
                         <img id="courseImg1" class="carousel-inner img-responsive musicImg6" src="{@$pageConfig.course1@}"/>
                 </div>
                 <div class="col-6" style="padding: 0;cursor: pointer;">
                     <div id="courseDesc2" class="musicDescription" style="background-color: #ada36d">
-                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">音乐素养<br/>3-6岁</span>
+                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">{@$pageConfig.course2_title@}<br/>{@$pageConfig.course2_description@}</span>
                     </div>
                     <img id="courseImg2" class="carousel-inner img-responsive musicImg6" src="{@$pageConfig.course2@}"/>
                 </div>
@@ -85,13 +85,13 @@
             <div class="row">
                 <div class="col-6" style="padding: 0;cursor: pointer;">
                     <div id="courseDesc3" class="musicDescription" style="background-color: #ad806d">
-                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">乐器学习<br/>5-12岁</span>
+                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">{@$pageConfig.course3_title@}<br/>{@$pageConfig.course3_description@}</span>
                     </div>
                     <img id="courseImg3" class="carousel-inner img-responsive musicImg6" src="{@$pageConfig.course3@}"/>
                 </div>
                 <div class="col-6" style="padding: 0;cursor: pointer;">
                     <div id="courseDesc4" class="musicDescription" style="background-color: #6e6dad">
-                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">乐队表演</span>
+                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">{@$pageConfig.course4_title@}<br/>{@$pageConfig.course4_description@}</span>
                     </div>
                     <img id="courseImg4" class="carousel-inner img-responsive musicImg6" src="{@$pageConfig.course4@}"/>
                 </div>
@@ -99,13 +99,13 @@
             <div class="row">
                 <div class="col-6" style="padding: 0;cursor: pointer;">
                     <div id="courseDesc5" class="musicDescription" style="background-color: #ada36d">
-                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">儿童合唱团</span>
+                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">{@$pageConfig.course5_title@}<br/>{@$pageConfig.course5_description@}</span>
                     </div>
                     <img id="courseImg5" class="carousel-inner img-responsive musicImg6" src="{@$pageConfig.course5@}"/>
                 </div>
                 <div class="col-6" style="padding: 0;cursor: pointer;">
                     <div id="courseDesc6" class="musicDescription" style="background-color: #6fad6d">
-                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">家庭亲子乐队</span>
+                        <span class="center-vertical" style="padding: 20px;border-top: 1px solid white;border-bottom: 1px solid white;">{@$pageConfig.course6_title@}<br/>{@$pageConfig.course6_description@}</span>
                     </div>
                     <img id="courseImg6" class="carousel-inner img-responsive musicImg6" src="{@$pageConfig.course6@}"/>
                 </div>
@@ -115,7 +115,7 @@
     <!--part1 end-->
 
     <!--part2 start-->
-    <div class="row" class="marginTop">
+    <div class="row marginTop">
         <div class="col-md-4">
             <div class="row">
                 <div class="col-md-2 col-2"><img class="carousel-inner img-responsive" src="./images/index/1.png"/></div>
@@ -144,7 +144,7 @@
             </div>
         </div>
     </div>
-    <div class="row" class="marginTop">
+    <div class="row marginTop">
         <div class="col-md-4">
             <div class="row">
                 <div class="col-md-2 col-2"><img class="carousel-inner img-responsive" src="./images/index/4.png"/></div>
@@ -179,9 +179,9 @@
 <div class="marginTop" style="background-color: #4f4f4f;">
     <div class="container">
         <div class="row" style="padding: 10px;">
-            <div class="col-md-6 col-8 text-center"><h1 style="line-height: 300%;color: white;font-weight:bold">匠心打造</h1>
+            <div class="col-md-6 col-7 text-center"><h1 style="line-height: 300%;color: white;font-weight:bold">匠心打造</h1>
             </div>
-            <div class="col-md-6 col-4 text-center" style="padding: 20px"><img src="./img/qr.png" width="100px"
+            <div class="col-md-6 col-5 text-center" style="padding: 20px"><img src="./img/qr.png" width="100px"
                                                                          height="100px"></div>
         </div>
     </div>
@@ -193,7 +193,7 @@
     <div class="row">
         <div class="col-md-6" style="padding: 0"><img class="carousel-inner img-responsive" src="{@$pageConfig.description2_img@}"/>
         </div>
-        <div class="col-md-6" style="padding-left: 40px;padding-right:40px;background-color: #f2f2ea">
+        <div class="col-md-6 padding1" style="background-color: #f2f2ea">
             <h1 style="line-height: 150%">{@$pageConfig.title3@}</h1>
             <p class="lineHeight1">{@$pageConfig.description3@}</p>
             <h1 style="line-height: 150%">{@$pageConfig.title4@}</h1>

@@ -29,8 +29,8 @@ class FControllerModel extends Yaf_Controller_Abstract {
             'bootstrap' => 'http://' . $configs['host'] . '/css/bootstrap.css',
         );
         $this->js = array(
-            'http://' . $configs['host'] . '/js/jquery1.4.2.min.js',
             'http://' . $configs['host'] . '/js/popper.min.js',
+            'http://' . $configs['host'] . '/js/jquery1.4.2.min.js',
             'http://' . $configs['host'] . '/js/bootstrap.min.js',
         );
         $this->_view->assign('css_files', $this->css);
