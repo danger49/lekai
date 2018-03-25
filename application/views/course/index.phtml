@@ -36,8 +36,15 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-12">
+                            {@if $course.mediaType eq "video"@}
+                            <video class="carousel-inner img-responsive" controls="controls">
+                                <source src="http://{@$config.host@}/{@$course.media@}" type="video/mp4">
+                                您的浏览器不支持该视频格式
+                            </video>
+                            {@else@}
                             <img class="carousel-inner img-responsive"
                                  src="http://{@$config.host@}/{@$course.media@}">
+                            {@/if@}
                         </div>
                     </div>
                     <div class="row text-center" style="padding:50px 0;">

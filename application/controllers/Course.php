@@ -22,6 +22,11 @@ class CourseController extends FControllerModel {
         $list = $courseModel->getCourseList();
         foreach ($list as &$item) {
             $item['labels'] = $item['labels'] ? explode(',', $item['labels']) : [];
+            if (strpos($item['media'], '.mp4')) {
+                $item['mediaType'] = 'video';
+            } else {
+                $item['mediaType'] = 'img';
+            }
         }
         unset($item);
         $this->_view->assign('list', $list);
