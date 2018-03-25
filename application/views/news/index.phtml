@@ -5,17 +5,17 @@
 </div>
 
 <div class="container">
-    <div class="row"><div class="col-md-12"><h3 style="line-height: 400%"><b>一起给孩子一个有声童年</b></h3></div></div>
+    <div class="row"><div class="col-12"><h3 style="line-height: 400%"><b>一起给孩子一个有声童年</b></h3></div></div>
     {@foreach from=$list item=news@}
-    <div class="row"><div class="col-md-12"><h5 style="line-height: 200%"><b>【分享】{@$news.title@}</b></h5></div></div>
-        <div class="row"><div class="col-md-12"><h6>{@$news.add_time@}</h6></div></div>
-    <div class="row"><div class="col-md-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}"></div></div>
-        <div class="row"><div class="col-md-12"><p style="line-height: 200%">{@$news.description@}</p></div></div>
-        <div class="row"><div class="col-md-12"><h5 style="line-height: 300%"><a href="/news/detail/id/{@$news.id@}">详细内容</a></h5></div></div>
+    <div class="row"><div class="col-12"><h5  class="lineHeight1"><b>【分享】{@$news.title@}</b></h5></div></div>
+        <div class="row"><div class="col-12"><h6>{@$news.add_time@}</h6></div></div>
+    <div class="row"><div class="col-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}"></div></div>
+        <div class="row"><div class="col-12"><p class="lineHeight1">{@$news.description@}</p></div></div>
+        <div class="row"><div class="col-12"><h5 class="lineHeight"><a href="/news/detail/id/{@$news.id@}">详细内容</a></h5></div></div>
     {@/foreach@}
     <!--翻页-->
     <div class="row">
-        <div class="col-md-12">{@$pagebar@}</div>
+        <div class="col-12">{@$pagebar@}</div>
     </div>
     <!--/翻页-->
 </div>

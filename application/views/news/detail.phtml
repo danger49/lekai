@@ -4,22 +4,22 @@
     <img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$pageConfig.banner@}">
 </div>
 
-<div class="container" style="padding: 10px 100px 100px 100px;">
+<div class="container padding">
     <div class="row" style="padding: 20px 0;"><h3>{@$news.title@}</h3></div>
     <div class="row" style="padding: 10px 0">
-        <div class="col-md-6">{@$news.add_time@}</div>
-        <div class="col-md-3">{@$news.click@}</div>
-        <div class="col-md-3">{@$news.good@}</div>
+        <div class="col-6">{@$news.add_time@}</div>
+        <div class="col-3">{@$news.click@}</div>
+        <div class="col-3">{@$news.good@}</div>
     </div>
     <div class="row" style="background-color: #f6f6f6;padding: 30px 0;">
-        {@$news.description@}
+        <div class="col-12">{@$news.description@}</div>
     </div>
     <div class="row" style="padding: 30px 0">
-        <img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}">
+        <div class="col-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}"></div>
     </div>
-    <div class="row"><p>{@$news.content@}</p></div>
+    <div class="row"><div class="col-12"><p>{@$news.content@}</p></div></div>
     <div class="row text-center" style="margin:20px;">
-        <div class="col-md-12"><a href="/news"><span class="more">更多文化</span></a></div>
+        <div class="col-12"><a href="/news"><span class="more">更多文化</span></a></div>
     </div>
 </div>
 
