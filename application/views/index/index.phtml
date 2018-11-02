@@ -204,9 +204,86 @@
     </div>
 </div>
 
+<!--浮窗-->
+<div class="suspension">
+    <span class="consult" title="在线客服">
+        <div class="suspension-list" style="display:none;">
+            <div class="suspension-list-content">
+                <ul>
+                    <li>
+                        <div class="service-phone">
+                            <span class="info-name">客服热线</span>
+                            {@if $is_mobile eq 1@}
+                            <span class="info-value">
+                                <a href="tel:18901647325">张老师:18901647325</a>
+                            </span>
+                            <span class="info-value">
+                                <a href="tel:15316062496">全老师:15316062496</a>
+                            </span>
+                            <span class="info-value">
+                                <a href="tel:18901741937">张老师:18901741937</a>
+                            </span>
+                            {@else@}
+                            <span class="info-value">
+                                张老师:18901647325
+                            </span>
+                            <span class="info-value">
+                                全老师:15316062496
+                            </span>
+                            <span class="info-value">
+                                张老师:18901741937
+                            </span>
+                            {@/if@}
+                        </div>
+                    </li>
+                    <li>
+                        <div class="service-qq">
+                            <span class="info-name">在线客服</span>
+                            {@if $is_mobile eq 1@}
+                            <span class="info-value">
+                                <a href="mqqwpa://im/chat?chat_type=wpa&uin=399893509&version=1&src_type=web&web_src=oicqzone.com">399893509（Jim）</a>
+                            </span>
+                            <span class="info-value">
+                                <a href="mqqwpa://im/chat?chat_type=wpa&uin=437448862&version=1&src_type=web&web_src=oicqzone.com">437448862（Janice）</a>
+                            </span>
+                            <span class="info-value">
+                                <a href="mqqwpa://im/chat?chat_type=wpa&uin=3495126570&version=1&src_type=web&web_src=oicqzone.com">3495126570（Forrest）</a>
+                            </span>
+                            {@else@}
+                            <span class="info-value">
+                                <a href="tencent://message/?uin=399893509&Site=乐开音乐&Menu=yes">399893509（Jim）</a>
+                            </span>
+                            <span class="info-value">
+                                <a href="tencent://message/?uin=437448862&Site=乐开音乐&Menu=yes">437448862（Janice）</a>
+                            </span>
+                            <span class="info-value">
+                                <a href="tencent://message/?uin=3495126570&Site=乐开音乐&Menu=yes">3495126570（Forrest）</a>
+                            </span>
+                            {@/if@}
+                        </div>
+                    </li>
+                    <li class="suspension-list-bottom">
+                        <div href="javascript:;" class="service-phone">
+                            <span class="info-name">投诉与建议</span>
+                            <span class="info-value">021-33283766</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </span>
+    <span class="cart" title="关注微信公众账号">
+        <div class="pic">
+            <div class="pic-content"></div>
+        </div>
+    </span>
+    <a href="javascript:void(0)" class="back-top" style="display: block;" title="返回顶部"></a>
+</div>
+
 {@include 'footer.phtml'@}
 
 <script>
+  document.body.addEventListener('touchstart',function(){});
   var block_1_1 = document.getElementById('courseImg1');
   var block_1_2 = document.getElementById('courseDesc1');
   var block_2_1 = document.getElementById('courseImg2');
@@ -303,5 +380,22 @@
     block_6_1.style.display = 'block';
     block_6_2.style.display = 'none';
   }
+
+    $(function() {
+        $(".back-top").hide();
+        $(".back-top").on("click", function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        })
+        $(window).bind('scroll resize', function() {
+            if ($(window).scrollTop() <= 400) {
+                $(".back-top").hide();
+            } else {
+                $(".back-top").show();
+            }
+        })
+    })
 
 </script>

@@ -14,12 +14,14 @@
     <div class="row" style="background-color: #f6f6f6;padding: 30px 0;">
         <div class="col-12">{@$news.description@}</div>
     </div>
+    {@if $news.img@}
     <div class="row" style="padding: 30px 0">
         <div class="col-12"><img class="carousel-inner img-responsive" src="http://{@$config.host@}/{@$news.img@}"></div>
     </div>
+    {@/if@}
     <div class="row"><div class="col-12"><p>{@$news.content@}</p></div></div>
     <div class="row text-center" style="margin:20px;">
-        <div class="col-12"><a href="/news"><span class="more">更多文化</span></a></div>
+        <div class="col-12"><a href="/news"><span class="more">返回</span></a></div>
     </div>
 </div>
 
